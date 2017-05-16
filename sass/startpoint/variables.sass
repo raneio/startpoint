@@ -78,7 +78,7 @@ $button-background--basic: $color-highlight !default
 $button-background--hover: saturate($color-highlight, 20%) !default
 $button-background--activ: saturate($color-highlight, 50%) !default
 
-$button-border--basic: px(2) dashed $color-highlight !default
+$button-border--basic: (2px/$rem+em) dashed $color-highlight !default
 $button-border--hover: $button-border--basic !default
 $button-border--activ: $button-border--hover !default
 
@@ -86,9 +86,9 @@ $button-font-color--basic: $color-background !default
 $button-font-color--hover: $button-font-color--basic !default
 $button-font-color--activ: $button-font-color--hover !default
 
-$button-shadow-box--basic: 0 px(3) px(5) mix(transparent, $color-content, 50%) !default
+$button-shadow-box--basic: 0 (3px/$rem+em) (5px/$rem+em) mix(transparent, $color-content, 50%) !default
 $button-shadow-box--hover: $button-shadow-box--basic !default
-$button-shadow-box--activ: 0 px(2) px(5) mix(transparent, $color-content, 50%) !default !default
+$button-shadow-box--activ: 0 (2px/$rem+em) (5px/$rem+em) mix(transparent, $color-content, 50%) !default !default
 
 $button-transform--basic: none !default
 $button-transform--hover: rotate(2deg) scale(1.1) !default
