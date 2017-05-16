@@ -1,0 +1,151 @@
+//
+// Base
+// --------------------------------------------------
+// Everything is relative to $rem
+
+$rem: 16px !default
+
+
+//
+// Main colors
+// --------------------------------------------------
+
+$color-background: AliceBlue !default
+$color-content: DimGray !default
+$color-highlight: SeaGreen !default
+
+
+//
+// Space
+// --------------------------------------------------
+
+$space-line-height: 1.5 !default
+$space-letter-spacing: .02em !default
+$space-margin: 1.5rem !default
+
+
+//
+// Fonts
+// --------------------------------------------------
+
+$font-color: $color-content !default
+$font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !default
+$font-size: 1rem !default
+$font-weight: normal !default
+
+
+//
+// Headings
+// --------------------------------------------------
+// Get $heading-size-scale ratio from
+// http://type-scale.com/
+
+$heading-font-color: $font-color !default
+$heading-font-family: $font-family !default
+$heading-font-weight: 300 !default
+$heading-size-base: 1rem !default
+$heading-size-scale: 1.414 !default
+
+
+//
+// Links
+// --------------------------------------------------
+
+$link-font-color--basic: $color-highlight !default
+$link-font-color--hover: saturate($color-highlight, 20%) !default
+$link-font-color--activ: saturate($color-highlight, 50%) !default
+
+$link-text-decoration--basic: none !default
+$link-text-decoration--hover: underline !default
+$link-text-decoration--activ: $link-text-decoration--hover !default
+
+$link-transition--basic: color .2s !default
+$link-transition--hover: $link-transition--basic !default
+$link-transition--activ: $link-transition--hover !default
+
+
+//
+// Buttons
+// --------------------------------------------------
+
+$button-border-radius: 0 !default
+$button-font-family: $font-family !default
+$button-font-size: 1.2rem !default
+$button-font-weight: normal !default
+$button-padding: 1em 2em !default
+
+$button-background--basic: $color-highlight !default
+$button-background--hover: saturate($color-highlight, 20%) !default
+$button-background--activ: saturate($color-highlight, 50%) !default
+
+$button-border--basic: px(2) dashed $color-highlight !default
+$button-border--hover: $button-border--basic !default
+$button-border--activ: $button-border--hover !default
+
+$button-font-color--basic: $color-background !default
+$button-font-color--hover: $button-font-color--basic !default
+$button-font-color--activ: $button-font-color--hover !default
+
+$button-shadow-box--basic: 0 px(3) px(5) mix(transparent, $color-content, 50%) !default
+$button-shadow-box--hover: $button-shadow-box--basic !default
+$button-shadow-box--activ: 0 px(2) px(5) mix(transparent, $color-content, 50%) !default !default
+
+$button-transform--basic: none !default
+$button-transform--hover: rotate(2deg) scale(1.1) !default
+$button-transform--activ: $button-transform--hover !default
+
+$button-transition--basic: transform .2s, background .2s, box-shadow .2s !default
+$button-transition--hover: $button-transition--basic !default
+$button-transition--activ: none !default
+
+
+//
+// Inputs
+// --------------------------------------------------
+
+$input-border-radius: 0 !default
+$input-color-background: white !default
+$input-color-content: #333 !default
+$input-font-family: $font-family !default
+$input-font-size: 1rem !default
+$input-font-weight: normal !default
+$input-padding: .5em .7em !default
+$input-placeholder-color: mix($input-color-background, $input-color-content, 70%) !default
+
+$input-background--basic: $input-color-background !default
+$input-background--hover: $input-background--basic !default
+$input-background--focus: $input-background--hover !default
+
+$input-border--basic: 1px solid mix($input-color-background, $input-color-content, 80%) !default
+$input-border--hover: 1px solid mix($input-color-background, $input-color-content, 50%) !default
+$input-border--focus: 1px solid $input-color-content !default
+
+$input-font-color--basic: mix($input-color-background, $input-color-content, 30%) !default
+$input-font-color--hover: $input-font-color--basic !default
+$input-font-color--focus: $input-color-content !default
+
+$input-select-arrow-color--basic: mix($input-color-background, $input-color-content, 80%) !default
+$input-select-arrow-color--hover: mix($input-color-background, $input-color-content, 50%) !default
+$input-select-arrow-color--focus: $input-color-content !default
+
+$input-shadow-box--basic: none !default
+$input-shadow-box--hover: $input-shadow-box--basic !default
+$input-shadow-box--focus: $input-shadow-box--hover !default
+
+$input-transform--basic: none !default
+$input-transform--hover: scale(1.02) !default
+$input-transform--focus: $input-transform--hover !default
+
+$input-transition--basic: .2s !default
+$input-transition--hover: $input-transition--basic !default
+$input-transition--focus: $input-transition--hover !default
+
+
+//
+// Labels
+// --------------------------------------------------
+
+$label-display: block !default
+$label-font-color: $color-content !default
+$label-font-family: $font-family !default
+$label-font-size: .8rem !default

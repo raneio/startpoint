@@ -1,0 +1,209 @@
+//
+// Styles
+// --------------------------------------------------
+
+\:root
+  font-size: $rem
+
+*, *:before, *:after
+  box-sizing: inherit
+  letter-spacing: $space-letter-spacing
+  margin: 0
+
+* + *
+  // Add margin if not first child
+  margin-top: $space-margin
+
+html
+  box-sizing: border-box
+  min-height: 100vh
+  width: 100vw
+
+body
+  background-color: $color-background
+  color: $font-color
+  font-family: $font-family
+  font-weight: $font-weight
+  line-height: $space-line-height
+  min-height: 100vh
+  width: 100vw
+  -moz-osx-font-smoothing: grayscale
+  -webkit-font-smoothing: antialiased
+
+ul
+  padding: 0
+  list-style: none
+
+li
+  margin: 0
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+  color: $heading-font-color
+  font-family: $heading-font-family
+  font-weight: $heading-font-weight
+
+h1
+  font-size: $heading-size-base * $heading-size-scale * $heading-size-scale * $heading-size-scale * $heading-size-scale
+  margin: 0
+
+h2
+  font-size: $heading-size-base * $heading-size-scale * $heading-size-scale * $heading-size-scale
+
+h3
+  font-size: $heading-size-base * $heading-size-scale * $heading-size-scale
+
+h4
+  font-size: $heading-size-base * $heading-size-scale
+
+h5
+  font-size: $heading-size-base
+
+h6
+  font-size: $heading-size-base / $heading-size-scale
+
+* + h1
+  // Fixed normalize issue
+  margin-top: $space-margin
+
+a
+  color: $link-font-color--basic
+  text-decoration: $link-text-decoration--basic
+  transition: $link-transition--basic
+
+  &:hover
+    color: $link-font-color--hover
+    text-decoration: $link-text-decoration--hover
+    transition: $link-transition--hover
+
+  &:active
+    color: $link-font-color--activ
+    text-decoration: $link-text-decoration--activ
+    transition: $link-transition--activ
+
+button
+  background: $button-background--basic
+  border: $button-border--basic
+  border-radius: $button-border-radius
+  box-shadow: $button-shadow-box--basic
+  color: $button-font-color--basic
+  cursor: pointer
+  font-family: $button-font-family
+  font-size: $button-font-size
+  font-weight: $button-font-weight
+  letter-spacing: inherit
+  outline: 0
+  padding: $button-padding
+  transition: $button-transition--basic
+  transform: $button-transform--basic
+  -webkit-font-smoothing: inherit
+
+  &:hover
+    background: $button-background--hover
+    border: $button-border--hover
+    box-shadow: $button-shadow-box--hover
+    color: $button-font-color--hover
+    transition: $button-transition--hover
+    transform: $button-transform--hover
+
+  &:active
+    background: $button-background--activ
+    border: $button-border--activ
+    box-shadow: $button-shadow-box--activ
+    color: $button-shadow-box--activ
+    transition: $button-transition--activ
+    transform: $button-transform--activ
+
+img
+  max-width: 100%
+  height: auto
+  border: 0
+
+input[type="color"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+input:not([type]),
+textarea,
+select
+  background: $input-background--basic
+  border: $input-border--basic
+  border-radius: $input-border-radius
+  box-shadow: $input-shadow-box--basic
+  color: $input-font-color--basic
+  display: block
+  font-family: $input-font-family
+  font-size: $input-font-size
+  font-weight: $input-font-weight
+  outline: 0
+  padding: $input-padding
+  transform: $input-transform--basic
+  transition: $input-transition--basic
+  width: 100%
+
+  &:hover
+    background: $input-background--hover
+    border: $input-border--hover
+    box-shadow: $input-shadow-box--hover
+    color: $input-font-color--hover
+    transition: $input-transition--hover
+    transform: $input-transform--hover
+
+  &:focus
+    background: $input-background--focus
+    border: $input-border--focus
+    box-shadow: $input-shadow-box--focus
+    color: $input-font-color--focus
+    transition: $input-transition--focus
+    transform: $input-transform--focus
+
+  &::placeholder
+    color: $input-placeholder-color
+
+select
+  -webkit-appearance: none
+  -moz-appearance: none
+
+option
+  margin: 0
+
+@if $input-select-arrow-color--basic && $input-select-arrow-color--hover && $input-select-arrow-color--focus
+
+  select
+    background-image: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' version='1.1' width='12' height='12'%3E%3Cpolygon points='6,12 0,0 12,0' fill='#{svg-safe-hex($input-select-arrow-color--basic)}'/%3E%3C/svg%3E")
+
+  select:hover
+    background-image: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' version='1.1' width='12' height='12'%3E%3Cpolygon points='6,12 0,0 12,0' fill='#{svg-safe-hex($input-select-arrow-color--hover)}'/%3E%3C/svg%3E")
+
+  select:focus
+    background-image: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' version='1.1' width='12' height='12'%3E%3Cpolygon points='6,12 0,0 12,0' fill='#{svg-safe-hex($input-select-arrow-color--focus)}'/%3E%3C/svg%3E")
+
+  select,
+  select:hover,
+  select:focus
+    background-repeat: no-repeat
+    background-position: right 10px center
+
+input[type="checkbox"],
+input[type="radio"]
+  vertical-align: middle
+
+label
+  color: $label-font-color
+  display: $label-display
+  font-family: $label-font-family
+  font-size: $label-font-size
