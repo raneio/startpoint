@@ -1,157 +1,157 @@
-// //
-// // Base
-// // --------------------------------------------------
-// // Everything is relative to $rem
 //
-// $rem: 16px
+// Base
+// --------------------------------------------------
+// Everything is relative to $rem
+
+$rem: 16px
+
+
 //
+// Colors
+// --------------------------------------------------
+
+$color-background: aliceblue
+$color-content: dimgray
+$color-highlight: seagreen
+$color-input-background: white
+$color-input-content: #333
+
+
 //
-// //
-// // Main colors
-// // --------------------------------------------------
+// Space
+// --------------------------------------------------
+
+$space-line-height: 1.5
+$space-letter-spacing: .02em
+$space-margin: 1.5rem
+
+
 //
-// $color-background: AliceBlue
-// $color-content: DimGray
-// $color-highlight: #2E8B57
+// Fonts
+// --------------------------------------------------
+
+$font-color: $color-content
+$font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
+$font-size: 1rem
+$font-weight: normal
+
+
 //
+// Headings
+// --------------------------------------------------
+// Get $heading-size-scale ratio from
+// http://type-scale.com/
+
+$heading-font-color: $font-color
+$heading-font-family: $font-family
+$heading-font-weight: 300
+$heading-size-base: 1rem
+$heading-size-scale: 1.414
+
+
 //
-// //
-// // Space
-// // --------------------------------------------------
+// Links
+// --------------------------------------------------
+
+$link-font-color--basic: $color-highlight
+$link-font-color--hover: saturate($color-highlight, 20%)
+$link-font-color--activ: saturate($color-highlight, 50%)
+
+$link-text-decoration--basic: none
+$link-text-decoration--hover: underline
+$link-text-decoration--activ: $link-text-decoration--hover
+
+$link-transition--basic: color .2s
+$link-transition--hover: $link-transition--basic
+$link-transition--activ: $link-transition--hover
+
+
 //
-// $space-line-height: 1.5
-// $space-letter-spacing: .02em
-// $space-margin: 1.5rem
+// Buttons
+// --------------------------------------------------
+
+$button-border-radius: 0
+$button-font-family: $font-family
+$button-font-size: 1.2rem
+$button-font-weight: normal
+$button-padding: 1em 2em
+
+$button-background--basic: $color-highlight
+$button-background--hover: saturate($color-highlight, 20%)
+$button-background--activ: saturate($color-highlight, 50%)
+
+$button-border--basic: (2px/$rem+em) dashed $color-highlight
+$button-border--hover: $button-border--basic
+$button-border--activ: $button-border--hover
+
+$button-font-color--basic: $color-background
+$button-font-color--hover: $button-font-color--basic
+$button-font-color--activ: $button-font-color--hover
+
+$button-shadow-box--basic: 0 (3px/$rem+em) (5px/$rem+em) mix(transparent, $color-content, 50%)
+$button-shadow-box--hover: $button-shadow-box--basic
+$button-shadow-box--activ: 0 (2px/$rem+em) (5px/$rem+em) mix(transparent, $color-content, 50%)
+
+$button-transform--basic: none
+$button-transform--hover: rotate(2deg) scale(1.1)
+$button-transform--activ: $button-transform--hover
+
+$button-transition--basic: transform .2s, background .2s, box-shadow .2s
+$button-transition--hover: $button-transition--basic
+$button-transition--activ: none
+
+
 //
+// Labels
+// --------------------------------------------------
+
+$label-display: block
+$label-font-color: $color-content
+$label-font-family: $font-family
+$label-font-size: .8rem
+
+
 //
-// //
-// // Fonts
-// // --------------------------------------------------
+// Inputs
+// --------------------------------------------------
+
+$input-border-radius: 0
+$input-font-family: $font-family
+$input-font-size: 1rem
+$input-font-weight: normal
+$input-padding: .5em .7em
+$input-placeholder-color: mix($color-input-background, $color-input-content, 70%)
+
+$input-background--basic: $color-input-background
+$input-background--hover: $input-background--basic
+$input-background--focus: $input-background--hover
+
+$input-border--basic: 1px solid mix($color-input-background, $color-input-content, 80%)
+$input-border--hover: 1px solid mix($color-input-background, $color-input-content, 50%)
+$input-border--focus: 1px solid $color-highlight
+
+$input-font-color--basic: mix($color-input-background, $color-input-content, 30%)
+$input-font-color--hover: $input-font-color--basic
+$input-font-color--focus: $color-input-content
+
+$input-select-arrow-color--basic: mix($color-input-background, $color-input-content, 80%)
+$input-select-arrow-color--hover: mix($color-input-background, $color-input-content, 50%)
+$input-select-arrow-color--focus: $color-input-content
+
+$input-shadow-box--basic: none
+$input-shadow-box--hover: $input-shadow-box--basic
+$input-shadow-box--focus: $input-shadow-box--hover
+
+$input-transform--basic: none
+$input-transform--hover: scale(1.02)
+$input-transform--focus: $input-transform--hover
+
+$input-transition--basic: .2s
+$input-transition--hover: $input-transition--basic
+$input-transition--focus: $input-transition--hover
+
+
 //
-// $font-color: $color-content
-// $font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
-// $font-size: 1rem
-// $font-weight: normal
-//
-//
-// //
-// // Headings
-// // --------------------------------------------------
-// // Get $heading-size-scale ratio from
-// // http://type-scale.com/
-//
-// $heading-font-color: $font-color
-// $heading-font-family: $font-family
-// $heading-font-weight: 300
-// $heading-size-base: 1rem
-// $heading-size-scale: 1.414
-//
-//
-// //
-// // Links
-// // --------------------------------------------------
-//
-// $link-font-color--basic: $color-highlight
-// $link-font-color--hover: saturate($color-highlight, 20%)
-// $link-font-color--activ: saturate($color-highlight, 50%)
-//
-// $link-text-decoration--basic: none
-// $link-text-decoration--hover: underline
-// $link-text-decoration--activ: $link-text-decoration--hover
-//
-// $link-transition--basic: color .2s
-// $link-transition--hover: $link-transition--basic
-// $link-transition--activ: $link-transition--hover
-//
-//
-// //
-// // Buttons
-// // --------------------------------------------------
-//
-// $button-border-radius: 0
-// $button-font-family: $font-family
-// $button-font-size: 1.2rem
-// $button-font-weight: normal
-// $button-padding: 1em 2em
-//
-// $button-background--basic: $color-highlight
-// $button-background--hover: saturate($color-highlight, 20%)
-// $button-background--activ: saturate($color-highlight, 50%)
-//
-// $button-border--basic: (2px/$rem+em) dashed $color-highlight
-// $button-border--hover: $button-border--basic
-// $button-border--activ: $button-border--hover
-//
-// $button-font-color--basic: $color-background
-// $button-font-color--hover: $button-font-color--basic
-// $button-font-color--activ: $button-font-color--hover
-//
-// $button-shadow-box--basic: 0 (3px/$rem+em) (5px/$rem+em) mix(transparent, $color-content, 50%)
-// $button-shadow-box--hover: $button-shadow-box--basic
-// $button-shadow-box--activ: 0 (2px/$rem+em) (5px/$rem+em) mix(transparent, $color-content, 50%)
-//
-// $button-transform--basic: none
-// $button-transform--hover: rotate(2deg) scale(1.1)
-// $button-transform--activ: $button-transform--hover
-//
-// $button-transition--basic: transform .2s, background .2s, box-shadow .2s
-// $button-transition--hover: $button-transition--basic
-// $button-transition--activ: none
-//
-//
-// //
-// // Labels
-// // --------------------------------------------------
-//
-// $label-display: block
-// $label-font-color: $color-content
-// $label-font-family: $font-family
-// $label-font-size: .8rem
-//
-//
-// //
-// // Inputs
-// // --------------------------------------------------
-//
-// $input-border-radius: 0
-// $input-color-background: white
-// $input-color-content: #333
-// $input-font-family: $font-family
-// $input-font-size: 1rem
-// $input-font-weight: normal
-// $input-padding: .5em .7em
-// $input-placeholder-color: mix($input-color-background, $input-color-content, 70%)
-//
-// $input-background--basic: $input-color-background
-// $input-background--hover: $input-background--basic
-// $input-background--focus: $input-background--hover
-//
-// $input-border--basic: 1px solid mix($input-color-background, $input-color-content, 80%)
-// $input-border--hover: 1px solid mix($input-color-background, $input-color-content, 50%)
-// $input-border--focus: 1px solid $input-color-content
-//
-// $input-font-color--basic: mix($input-color-background, $input-color-content, 30%)
-// $input-font-color--hover: $input-font-color--basic
-// $input-font-color--focus: $color-highlight
-//
-// $input-select-arrow-color--basic: mix($input-color-background, $input-color-content, 80%)
-// $input-select-arrow-color--hover: mix($input-color-background, $input-color-content, 50%)
-// $input-select-arrow-color--focus: $input-color-content
-//
-// $input-shadow-box--basic: none
-// $input-shadow-box--hover: $input-shadow-box--basic
-// $input-shadow-box--focus: $input-shadow-box--hover
-//
-// $input-transform--basic: none
-// $input-transform--hover: scale(1.02)
-// $input-transform--focus: $input-transform--hover
-//
-// $input-transition--basic: .2s
-// $input-transition--hover: $input-transition--basic
-// $input-transition--focus: $input-transition--hover
-//
-//
-// //
-// // Tables
-// // --------------------------------------------------
-// // Coming later
+// Tables
+// --------------------------------------------------
+// Coming later
