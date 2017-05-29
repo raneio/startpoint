@@ -1,0 +1,20 @@
+@import "default"
+@import "functions"
+
+
+//
+// Margins
+// --------------------------------------------------
+// .auto-margin add margin to other than first child
+
+.auto-margin > * + *
+  margin-top: 1.5rem
+
+
+//
+// Lists
+// --------------------------------------------------
+
+ul.bullets
+  padding-left: 2rem
+  list-style: disc
