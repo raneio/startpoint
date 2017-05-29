@@ -33,9 +33,6 @@ ul
   padding: 0
   list-style: none
 
-li
-  margin: 0
-
 h1,
 h2,
 h3,
@@ -48,6 +45,7 @@ h6
 
 h1
   font-size: $heading-size-base * $heading-size-scale * $heading-size-scale * $heading-size-scale * $heading-size-scale
+  // Fixed normalize issue
   margin: 0
 
 h2
@@ -64,10 +62,6 @@ h5
 
 h6
   font-size: $heading-size-base / $heading-size-scale
-
-* + h1
-  // Fixed normalize issue
-  margin-top: $space-margin
 
 a
   color: $link-font-color--basic
@@ -176,9 +170,6 @@ select
 select
   -webkit-appearance: none
   -moz-appearance: none
-
-option
-  margin: 0
 
 @if $input-select-arrow-color--basic && $input-select-arrow-color--hover && $input-select-arrow-color--focus
 

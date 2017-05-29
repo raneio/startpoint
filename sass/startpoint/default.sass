@@ -10,7 +10,7 @@ $rem: 16px !default
 // Colors
 // --------------------------------------------------
 
-$color-background: aliceblue !default
+$color-background: #fefefe !default
 $color-content: dimgray !default
 $color-highlight: seagreen !default
 $color-input-background: white !default
@@ -80,7 +80,7 @@ $button-background--basic: $color-highlight !default
 $button-background--hover: saturate($color-highlight, 20%) !default
 $button-background--activ: saturate($color-highlight, 50%) !default
 
-$button-border--basic: (2px/$rem+em) dashed $color-highlight !default
+$button-border--basic: (1px/$rem+em) solid $color-highlight !default
 $button-border--hover: $button-border--basic !default
 $button-border--activ: $button-border--hover !default
 
@@ -93,7 +93,7 @@ $button-shadow-box--hover: $button-shadow-box--basic !default
 $button-shadow-box--activ: 0 (2px/$rem+em) (5px/$rem+em) mix(transparent, $color-content, 50%) !default !default
 
 $button-transform--basic: none !default
-$button-transform--hover: rotate(2deg) scale(1.1) !default
+$button-transform--hover: $button-transform--basic !default
 $button-transform--activ: $button-transform--hover !default
 
 $button-transition--basic: transform .2s, background .2s, box-shadow .2s !default
@@ -127,7 +127,7 @@ $input-background--hover: $input-background--basic !default
 $input-background--focus: $input-background--hover !default
 
 $input-border--basic: 1px solid mix($color-input-background, $color-input-content, 80%) !default
-$input-border--hover: 1px solid mix($color-input-background, $color-input-content, 50%) !default
+$input-border--hover: 1px solid mix($color-input-background, $color-input-content, 60%) !default
 $input-border--focus: 1px solid $color-highlight !default
 
 $input-font-color--basic: mix($color-input-background, $color-input-content, 30%) !default
@@ -143,7 +143,7 @@ $input-shadow-box--hover: $input-shadow-box--basic !default
 $input-shadow-box--focus: $input-shadow-box--hover !default
 
 $input-transform--basic: none !default
-$input-transform--hover: scale(1.02) !default
+$input-transform--hover: $input-transform--basic !default
 $input-transform--focus: $input-transform--hover !default
 
 $input-transition--basic: .2s !default

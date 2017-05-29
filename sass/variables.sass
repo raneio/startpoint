@@ -10,7 +10,7 @@ $rem: 16px
 // Colors
 // --------------------------------------------------
 
-$color-background: aliceblue
+$color-background: #fefefe
 $color-content: dimgray
 $color-highlight: seagreen
 $color-input-background: white
@@ -80,7 +80,7 @@ $button-background--basic: $color-highlight
 $button-background--hover: saturate($color-highlight, 20%)
 $button-background--activ: saturate($color-highlight, 50%)
 
-$button-border--basic: (2px/$rem+em) dashed $color-highlight
+$button-border--basic: (1px/$rem+em) solid $color-highlight
 $button-border--hover: $button-border--basic
 $button-border--activ: $button-border--hover
 
@@ -93,7 +93,7 @@ $button-shadow-box--hover: $button-shadow-box--basic
 $button-shadow-box--activ: 0 (2px/$rem+em) (5px/$rem+em) mix(transparent, $color-content, 50%)
 
 $button-transform--basic: none
-$button-transform--hover: rotate(2deg) scale(1.1)
+$button-transform--hover: $button-transform--basic
 $button-transform--activ: $button-transform--hover
 
 $button-transition--basic: transform .2s, background .2s, box-shadow .2s
@@ -127,7 +127,7 @@ $input-background--hover: $input-background--basic
 $input-background--focus: $input-background--hover
 
 $input-border--basic: 1px solid mix($color-input-background, $color-input-content, 80%)
-$input-border--hover: 1px solid mix($color-input-background, $color-input-content, 50%)
+$input-border--hover: 1px solid mix($color-input-background, $color-input-content, 60%)
 $input-border--focus: 1px solid $color-highlight
 
 $input-font-color--basic: mix($color-input-background, $color-input-content, 30%)
@@ -143,7 +143,7 @@ $input-shadow-box--hover: $input-shadow-box--basic
 $input-shadow-box--focus: $input-shadow-box--hover
 
 $input-transform--basic: none
-$input-transform--hover: scale(1.02)
+$input-transform--hover: $input-transform--basic
 $input-transform--focus: $input-transform--hover
 
 $input-transition--basic: .2s
