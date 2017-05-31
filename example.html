@@ -2,13 +2,45 @@
 <html>
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
   <link rel="stylesheet" href="style.min.css">
   <title>Startpoint Example</title>
 </head>
 <body>
 
-  <div class="container auto-margin">
+  <nav class="sp-navbar sp-invert">
+
+    <label class="sp-navpop-switch" for="sp-navpop-state"></label>
+
+    <div class="sp-nav-items">
+      <h4>Startpoint</h4>
+      <a href="#">Frontpage</a>
+    </div>
+
+    <div class="sp-nav-items">
+      <a href="#">Frontpage</a>
+      <a href="#">Features</a>
+    </div>
+
+  </nav>
+
+  <input id="sp-navpop-state" type="checkbox">
+  <nav class="sp-navpop sp-invert">
+
+    <label class="sp-navpop-switch sp-close" for="sp-navpop-state"></label>
+
+    <div class="sp-nav-items">
+      <a href="#">Frontpage</a>
+      <a href="#">Features</a>
+      <a href="#">About Us</a>
+      <a href="#">mail@example.com</a>
+      <a href="#">Twitter</a>
+    </div>
+
+  </nav>
+
+  <div class="container sp-auto-margin">
 
     <h1>Starpoint Example</h1>
     <a href="https://github.com/raneio/startpoint">https://github.com/raneio/startpoint</a>
@@ -21,7 +53,7 @@
 
     <h3>Bibliography</h3>
 
-    <ul class="bullets">
+    <ul class="sp-bullets">
       <li><i>Sosiaaliset suhteet Turun satamassa</i>, 1956</li>
       <li><i>Linjan vetoa</i>, 1968</li>
       <li><i>Väärää politiikkaa</i>, 1978 <a href="#">ISBN 951-26-1511-8</a></li>
@@ -37,7 +69,7 @@
       <li><i>Itsenäiseksi imperiumin kainalossa - mietteitä kansojen kohtaloista</i>, 2004 <a href="#">ISBN 951-31-3181-5</a></li>
     </ul>
 
-    <form class="auto-margin">
+    <form class="sp-auto-margin">
 
       <h3>Send feedback to no one</h3>
 

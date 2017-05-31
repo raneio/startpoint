@@ -16,6 +16,9 @@ $color-highlight: seagreen !default
 $color-input-background: white !default
 $color-input-content: #333 !default
 
+$color-background--invert: #0e0e0e !default
+$color-content--invert: white !default
+
 
 //
 // Space
@@ -35,6 +38,9 @@ $font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !default
 $font-size: 1rem !default
 $font-weight: normal !default
 
+$font-color--invert: $color-content--invert !default
+$font-weight--invert: 400 !default
+
 
 //
 // Headings
@@ -48,6 +54,9 @@ $heading-font-weight: 300 !default
 $heading-size-base: 1rem !default
 $heading-size-scale: 1.414 !default
 
+$heading-font-color--invert: $font-color--invert !default
+$heading-font-weight--invert: 400 !default
+
 
 //
 // Links
@@ -56,6 +65,10 @@ $heading-size-scale: 1.414 !default
 $link-font-color--basic: $color-highlight !default
 $link-font-color--hover: saturate($color-highlight, 20%) !default
 $link-font-color--activ: saturate($color-highlight, 50%) !default
+
+$link-font-color--basic-invert: $color-content--invert !default
+$link-font-color--hover-invert: mix($color-background--invert, $color-content--invert, 30%) !default
+$link-font-color--activ-invert: mix($color-background--invert, $color-content--invert, 20%) !default
 
 $link-text-decoration--basic: none !default
 $link-text-decoration--hover: underline !default
