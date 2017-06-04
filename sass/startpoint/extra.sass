@@ -1,0 +1,62 @@
+@import "default"
+@import "functions"
+
+
+//
+// Auto Margin
+// --------------------------------------------------
+// add top margin to other than first child
+
+[data-margin],
+[margin]
+
+  > * + *
+    margin-top: 1.5em
+
+
+//
+// Invert
+// --------------------------------------------------
+
+[data-invert],
+[invert]
+  background-color: $color-background--invert
+  color: $color-content--invert
+
+  a
+    color: $link-font-color--basic-invert
+
+    &:hover
+      color: $link-font-color--hover-invert
+
+    &:active
+      color: $link-font-color--activ-invert
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6
+    color: $heading-font-color--invert
+
+  label
+    color: $label-font-color--invert
+
+  button
+    background: $button-background--basic-invert
+    border: $button-border--basic-invert
+    box-shadow: $button-shadow-box--basic-invert
+    color: $button-font-color--basic-invert
+
+    &:hover
+      background: $button-background--hover-invert
+      border: $button-border--hover-invert
+      box-shadow: $button-shadow-box--hover-invert
+      color: $button-font-color--hover-invert
+
+    &:active
+      background: $button-background--activ-invert
+      border: $button-border--activ-invert
+      box-shadow: $button-shadow-box--activ-invert
+      color: $button-shadow-box--activ-invert
