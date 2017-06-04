@@ -11,6 +11,7 @@ https://cdn.rawgit.com/raneio/startpoint/8d748b15/example.html
 ### How to use
 
 ```
-sass --watch sass/style.sass:style.min.css --style compressed
+Download Zip: https://github.com/raneio/startpoint/archive/master.zip
+Compile Sass: sass --watch sass/style.sass:style.min.css --style compressed
 ```
 
