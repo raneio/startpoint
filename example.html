@@ -9,78 +9,51 @@
 </head>
 <body>
 
-  <nav class="sp-navbar sp-invert">
-
-    <label class="sp-navpop-switch" for="sp-navpop-state"></label>
-
-    <div class="sp-nav-items">
-      <h4>Startpoint</h4>
-      <a href="#">Frontpage</a>
-    </div>
-
-    <div class="sp-nav-items">
-      <a href="#">Frontpage</a>
-      <a href="#">Features</a>
-    </div>
-
-  </nav>
-
-  <input id="sp-navpop-state" type="checkbox">
-  <nav class="sp-navpop sp-invert">
-
-    <label class="sp-navpop-switch sp-close" for="sp-navpop-state"></label>
-
-    <div class="sp-nav-items">
-      <a href="#">Frontpage</a>
-      <a href="#">Features</a>
-      <a href="#">About Us</a>
-      <a href="#">mail@example.com</a>
-      <a href="#">Twitter</a>
-    </div>
-
-  </nav>
-
-  <div class="container sp-auto-margin">
+  <section class="container" margin>
 
     <h1>Starpoint Example</h1>
     <a href="https://github.com/raneio/startpoint">https://github.com/raneio/startpoint</a>
 
     <p>Mauno Henrik Koivisto (25 November 1923 – 12 May 2017) was a Finnish politician who served as the ninth President of Finland from 1982 to 1994. He also served twice as Prime Minister, from 1968 to 1970 and 1979 to 1982. He was the first Social Democrat to be elected President of Finland.</p>
 
-    <h2>Early life</h2>
+    <p>Koivisto was born in Turku, Finland, the second son of Juho Koivisto, a carpenter at Crichton-Vulcan shipyard, and Hymni Sofia Eskola, who died when he was 10. After attending primary school, Koivisto worked a number of jobs, and at the beginning of the Winter War in 1939 joined a field firefighting unit at the age of 16. During the Continuation War, Koivisto served in the Infantry Detachment Törni led by Lauri Törni, which was a reconnaissance detachment operating behind enemy lines..</p>
 
-    <p>Koivisto was born in Turku, Finland, the second son of Juho Koivisto, a carpenter at Crichton-Vulcan shipyard, and Hymni Sofia Eskola, who died when he was 10. After attending primary school, Koivisto worked a number of jobs, and at the beginning of the Winter War in 1939 joined a field firefighting unit at the age of 16. During the Continuation War, Koivisto served in the Infantry Detachment Törni led by Lauri Törni, which was a reconnaissance detachment operating behind enemy lines. This detachment was only open to selected volunteers. During the war he received the Order of the Cross of Liberty (2nd class) and was promoted to the rank of corporal. While reflecting on his wartime experiences later in life, he said "When you have taken part in a game in which your own life is at stake, all other games are small after that".</p>
+  </section>
 
-    <h3>Bibliography</h3>
+  <section invert>
+    <div class="container" margin>
 
-    <ul class="sp-bullets">
-      <li><i>Sosiaaliset suhteet Turun satamassa</i>, 1956</li>
-      <li><i>Linjan vetoa</i>, 1968</li>
-      <li><i>Väärää politiikkaa</i>, 1978 <a href="#">ISBN 951-26-1511-8</a></li>
-      <li><i>Tästä lähtien</i>, 1981 <a href="#">ISBN 951-26-2285-8</a></li>
-      <li><i>Linjaviitat</i>, 1983</li>
-      <li><i>Politiikkaa ja politikointia</i>, 1978–81; 1988</li>
-      <li><i>Maantiede ja historiallinen kokemus: Ulkopoliittisia kannanottoja</i>, 1992 <a href="#">ISBN 951-1-12614-8</a></li>
-      <li><i>Kaksi kautta</i>, 1994 <a href="#">ISBN 951-26-3947-5</a></li>
-      <li><i>Historian tekijät</i>, 1995 <a href="#">ISBN 951-26-4082-1</a></li>
-      <li><i>Liikkeen suunta</i>, 1997 <a href="#">ISBN 951-26-4272-7</a></li>
-      <li><i>Koulussa ja sodassa</i>, 1998 <a href="#">ISBN 951-26-4384-7</a></li>
-      <li><i>Venäjän idea</i>, 2001 <a href="#">ISBN 951-31-2108-9</a></li>
-      <li><i>Itsenäiseksi imperiumin kainalossa - mietteitä kansojen kohtaloista</i>, 2004 <a href="#">ISBN 951-31-3181-5</a></li>
-    </ul>
+      <h3>Invert colors</h3>
 
-    <form class="sp-auto-margin">
+      <ul class="sp-bullets">
+        <li><i>Maantiede ja historiallinen kokemus: Ulkopoliittisia kannanottoja</i>, 1992 <a href="#">ISBN 951-1-12614-8</a></li>
+        <li><i>Kaksi kautta</i>, 1994 <a href="#">ISBN 951-26-3947-5</a></li>
+        <li><i>Historian tekijät</i>, 1995 <a href="#">ISBN 951-26-4082-1</a></li>
+        <li><i>Liikkeen suunta</i>, 1997 <a href="#">ISBN 951-26-4272-7</a></li>
+        <li><i>Koulussa ja sodassa</i>, 1998 <a href="#">ISBN 951-26-4384-7</a></li>
+        <li><i>Venäjän idea</i>, 2001 <a href="#">ISBN 951-31-2108-9</a></li>
+        <li><i>Itsenäiseksi imperiumin kainalossa - mietteitä kansojen kohtaloista</i>, 2004 <a href="#">ISBN 951-31-3181-5</a></li>
+      </ul>
 
-      <h3>Send feedback to no one</h3>
+      <button type="button">Invert button</button>
+
+    </div>
+  </section>
+
+  <section class="container">
+
+    <form margin>
+
+      <h3>Send feedback</h3>
 
       <label>
         Name
-        <input type="text" value="" placeholder="This is placeholder">
+        <input type="text" placeholder="Give your name" value="Mauno Koivisto">
       </label>
 
       <label>
         Email
-        <input type="email" value="me@example.com">
+        <input type="email" placeholder="placeholder@example.com">
       </label>
 
       <label>
@@ -121,12 +94,12 @@
       </ul>
 
       <div>
-        <button type="button">Send This Form</button>
+        <button type="button">Submit Form</button>
       </div>
 
     </form>
 
-  </div>
+  </section>
 
 </body>
 </html>

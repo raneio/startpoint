@@ -10,11 +10,15 @@ $rem: 16px
 // Colors
 // --------------------------------------------------
 
-$color-background: #fefefe
-$color-content: dimgray
-$color-highlight: seagreen
+$color-background: #FEFEFE
+$color-content: #222
+$color-highlight: #00B7F9
 $color-input-background: white
 $color-input-content: #333
+
+$color-background--invert: invert($color-background)
+$color-content--invert: invert($color-content)
+$color-highlight--invert: $color-highlight
 
 
 //
@@ -33,7 +37,9 @@ $space-margin: 1.5rem
 $font-color: $color-content
 $font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
 $font-size: 1rem
-$font-weight: normal
+$font-weight: 400
+
+$font-color--invert: $color-content--invert
 
 
 //
@@ -48,14 +54,20 @@ $heading-font-weight: 300
 $heading-size-base: 1rem
 $heading-size-scale: 1.414
 
+$heading-font-color--invert: $font-color--invert
+
 
 //
 // Links
 // --------------------------------------------------
 
 $link-font-color--basic: $color-highlight
-$link-font-color--hover: saturate($color-highlight, 20%)
-$link-font-color--activ: saturate($color-highlight, 50%)
+$link-font-color--hover: mix($color-content, $color-highlight, 30%)
+$link-font-color--activ: mix($color-content, $color-highlight, 50%)
+
+$link-font-color--basic-invert: $color-highlight--invert
+$link-font-color--hover-invert: mix($color-content--invert, $color-highlight--invert, 30%)
+$link-font-color--activ-invert: mix($color-content--invert, $color-highlight--invert, 50%)
 
 $link-text-decoration--basic: none
 $link-text-decoration--hover: underline
@@ -70,33 +82,49 @@ $link-transition--activ: $link-transition--hover
 // Buttons
 // --------------------------------------------------
 
-$button-border-radius: 0
+$button-border-radius: 10rem
 $button-font-family: $font-family
 $button-font-size: 1.2rem
 $button-font-weight: normal
 $button-padding: 1em 2em
 
-$button-background--basic: $color-highlight
-$button-background--hover: saturate($color-highlight, 20%)
-$button-background--activ: saturate($color-highlight, 50%)
+$button-background--basic: transparent
+$button-background--hover: $button-background--basic
+$button-background--activ: $button-background--basic
 
-$button-border--basic: (1px/$rem+em) solid $color-highlight
-$button-border--hover: $button-border--basic
-$button-border--activ: $button-border--hover
+$button-background--basic-invert: $button-background--basic
+$button-background--hover-invert: $button-background--basic-invert
+$button-background--activ-invert: $button-background--basic-invert
 
-$button-font-color--basic: $color-background
-$button-font-color--hover: $button-font-color--basic
-$button-font-color--activ: $button-font-color--hover
+$button-border--basic: (2px/$rem+em) solid $color-highlight
+$button-border--hover: (2px/$rem+em) solid mix($color-content, $color-highlight, 30%)
+$button-border--activ: (2px/$rem+em) solid mix($color-content, $color-highlight, 50%)
 
-$button-shadow-box--basic: 0 (3px/$rem+em) (5px/$rem+em) mix(transparent, $color-content, 50%)
+$button-border--basic-invert: $button-border--basic
+$button-border--hover-invert: (2px/$rem+em) solid mix($color-content--invert, $color-highlight, 30%)
+$button-border--activ-invert: (2px/$rem+em) solid mix($color-content--invert, $color-highlight, 30%)
+
+$button-font-color--basic: $color-highlight
+$button-font-color--hover: mix($color-content, $color-highlight, 30%)
+$button-font-color--activ: mix($color-content, $color-highlight, 50%)
+
+$button-font-color--basic-invert: $button-font-color--basic
+$button-font-color--hover-invert: mix($color-content--invert, $color-highlight, 30%)
+$button-font-color--activ-invert: mix($color-content--invert, $color-highlight, 50%)
+
+$button-shadow-box--basic: none
 $button-shadow-box--hover: $button-shadow-box--basic
-$button-shadow-box--activ: 0 (2px/$rem+em) (5px/$rem+em) mix(transparent, $color-content, 50%)
+$button-shadow-box--activ: $button-shadow-box--basic
+
+$button-shadow-box--basic-invert: $button-shadow-box--basic
+$button-shadow-box--hover-invert: $button-shadow-box--basic-invert
+$button-shadow-box--activ-invert: $button-shadow-box--basic-invert
 
 $button-transform--basic: none
 $button-transform--hover: $button-transform--basic
-$button-transform--activ: $button-transform--hover
+$button-transform--activ: translateY((1px/$rem+em))
 
-$button-transition--basic: transform .2s, background .2s, box-shadow .2s
+$button-transition--basic: color .2s, border .2s, transform .2s
 $button-transition--hover: $button-transition--basic
 $button-transition--activ: none
 
@@ -105,10 +133,10 @@ $button-transition--activ: none
 // Labels
 // --------------------------------------------------
 
-$label-display: block
 $label-font-color: $color-content
-$label-font-family: $font-family
 $label-font-size: .8rem
+
+$label-font-color--invert: $color-content--invert
 
 
 //
