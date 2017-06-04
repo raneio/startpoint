@@ -75,7 +75,7 @@ $link-text-decoration--activ: $link-text-decoration--hover !default
 
 $link-transition--basic: color .2s !default
 $link-transition--hover: $link-transition--basic !default
-$link-transition--activ: $link-transition--hover !default
+$link-transition--activ: none !default
 
 
 //
@@ -83,6 +83,8 @@ $link-transition--activ: $link-transition--hover !default
 // --------------------------------------------------
 
 $button-border-radius: 10rem !default
+$button-border-style: solid !default
+$button-border-width: (2px/$rem+em) !default
 $button-font-family: $font-family !default
 $button-font-size: 1.2rem !default
 $button-font-weight: normal !default
@@ -96,21 +98,21 @@ $button-background--basic-invert: $button-background--basic !default
 $button-background--hover-invert: $button-background--basic-invert !default
 $button-background--activ-invert: $button-background--basic-invert !default
 
-$button-border--basic: (2px/$rem+em) solid $color-highlight !default
-$button-border--hover: (2px/$rem+em) solid mix($color-content, $color-highlight, 30%) !default
-$button-border--activ: (2px/$rem+em) solid mix($color-content, $color-highlight, 50%) !default
+$button-border-color--basic: $color-highlight !default
+$button-border-color--hover: mix($color-content, $button-border-color--basic, 30%) !default
+$button-border-color--activ: mix($color-content, $button-border-color--basic, 50%) !default
 
-$button-border--basic-invert: $button-border--basic !default
-$button-border--hover-invert: (2px/$rem+em) solid mix($color-content--invert, $color-highlight, 30%) !default
-$button-border--activ-invert: (2px/$rem+em) solid mix($color-content--invert, $color-highlight, 30%) !default
+$button-border-color--basic-invert: $button-border-color--basic !default
+$button-border-color--hover-invert: mix($color-content--invert, $button-border-color--basic-invert, 30%) !default
+$button-border-color--activ-invert: mix($color-content--invert, $button-border-color--basic-invert, 50%) !default
 
 $button-font-color--basic: $color-highlight !default
-$button-font-color--hover: mix($color-content, $color-highlight, 30%) !default
-$button-font-color--activ: mix($color-content, $color-highlight, 50%) !default
+$button-font-color--hover: mix($color-content, $button-font-color--basic, 30%) !default
+$button-font-color--activ: mix($color-content, $button-font-color--basic, 50%) !default
 
 $button-font-color--basic-invert: $button-font-color--basic !default
-$button-font-color--hover-invert: mix($color-content--invert, $color-highlight, 30%) !default
-$button-font-color--activ-invert: mix($color-content--invert, $color-highlight, 50%) !default
+$button-font-color--hover-invert: mix($color-content--invert, $button-font-color--basic-invert, 30%) !default
+$button-font-color--activ-invert: mix($color-content--invert, $button-font-color--basic-invert, 50%) !default
 
 $button-shadow-box--basic: none !default
 $button-shadow-box--hover: $button-shadow-box--basic !default
@@ -174,9 +176,9 @@ $input-transform--basic: none !default
 $input-transform--hover: $input-transform--basic !default
 $input-transform--focus: $input-transform--hover !default
 
-$input-transition--basic: .2s !default
+$input-transition--basic: all .2s !default
 $input-transition--hover: $input-transition--basic !default
-$input-transition--focus: $input-transition--hover !default
+$input-transition--focus: none !default
 
 
 //

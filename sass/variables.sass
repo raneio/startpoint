@@ -75,7 +75,7 @@ $link-text-decoration--activ: $link-text-decoration--hover
 
 $link-transition--basic: color .2s
 $link-transition--hover: $link-transition--basic
-$link-transition--activ: $link-transition--hover
+$link-transition--activ: none
 
 
 //
@@ -83,6 +83,8 @@ $link-transition--activ: $link-transition--hover
 // --------------------------------------------------
 
 $button-border-radius: 10rem
+$button-border-style: solid
+$button-border-width: (2px/$rem+em)
 $button-font-family: $font-family
 $button-font-size: 1.2rem
 $button-font-weight: normal
@@ -96,21 +98,21 @@ $button-background--basic-invert: $button-background--basic
 $button-background--hover-invert: $button-background--basic-invert
 $button-background--activ-invert: $button-background--basic-invert
 
-$button-border--basic: (2px/$rem+em) solid $color-highlight
-$button-border--hover: (2px/$rem+em) solid mix($color-content, $color-highlight, 30%)
-$button-border--activ: (2px/$rem+em) solid mix($color-content, $color-highlight, 50%)
+$button-border-color--basic: $color-highlight
+$button-border-color--hover: mix($color-content, $button-border-color--basic, 30%)
+$button-border-color--activ: mix($color-content, $button-border-color--basic, 50%)
 
-$button-border--basic-invert: $button-border--basic
-$button-border--hover-invert: (2px/$rem+em) solid mix($color-content--invert, $color-highlight, 30%)
-$button-border--activ-invert: (2px/$rem+em) solid mix($color-content--invert, $color-highlight, 30%)
+$button-border-color--basic-invert: $button-border-color--basic
+$button-border-color--hover-invert: mix($color-content--invert, $button-border-color--basic-invert, 30%)
+$button-border-color--activ-invert: mix($color-content--invert, $button-border-color--basic-invert, 50%)
 
 $button-font-color--basic: $color-highlight
-$button-font-color--hover: mix($color-content, $color-highlight, 30%)
-$button-font-color--activ: mix($color-content, $color-highlight, 50%)
+$button-font-color--hover: mix($color-content, $button-font-color--basic, 30%)
+$button-font-color--activ: mix($color-content, $button-font-color--basic, 50%)
 
 $button-font-color--basic-invert: $button-font-color--basic
-$button-font-color--hover-invert: mix($color-content--invert, $color-highlight, 30%)
-$button-font-color--activ-invert: mix($color-content--invert, $color-highlight, 50%)
+$button-font-color--hover-invert: mix($color-content--invert, $button-font-color--basic-invert, 30%)
+$button-font-color--activ-invert: mix($color-content--invert, $button-font-color--basic-invert, 50%)
 
 $button-shadow-box--basic: none
 $button-shadow-box--hover: $button-shadow-box--basic
@@ -174,9 +176,9 @@ $input-transform--basic: none
 $input-transform--hover: $input-transform--basic
 $input-transform--focus: $input-transform--hover
 
-$input-transition--basic: .2s
+$input-transition--basic: all .2s
 $input-transition--hover: $input-transition--basic
-$input-transition--focus: $input-transition--hover
+$input-transition--focus: none
 
 
 //
