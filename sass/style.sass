@@ -1,18 +1,20 @@
 @import "variables"
 @import "startpoint/core"
-@import "startpoint/extra"
+@import "startpoint/helpers"
+@import "startpoint/components/navbar"
 
 body
-  padding: 0 0 4rem 0
+  padding: 3rem 0 3rem 0
 
 .container
-  margin-left: auto
-  margin-right: auto
-  padding-top: 2rem
-  padding-bottom: 2rem
-  max-width: 960px
+  margin: 0 auto
+  padding: 2rem 0
+  max-width: $breakpoint-xl
   width: calc(100% - 4rem)
 
 ul.sp-bullets
   padding-left: 2rem
   list-style: disc
+
+.navbar h4
+  font-weight: 400

@@ -1,0 +1,155 @@
+@import "../default"
+
+
+//
+// Variables
+// --------------------------------------------------
+
+$navbar-height: 3rem !default
+$navbar-breakpoint: $breakpoint-m !default
+$navbar-color-background: $color-background !default
+$navbar-color-content: $color-content !default
+
+$navbar-color-background--invert: $color-background--invert !default
+$navbar-color-content--invert: $color-content--invert !default
+
+//
+// Navbar
+// --------------------------------------------------
+
+.navbar
+  z-index: 100000
+  height: $navbar-height
+  display: flex
+  justify-content: space-between
+  align-items: center
+  flex: 1 0 0
+  padding-left: 2rem
+  padding-right: 2rem
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  overflow-x: auto
+  background: $navbar-color-background
+
+  .overlay-nav-switch
+    -webkit-appearance: none
+    -moz-appearance: none
+    appearance: none
+    min-width: 30px
+    height: 30px
+    margin: 0
+    cursor: pointer
+    position: relative
+    outline: none
+    order: 99
+
+  .overlay-nav
+    opacity: 0
+    pointer-events: none
+    max-width: 0
+
+
+  *:not(.overlay-nav-switch)
+    flex: 1 0 0
+    display: flex
+    align-items: center
+
+    & + *
+      justify-content: flex-end
+
+    *
+      flex: 0 0 0
+      margin: 0 .5em
+      white-space: nowrap
+
+      &:first-child
+        margin-left: 0
+
+      &:last-child
+        margin-right: 1em
+
+  .overlay-nav-switch:checked ~ .overlay-nav
+    opacity: 1
+    pointer-events: auto
+    display: flex
+    position: fixed
+    top: $navbar-height
+    bottom: 0
+    left: 0
+    right: 0
+    transition: opacity .2s
+    flex-direction: column
+    transition: opacity .2s
+    align-content: center
+    background-color: mix(transparent, $navbar-color-background, 5%)
+    max-width: none
+
+    *
+      flex: 1 0 0
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 100%
+      white-space: nowrap
+
+  @media (min-width: $navbar-breakpoint)
+    .overlay-nav-switch:not(:checked)
+      display: none
+
+    .overlay-nav
+      opacity: 1
+      pointer-events: auto
+      max-width: none
+
+
+  //
+  // Nav switch animation
+  // --------------------------------------------------
+
+  .overlay-nav-switch
+
+    &::before,
+    &::after
+      content: ''
+      left: 0
+      right: 0
+      position: absolute
+      transition: top .2s, bottom .2s, transform .2s
+      height: 1px
+      background-color: $navbar-color-content
+
+    &::before
+      top: 10px
+
+    &::after
+      bottom: 10px
+
+    &:checked
+
+      &::before
+        top: 15px
+        transform: rotate(45deg)
+
+      &::after
+        bottom: 15px
+        transform: rotate(-45deg)
+
+
+  //
+  // Invert
+  // --------------------------------------------------
+
+  &[data-invert],
+  &[invert]
+    background: $navbar-color-background--invert
+
+    .overlay-nav-switch
+
+      &::before,
+      &::after
+        background-color: $navbar-color-content--invert
+
+    .overlay-nav-switch:checked ~ .overlay-nav
+      background-color: mix(transparent, $navbar-color-background--invert, 5%)
