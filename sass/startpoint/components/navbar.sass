@@ -83,7 +83,7 @@ $navbar-color-content--invert: $color-content--invert !default
     flex-direction: column
     transition: opacity .2s
     align-content: center
-    background-color: mix(transparent, $navbar-color-background, 5%)
+    background-color: mix(transparent, $navbar-color-background, 4%)
     max-width: none
 
     *
@@ -141,8 +141,7 @@ $navbar-color-content--invert: $color-content--invert !default
   // Invert
   // --------------------------------------------------
 
-  &[data-invert],
-  &[invert]
+  &[data-invert]
     background: $navbar-color-background--invert
 
     .overlay-nav-switch
@@ -152,4 +151,4 @@ $navbar-color-content--invert: $color-content--invert !default
         background-color: $navbar-color-content--invert
 
     .overlay-nav-switch:checked ~ .overlay-nav
-      background-color: mix(transparent, $navbar-color-background--invert, 5%)
+      background-color: mix(transparent, $navbar-color-background--invert, 4%)
