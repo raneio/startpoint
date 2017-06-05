@@ -1,0 +1,111 @@
+@import "../default"
+
+
+//
+// Variables
+// --------------------------------------------------
+
+
+//
+// Modal
+// --------------------------------------------------
+
+.modal
+  pointer-events: none
+
+  *
+    transition: opacity .2s
+
+  .modal-close
+    z-index: 200002
+    position: fixed
+    top: 2rem
+    right: 2rem
+    -webkit-appearance: none
+    -moz-appearance: none
+    appearance: none
+    width: 30px
+    height: 30px
+    margin: 0
+    cursor: pointer
+    outline: none
+    opacity: 0
+
+    &::before,
+    &::after
+      content: ''
+      left: 0
+      right: 0
+      position: absolute
+      transition: top .2s, bottom .2s, transform .2s
+      height: 1px
+      background-color: $color-content--invert
+
+    &::before
+      top: 15px
+      transform: rotate(45deg)
+
+    &::after
+      bottom: 15px
+      transform: rotate(-45deg)
+
+    ~ *
+      opacity: 0
+
+    &:checked
+      opacity: 1
+      pointer-events: auto
+
+      ~ *
+        opacity: 1
+        pointer-events: auto
+
+  .modal-background
+    position: fixed
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    background-color: mix(transparent, $color-background--invert, 10%)
+    z-index: 200000
+
+  .modal-box
+    position: fixed
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    z-index: 200001
+    background-color: $color-background
+    max-height: calc(100% - 6rem)
+    width: calc(100% - 6rem)
+    display: flex
+    flex-direction: column
+
+    header,
+    footer
+      display: flex
+      flex-shrink: 0
+      justify-content: space-between
+      align-items: center
+      padding: 1rem 2rem
+
+      *
+        display: flex
+        align-items: center
+
+
+    .modal-content
+      overflow: auto
+      padding: 1rem 2rem
+
+  &[data-invert]
+
+    .modal-close::before,
+    .modal-close::after
+      background-color: $color-content
+
+    .modal-background
+      background-color: mix(transparent, $color-background, 10%)
+
+    .modal-box
+      background-color: $color-background--invert
