@@ -3,12 +3,77 @@
 
 
 //
+// Hide
+// --------------------------------------------------
+// Force display to none
+
+[data-hide=""]
+  display: none !important
+
+@media (max-width: $breakpoint-s - 1)
+  [data-hide~="xs"],
+  [data-hide~="s-"],
+  [data-hide~="m-"],
+  [data-hide~="l-"],
+  [data-hide~="xl-"]
+    display: none !important
+
+@media (min-width: $breakpoint-s) and (max-width: $breakpoint-m - 1)
+  [data-hide~="s"],
+  [data-hide~="m-"],
+  [data-hide~="l-"],
+  [data-hide~="xl-"],
+  [data-hide~="xs+"]
+    display: none !important
+
+@media (min-width: $breakpoint-m) and (max-width: $breakpoint-l - 1)
+  [data-hide~="m"],
+  [data-hide~="l-"],
+  [data-hide~="xl-"],
+  [data-hide~="xs+"],
+  [data-hide~="s+"]
+    display: none !important
+
+@media (min-width: $breakpoint-l) and (max-width: $breakpoint-xl - 1)
+  [data-hide~="l"],
+  [data-hide~="xl-"],
+  [data-hide~="xs+"],
+  [data-hide~="s+"],
+  [data-hide~="m+"]
+    display: none !important
+
+@media (min-width: $breakpoint-xl)
+  [data-hide~="xl"],
+  [data-hide~="xs+"],
+  [data-hide~="s+"],
+  [data-hide~="m+"],
+  [data-hide~="l+"]
+    display: none !important
+
+
+//
+// Width
+// --------------------------------------------------
+
+[data-width="s"]
+  max-width: $breakpoint-s
+
+[data-width="m"]
+  max-width: $breakpoint-m
+
+[data-width="l"]
+  max-width: $breakpoint-l
+
+[data-width="xl"]
+  max-width: $breakpoint-xl
+
+
+//
 // Auto Margin
 // --------------------------------------------------
 // Add top margin to other than first child
 
-[data-margin],
-[margin]
+[data-margin]
 
   > * + *
     margin-top: 1.5em
@@ -19,8 +84,7 @@
 // --------------------------------------------------
 // Turn the colors into opposite colors
 
-[data-invert],
-[invert]
+[data-invert]
   background-color: $color-background--invert
   color: $color-content--invert
 
