@@ -92,15 +92,15 @@ $link-transition--activ: none !default
 // Buttons
 // --------------------------------------------------
 
-$button-border-radius: 10rem !default
+$button-border-radius: (3px/$rem+em) !default
 $button-border-style: solid !default
-$button-border-width: (2px/$rem+em) !default
+$button-border-width: (1px/$rem+em) !default
 $button-font-family: $font-family !default
 $button-font-size: 1.2rem !default
 $button-font-weight: normal !default
-$button-padding: 1em 2em !default
+$button-padding: .5em 1.5em !default
 
-$button-background--basic: transparent !default
+$button-background--basic: $color-highlight !default
 $button-background--hover: $button-background--basic !default
 $button-background--activ: $button-background--basic !default
 
@@ -109,20 +109,20 @@ $button-background--hover-invert: $button-background--basic-invert !default
 $button-background--activ-invert: $button-background--basic-invert !default
 
 $button-border-color--basic: $color-highlight !default
-$button-border-color--hover: mix($color-content, $button-border-color--basic, 30%) !default
-$button-border-color--activ: mix($color-content, $button-border-color--basic, 50%) !default
+$button-border-color--hover: mix($color-content, $button-border-color--basic, 50%) !default
+$button-border-color--activ: $button-border-color--hover !default
 
 $button-border-color--basic-invert: $button-border-color--basic !default
-$button-border-color--hover-invert: mix($color-content--invert, $button-border-color--basic-invert, 30%) !default
-$button-border-color--activ-invert: mix($color-content--invert, $button-border-color--basic-invert, 50%) !default
+$button-border-color--hover-invert: $button-border-color--hover !default
+$button-border-color--activ-invert: $button-border-color--activ !default
 
-$button-font-color--basic: $color-highlight !default
-$button-font-color--hover: mix($color-content, $button-font-color--basic, 30%) !default
-$button-font-color--activ: mix($color-content, $button-font-color--basic, 50%) !default
+$button-font-color--basic: $color-background !default
+$button-font-color--hover: $button-font-color--basic !default
+$button-font-color--activ: $button-font-color--basic !default
 
-$button-font-color--basic-invert: $button-font-color--basic !default
-$button-font-color--hover-invert: mix($color-content--invert, $button-font-color--basic-invert, 30%) !default
-$button-font-color--activ-invert: mix($color-content--invert, $button-font-color--basic-invert, 50%) !default
+$button-font-color--basic-invert: $color-background--invert !default
+$button-font-color--hover-invert: $button-font-color--basic-invert !default
+$button-font-color--activ-invert: $button-font-color--basic-invert !default
 
 $button-shadow-box--basic: none !default
 $button-shadow-box--hover: $button-shadow-box--basic !default
