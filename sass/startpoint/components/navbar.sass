@@ -21,17 +21,19 @@ $navbar-color-content--invert: $color-content--invert !default
   z-index: 100000
   height: $navbar-height
   display: flex
-  justify-content: space-between
   align-items: center
-  flex: 1 0 0
-  padding-left: 2rem
+  padding-left: 1rem
   padding-right: 2rem
   position: fixed
   top: 0
   left: 0
   right: 0
   overflow-x: auto
-  background: $navbar-color-background
+  background-color: $navbar-color-background
+  white-space: nowrap
+
+  *
+    margin-left: 1rem
 
   .overlay-nav-switch
     -webkit-appearance: none
@@ -39,7 +41,6 @@ $navbar-color-content--invert: $color-content--invert !default
     appearance: none
     min-width: 30px
     height: 30px
-    margin: 0
     cursor: pointer
     position: relative
     outline: none
@@ -49,26 +50,25 @@ $navbar-color-content--invert: $color-content--invert !default
     opacity: 0
     pointer-events: none
     max-width: 0
+    margin: 0
 
 
   *:not(.overlay-nav-switch)
-    flex: 1 0 0
+    flex: 0 1 1
     display: flex
     align-items: center
 
-    & + *
-      justify-content: flex-end
-
     *
       flex: 0 0 0
-      margin: 0 .5em
-      white-space: nowrap
 
       &:first-child
         margin-left: 0
 
-      &:last-child
-        margin-right: 1em
+    &.space
+      width: 100%
+      flex: 1 0 0
+      background-color: red
+      height: 10px
 
   .overlay-nav-switch:checked ~ .overlay-nav
     opacity: 1
@@ -83,7 +83,7 @@ $navbar-color-content--invert: $color-content--invert !default
     flex-direction: column
     transition: opacity .2s
     align-content: center
-    background-color: mix(transparent, $navbar-color-background, 4%)
+    background-color: mix(transparent, $navbar-color-background, 10%)
     max-width: none
 
     *
@@ -102,6 +102,7 @@ $navbar-color-content--invert: $color-content--invert !default
       opacity: 1
       pointer-events: auto
       max-width: none
+      margin-left: 1rem
 
 
   //
@@ -151,4 +152,4 @@ $navbar-color-content--invert: $color-content--invert !default
         background-color: $navbar-color-content--invert
 
     .overlay-nav-switch:checked ~ .overlay-nav
-      background-color: mix(transparent, $navbar-color-background--invert, 4%)
+      background-color: mix(transparent, $navbar-color-background--invert, 10%)
