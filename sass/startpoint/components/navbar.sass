@@ -5,135 +5,63 @@
 // Variables
 // --------------------------------------------------
 
-$navbar-height: 3rem !default
-$navbar-breakpoint: $breakpoint-m !default
 $navbar-color-background: $color-background !default
 $navbar-color-content: $color-content !default
+$navbar-height: 3rem !default
 
 $navbar-color-background--invert: $color-background--invert !default
 $navbar-color-content--invert: $color-content--invert !default
+
 
 //
 // Navbar
 // --------------------------------------------------
 
-.navbar
+nav.navbar
   z-index: 100000
-  height: $navbar-height
+  min-height: $navbar-height
   display: flex
   align-items: center
   padding-left: 1rem
-  padding-right: 2rem
-  position: fixed
-  top: 0
-  left: 0
-  right: 0
-  overflow-x: auto
+  padding-right: 1rem
   background-color: $navbar-color-background
   white-space: nowrap
 
   *
     margin-left: 1rem
-
-  .overlay-nav-switch
-    -webkit-appearance: none
-    -moz-appearance: none
-    appearance: none
-    min-width: 30px
-    height: 30px
-    cursor: pointer
-    position: relative
-    outline: none
-    order: 99
-
-  .overlay-nav
-    opacity: 0
-    pointer-events: none
-    max-width: 0
-    margin: 0
-
-
-  *:not(.overlay-nav-switch)
     flex: 0 1 1
     display: flex
     align-items: center
 
-    *
-      flex: 0 0 0
+    &:first-child
+      margin-left: 0
 
-      &:first-child
-        margin-left: 0
+  hr
+    width: 100%
+    flex: 1 0 0
+    border-width: 0
 
-    &.space
-      width: 100%
-      flex: 1 0 0
-
-  .overlay-nav-switch:checked ~ .overlay-nav
-    opacity: 1
-    pointer-events: auto
-    display: flex
-    position: fixed
-    top: $navbar-height
-    bottom: 0
-    left: 0
-    right: 0
-    transition: opacity .2s
-    flex-direction: column
-    transition: opacity .2s
-    align-content: center
-    background-color: mix(transparent, $navbar-color-background, 10%)
-    max-width: none
-
-    *
-      flex: 1 0 0
-      display: flex
-      align-items: center
-      justify-content: center
-      width: 100%
-      white-space: nowrap
-
-  @media (min-width: $navbar-breakpoint)
-    .overlay-nav-switch:not(:checked)
-      display: none
-
-    .overlay-nav
-      opacity: 1
-      pointer-events: auto
-      max-width: none
-      margin-left: 1rem
-
-
-  //
-  // Nav switch animation
-  // --------------------------------------------------
-
-  .overlay-nav-switch
+  .nav-switch-icon
+    width: 30px
+    height: 30px
+    position: relative
 
     &::before,
     &::after
       content: ''
-      left: 0
-      right: 0
+      left: 5px
+      right: 5px
       position: absolute
-      transition: top .2s, bottom .2s, transform .2s
       height: 1px
       background-color: $navbar-color-content
 
     &::before
-      top: 10px
+      top: 11px
+      transition: top .2s, bottom .2s, transform .5s
 
     &::after
-      bottom: 10px
-
-    &:checked
-
-      &::before
-        top: 15px
-        transform: rotate(45deg)
-
-      &::after
-        bottom: 15px
-        transform: rotate(-45deg)
+      bottom: 11px
+      transition: top .2s, bottom .2s, transform .3s
 
 
   //
@@ -143,11 +71,47 @@ $navbar-color-content--invert: $color-content--invert !default
   &[data-invert]
     background: $navbar-color-background--invert
 
-    .overlay-nav-switch
+    .nav-switch-icon
 
       &::before,
       &::after
         background-color: $navbar-color-content--invert
 
-    .overlay-nav-switch:checked ~ .overlay-nav
-      background-color: mix(transparent, $navbar-color-background--invert, 10%)
+
+//
+// Overlay navigation
+// --------------------------------------------------
+
+input[type="checkbox"]:checked + nav.navbar,
+nav.navbar[data-nav-switch="true"]
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  flex-direction: column
+  align-content: stretch
+
+  *
+    flex-direction: column
+    margin: 0
+    padding-top: 1rem
+
+  .nav-switch-icon
+    position: fixed
+    top: .5rem
+    right: 1rem
+
+    &::before
+      top: 15px
+      transform: rotate(225deg)
+
+    &::after
+      bottom: 15px
+      transform: rotate(135deg)
+
+  hr
+    flex: 0 0 0
+
+  [data-hide]
+    display: flex !important
