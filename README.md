@@ -5,7 +5,7 @@ The sass-based starting point to every web projects without javascript.
 
 ### Example
 
-https://cdn.rawgit.com/raneio/startpoint/8d748b15/example.html
+https://cdn.rawgit.com/raneio/startpoint/747dbbca/example.html
 
 
 ### How to use
