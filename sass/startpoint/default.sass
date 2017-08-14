@@ -13,8 +13,6 @@ $rem: 16px !default
 $color-background: #FEFEFE !default
 $color-content: #222 !default
 $color-highlight: #00B7F9 !default
-$color-input-background: white !default
-$color-input-content: #333 !default
 
 $color-background--invert: invert($color-background) !default
 $color-content--invert: invert($color-content) !default
@@ -142,27 +140,26 @@ $button-transition--activ: none !default
 // --------------------------------------------------
 
 $input-border-radius: 0 !default
+$input-color-background: white !default
+$input-color-content: #333 !default
 $input-font-family: $font-family !default
 $input-font-size: 1rem !default
 $input-font-weight: normal !default
 $input-padding: .5em .7em !default
-$input-placeholder-color: mix($color-input-background, $color-input-content, 70%) !default
+$input-placeholder-color: mix($input-color-content, $input-color-background, 30%) !default
+$input-select-arrow-color: mix($input-color-content, $input-color-background, 50%) !default
 
-$input-background--basic: $color-input-background !default
+$input-background--basic: $input-color-background !default
 $input-background--hover: $input-background--basic !default
 $input-background--focus: $input-background--hover !default
 
-$input-border--basic: 1px solid mix($color-input-background, $color-input-content, 80%) !default
-$input-border--hover: 1px solid mix($color-input-background, $color-input-content, 60%) !default
+$input-border--basic: 1px solid mix($input-color-content, $input-color-background, 20%) !default
+$input-border--hover: 1px solid mix($input-color-content, $input-color-background, 40%) !default
 $input-border--focus: 1px solid $color-highlight !default
 
-$input-font-color--basic: mix($color-input-background, $color-input-content, 30%) !default
+$input-font-color--basic: $input-color-content !default
 $input-font-color--hover: $input-font-color--basic !default
-$input-font-color--focus: $color-input-content !default
-
-$input-select-arrow-color--basic: mix($color-input-background, $color-input-content, 80%) !default
-$input-select-arrow-color--hover: mix($color-input-background, $color-input-content, 50%) !default
-$input-select-arrow-color--focus: $color-input-content !default
+$input-font-color--focus: $input-font-color--basic !default
 
 $input-shadow-box--basic: none !default
 $input-shadow-box--hover: $input-shadow-box--basic !default

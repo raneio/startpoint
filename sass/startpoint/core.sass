@@ -185,22 +185,12 @@ select
   -webkit-appearance: none
   -moz-appearance: none
 
-@if $input-select-arrow-color--basic && $input-select-arrow-color--hover && $input-select-arrow-color--focus
-
-  select
-    background-image: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' version='1.1' width='12' height='12'%3E%3Cpolygon points='6,12 0,0 12,0' fill='#{svg-safe-hex($input-select-arrow-color--basic)}'/%3E%3C/svg%3E")
-
-  select:hover
-    background-image: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' version='1.1' width='12' height='12'%3E%3Cpolygon points='6,12 0,0 12,0' fill='#{svg-safe-hex($input-select-arrow-color--hover)}'/%3E%3C/svg%3E")
-
-  select:focus
-    background-image: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' version='1.1' width='12' height='12'%3E%3Cpolygon points='6,12 0,0 12,0' fill='#{svg-safe-hex($input-select-arrow-color--focus)}'/%3E%3C/svg%3E")
-
-  select,
-  select:hover,
-  select:focus
-    background-repeat: no-repeat
-    background-position: right 10px center
+select,
+select:hover,
+select:focus
+  background-image: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' version='1.1' width='12' height='14' %3E %3Cpolygon points='0,6 6,0 12,6' fill='#{svg-safe-hex($input-select-arrow-color)}'/%3E %3Cpolygon points='0,8 12,8 6,14' fill='#{svg-safe-hex($input-select-arrow-color)}'/%3E %3C/svg%3E")
+  background-repeat: no-repeat
+  background-position: right 12px center
 
 input[type="checkbox"],
 input[type="radio"]
