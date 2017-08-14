@@ -122,3 +122,221 @@
       border-color: $button-border-color--activ-invert
       box-shadow: $button-shadow-box--activ-invert
       color: $button-shadow-box--activ-invert
+
+
+//
+// Grid
+// --------------------------------------------------
+
+[data-grid]
+  display: flex
+  flex-wrap: wrap
+  margin: $grid-space * -1
+
+  > *
+    display: block
+    flex-basis: auto
+    padding: $grid-space
+
+[data-grid="1"] > *
+  flex-basis: 100% !important
+[data-grid="2"] > *
+  flex-basis: 50% !important
+[data-grid="3"] > *
+  flex-basis: 33.3333% !important
+[data-grid="4"] > *
+  flex-basis: 25% !important
+[data-grid="5"] > *
+  flex-basis: 20% !important
+[data-grid="6"] > *
+  flex-basis: 16.6666% !important
+
+@media (max-width: $breakpoint-s - 1)
+  [data-grid~="1xs"] > *,
+  [data-grid~="1s-"] > *,
+  [data-grid~="1m-"] > *,
+  [data-grid~="1l-"] > *,
+  [data-grid~="1xl-"] > *
+    flex-basis: 100% !important
+  [data-grid~="2xs"] > *,
+  [data-grid~="2s-"] > *,
+  [data-grid~="2m-"] > *,
+  [data-grid~="2l-"] > *,
+  [data-grid~="2xl-"] > *
+    flex-basis: 50% !important
+  [data-grid~="3xs"] > *,
+  [data-grid~="3s-"] > *,
+  [data-grid~="3m-"] > *,
+  [data-grid~="3l-"] > *,
+  [data-grid~="3xl-"] > *
+    flex-basis: 33.3333% !important
+  [data-grid~="4xs"] > *,
+  [data-grid~="4s-"] > *,
+  [data-grid~="4m-"] > *,
+  [data-grid~="4l-"] > *,
+  [data-grid~="4xl-"] > *
+    flex-basis: 25% !important
+  [data-grid~="5xs"] > *,
+  [data-grid~="5s-"] > *,
+  [data-grid~="5m-"] > *,
+  [data-grid~="5l-"] > *,
+  [data-grid~="5xl-"] > *
+    flex-basis: 20% !important
+  [data-grid~="6xs"] > *,
+  [data-grid~="6s-"] > *,
+  [data-grid~="6m-"] > *,
+  [data-grid~="6l-"] > *,
+  [data-grid~="6xl-"] > *
+    flex-basis: 16.6666% !important
+
+@media (min-width: $breakpoint-s) and (max-width: $breakpoint-m - 1)
+  [data-grid~="1s"] > *,
+  [data-grid~="1s-"] > *,
+  [data-grid~="1m-"] > *,
+  [data-grid~="1l-"] > *,
+  [data-grid~="1s+"] > *
+    flex-basis: 100% !important
+  [data-grid~="2s"] > *,
+  [data-grid~="2s-"] > *,
+  [data-grid~="2m-"] > *,
+  [data-grid~="2l-"] > *,
+  [data-grid~="2s+"] > *
+    flex-basis: 50% !important
+  [data-grid~="3s"] > *,
+  [data-grid~="3s-"] > *,
+  [data-grid~="3m-"] > *,
+  [data-grid~="3l-"] > *,
+  [data-grid~="3s+"] > *
+    flex-basis: 33.3333% !important
+  [data-grid~="4s"] > *,
+  [data-grid~="4s-"] > *,
+  [data-grid~="4m-"] > *,
+  [data-grid~="4l-"] > *,
+  [data-grid~="4s+"] > *
+    flex-basis: 25% !important
+  [data-grid~="5s"] > *,
+  [data-grid~="5s-"] > *,
+  [data-grid~="5m-"] > *,
+  [data-grid~="5l-"] > *,
+  [data-grid~="5s+"] > *
+    flex-basis: 20% !important
+  [data-grid~="6s"] > *,
+  [data-grid~="6s-"] > *,
+  [data-grid~="6m-"] > *,
+  [data-grid~="6l-"] > *,
+  [data-grid~="6s+"] > *
+    flex-basis: 16.6666% !important
+
+@media (min-width: $breakpoint-m) and (max-width: $breakpoint-l - 1)
+  [data-grid~="1m"] > *,
+  [data-grid~="1m-"] > *,
+  [data-grid~="1l-"] > *,
+  [data-grid~="1m+"] > *,
+  [data-grid~="1s+"] > *
+    flex-basis: 100% !important
+  [data-grid~="2m"] > *,
+  [data-grid~="2m-"] > *,
+  [data-grid~="2l-"] > *,
+  [data-grid~="2m+"] > *,
+  [data-grid~="2s+"] > *
+    flex-basis: 50% !important
+  [data-grid~="3m"] > *,
+  [data-grid~="3m-"] > *,
+  [data-grid~="3l-"] > *,
+  [data-grid~="3m+"] > *,
+  [data-grid~="3s+"] > *
+    flex-basis: 33.3333% !important
+  [data-grid~="4m"] > *,
+  [data-grid~="4m-"] > *,
+  [data-grid~="4l-"] > *,
+  [data-grid~="4m+"] > *,
+  [data-grid~="4s+"] > *
+    flex-basis: 25% !important
+  [data-grid~="5m"] > *,
+  [data-grid~="5m-"] > *,
+  [data-grid~="5l-"] > *,
+  [data-grid~="5m+"] > *,
+  [data-grid~="5s+"] > *
+    flex-basis: 20% !important
+  [data-grid~="6m"] > *,
+  [data-grid~="6m-"] > *,
+  [data-grid~="6l-"] > *,
+  [data-grid~="6m+"] > *,
+  [data-grid~="6s+"] > *
+    flex-basis: 16.6666% !important
+
+@media (min-width: $breakpoint-l) and (max-width: $breakpoint-xl - 1)
+  [data-grid~="1l"] > *,
+  [data-grid~="1l-"] > *,
+  [data-grid~="1l+"] > *,
+  [data-grid~="1m+"] > *,
+  [data-grid~="1s+"] > *
+    flex-basis: 100% !important
+  [data-grid~="2l"] > *,
+  [data-grid~="2l-"] > *,
+  [data-grid~="2l+"] > *,
+  [data-grid~="2m+"] > *,
+  [data-grid~="2s+"] > *
+    flex-basis: 50% !important
+  [data-grid~="3l"] > *,
+  [data-grid~="3l-"] > *,
+  [data-grid~="3l+"] > *,
+  [data-grid~="3m+"] > *,
+  [data-grid~="3s+"] > *
+    flex-basis: 33.3333% !important
+  [data-grid~="4l"] > *,
+  [data-grid~="4l-"] > *,
+  [data-grid~="4l+"] > *,
+  [data-grid~="4m+"] > *,
+  [data-grid~="4s+"] > *
+    flex-basis: 25% !important
+  [data-grid~="5l"] > *,
+  [data-grid~="5l-"] > *,
+  [data-grid~="5l+"] > *,
+  [data-grid~="5m+"] > *,
+  [data-grid~="5s+"] > *
+    flex-basis: 20% !important
+  [data-grid~="6l"] > *,
+  [data-grid~="6l-"] > *,
+  [data-grid~="6l+"] > *,
+  [data-grid~="6m+"] > *,
+  [data-grid~="6s+"] > *
+    flex-basis: 16.6666% !important
+
+@media (min-width: $breakpoint-xl)
+  [data-grid~="1xl"] > *,
+  [data-grid~="1xs+"] > *,
+  [data-grid~="1s+"] > *,
+  [data-grid~="1m+"] > *,
+  [data-grid~="1l+"] > *
+    flex-basis: 100% !important
+  [data-grid~="2xl"] > *,
+  [data-grid~="2xs+"] > *,
+  [data-grid~="2s+"] > *,
+  [data-grid~="2m+"] > *,
+  [data-grid~="2l+"] > *
+    flex-basis: 50% !important
+  [data-grid~="3xl"] > *,
+  [data-grid~="3xs+"] > *,
+  [data-grid~="3s+"] > *,
+  [data-grid~="3m+"] > *,
+  [data-grid~="3l+"] > *
+    flex-basis: 33.3333% !important
+  [data-grid~="4xl"] > *,
+  [data-grid~="4xs+"] > *,
+  [data-grid~="4s+"] > *,
+  [data-grid~="4m+"] > *,
+  [data-grid~="4l+"] > *
+    flex-basis: 25% !important
+  [data-grid~="5xl"] > *,
+  [data-grid~="5xs+"] > *,
+  [data-grid~="5s+"] > *,
+  [data-grid~="5m+"] > *,
+  [data-grid~="5l+"] > *
+    flex-basis: 20% !important
+  [data-grid~="6xl"] > *,
+  [data-grid~="6xs+"] > *,
+  [data-grid~="6s+"] > *,
+  [data-grid~="6m+"] > *,
+  [data-grid~="6l+"] > *
+    flex-basis: 16.6666% !important

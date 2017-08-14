@@ -31,12 +31,6 @@ $breakpoint-m: 768px !default
 $breakpoint-l: 992px !default
 $breakpoint-xl: 1200px !default
 
-//
-// Space
-// --------------------------------------------------
-
-$space-margin: 1.5rem !default
-
 
 //
 // Fonts
@@ -61,9 +55,8 @@ $font-color--invert: $color-content--invert !default
 $heading-font-color: $font-color !default
 $heading-font-family: $font-family !default
 $heading-line-height: 1.2 !default
-$heading-letter-spacing: .04em !default
+$heading-letter-spacing: .03em !default
 $heading-font-weight: 300 !default
-$heading-size-base: 1rem !default
 $heading-size-scale: 1.414 !default
 
 $heading-font-color--invert: $font-color--invert !default
@@ -83,7 +76,7 @@ $link-font-color--activ-invert: mix($color-content--invert, $color-highlight--in
 
 $link-text-decoration--basic: none !default
 $link-text-decoration--hover: underline !default
-$link-text-decoration--activ: $link-text-decoration--hover !default
+$link-text-decoration--activ: underline !default
 
 $link-transition--basic: color .2s !default
 $link-transition--hover: $link-transition--basic !default
@@ -93,30 +86,31 @@ $link-transition--activ: none !default
 //
 // Buttons
 // --------------------------------------------------
+// (3px/$rem+em) is relative to font-size
 
 $button-border-radius: (3px/$rem+em) !default
-$button-border-style: solid !default
-$button-border-width: (1px/$rem+em) !default
+$button-border-style: none !default
+$button-border-width: 1px !default
 $button-font-family: $font-family !default
-$button-font-size: 1.2rem !default
-$button-font-weight: normal !default
-$button-padding: .5em 1.5em !default
+$button-font-size: 1rem !default
+$button-font-weight: 400 !default
+$button-padding: .4em 1em !default
 
-$button-background--basic: $color-highlight !default
-$button-background--hover: $button-background--basic !default
-$button-background--activ: $button-background--basic !default
+$button-background--basic: $link-font-color--basic !default
+$button-background--hover: $link-font-color--hover-invert !default
+$button-background--activ: $link-font-color--activ-invert !default
 
-$button-background--basic-invert: $button-background--basic !default
-$button-background--hover-invert: $button-background--basic-invert !default
-$button-background--activ-invert: $button-background--basic-invert !default
+$button-background--basic-invert: $link-font-color--basic-invert !default
+$button-background--hover-invert: $link-font-color--hover-invert !default
+$button-background--activ-invert: $link-font-color--activ-invert !default
 
-$button-border-color--basic: $color-highlight !default
-$button-border-color--hover: mix($color-content, $button-border-color--basic, 50%) !default
-$button-border-color--activ: $button-border-color--hover !default
+$button-border-color--basic: $color-content !default
+$button-border-color--hover: $button-border-color--basic !default
+$button-border-color--activ: $button-border-color--basic !default
 
-$button-border-color--basic-invert: $button-border-color--basic !default
-$button-border-color--hover-invert: $button-border-color--hover !default
-$button-border-color--activ-invert: $button-border-color--activ !default
+$button-border-color--basic-invert: $color-content--invert !default
+$button-border-color--hover-invert: $button-border-color--basic-invert !default
+$button-border-color--activ-invert: $button-border-color--basic-invert !default
 
 $button-font-color--basic: $color-background !default
 $button-font-color--hover: $button-font-color--basic !default
@@ -136,7 +130,7 @@ $button-shadow-box--activ-invert: $button-shadow-box--basic-invert !default
 
 $button-transform--basic: none !default
 $button-transform--hover: $button-transform--basic !default
-$button-transform--activ: translateY((1px/$rem+em)) !default
+$button-transform--activ: translateY(1px) !default
 
 $button-transition--basic: color .2s, border .2s, transform .2s !default
 $button-transition--hover: $button-transition--basic !default
@@ -181,6 +175,13 @@ $input-transform--focus: $input-transform--hover !default
 $input-transition--basic: all .2s !default
 $input-transition--hover: $input-transition--basic !default
 $input-transition--focus: none !default
+
+
+//
+// Grid
+// --------------------------------------------------
+
+$grid-space: 1rem !default
 
 
 //
