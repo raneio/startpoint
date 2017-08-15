@@ -3,7 +3,11 @@
 // --------------------------------------------------
 // Everything is relative to $rem
 
-$rem: 16px !default
+$rem: 14px !default
+$rem--s: $rem !default
+$rem--m: 16px !default
+$rem--l: $rem--m !default
+$rem--xl: $rem--m !default
 
 
 //
@@ -42,13 +46,13 @@ $space-grid: 1rem !default
 // Fonts
 // --------------------------------------------------
 
-$font-color: $color-content !default
 $font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !default
 $font-line-height: 1.5 !default
 $font-letter-spacing: .02em !default
 $font-size: 1rem !default
 $font-weight: 400 !default
 
+$font-color: $color-content !default
 $font-color--invert: $color-content--invert !default
 
 
@@ -58,14 +62,20 @@ $font-color--invert: $color-content--invert !default
 // Get $heading-size-scale ratio from
 // http://type-scale.com/
 
-$heading-font-color: $font-color !default
 $heading-font-family: $font-family !default
 $heading-line-height: 1.2 !default
 $heading-letter-spacing: .03em !default
 $heading-font-weight: 300 !default
-$heading-size-scale: 1.414 !default
 
+$heading-font-color: $font-color !default
 $heading-font-color--invert: $font-color--invert !default
+
+$heading-size-scale: 1.414 !default
+$heading-size-scale--s: $heading-size-scale !default
+$heading-size-scale--m: $heading-size-scale !default
+$heading-size-scale--l: 1.5 !default
+$heading-size-scale--xl: $heading-size-scale--l !default
+
 
 
 //
