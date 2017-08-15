@@ -76,7 +76,7 @@
 [data-margin]
 
   > * + *
-    margin-top: 1.5em
+    margin-top: $space-margin
 
 
 //
@@ -131,12 +131,16 @@
 [data-grid]
   display: flex
   flex-wrap: wrap
-  margin: $grid-space * -1
+  margin-left: $space-grid / 2 * -1
+  margin-right: $space-grid / 2 * -1
+  margin-bottom: $space-grid * -1
 
   > *
     display: block
     flex-basis: auto
-    padding: $grid-space
+    padding-left: $space-grid / 2
+    padding-right: $space-grid / 2
+    padding-bottom: $space-grid
 
 [data-grid="1"] > *
   flex-basis: 100% !important

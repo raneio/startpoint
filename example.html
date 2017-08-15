@@ -40,93 +40,80 @@
 
     <h3>Grid</h3>
 
-    <div>
-
-      <div data-grid="1xs 2s 2m 3l+">
-        <div>
-          <img src="https://unsplash.it/450/200?image=1084" alt="">
-        </div>
-        <div>
-          <img src="https://unsplash.it/450/200?image=1074" alt="">
-        </div>
-        <div>
-          <img src="https://unsplash.it/450/200?image=1062" alt="">
-        </div>
-        <div>
-          <img src="https://unsplash.it/450/200?image=1024" alt="">
-        </div>
-        <div>
-          <img src="https://unsplash.it/450/200?image=1020" alt="">
-        </div>
-        <div>
-          <img src="https://unsplash.it/450/200?image=1003" alt="">
-        </div>
+    <section data-grid="1xs 2s 2m 3l+">
+      <div>
+        <img src="https://unsplash.it/450/200?image=1084" alt="">
       </div>
+      <div>
+        <img src="https://unsplash.it/450/200?image=1074" alt="">
+      </div>
+      <div>
+        <img src="https://unsplash.it/450/200?image=1062" alt="">
+      </div>
+      <div>
+        <img src="https://unsplash.it/450/200?image=1024" alt="">
+      </div>
+      <div>
+        <img src="https://unsplash.it/450/200?image=1020" alt="">
+      </div>
+      <div>
+        <img src="https://unsplash.it/450/200?image=1003" alt="">
+      </div>
+    </section>
 
+  </section>
+
+  <form class="container" data-margin>
+
+    <h3>Form</h3>
+
+    <label>
+      Name
+      <input type="text" placeholder="Give your name">
+    </label>
+
+    <label>
+      Message
+      <textarea rows="3"></textarea>
+    </label>
+
+    <label>
+      <input type="checkbox"> Click me if you want
+    </label>
+
+    <label>
+      Select Awards and decorations
+      <select>
+        <option>Sweden : Knight of the Order of the Seraphim</option>
+        <option>Norway : Grand Cross of the Order of St. Olav</option>
+        <option>Denmark : Knight of the Order of the Elephant</option>
+        <option>Iceland : Grand Cross with Collar of the Order of the Falcon & wife : Grand Cross</option>
+      </select>
+    </label>
+
+    <ul>
+      <li>
+        <label>
+          <input type="radio" name="foo-radio"> University of Helsinki 1990
+        </label>
+      </li>
+      <li>
+        <label>
+          <input type="radio" name="foo-radio"> University of Praha 1987
+        </label>
+      </li>
+      <li>
+        <label>
+          <input type="radio" name="foo-radio"> Åbo Akademi 1978
+        </label>
+      </li>
+    </ul>
+
+    <div>
+      <button type="button">Submit Form</button>
     </div>
 
-  </section>
-
-  <section class="container">
-
-    <form data-margin>
-
-      <h3>Send feedback</h3>
-
-      <label>
-        Name
-        <input type="text" placeholder="Give your name" value="Mauno Koivisto">
-      </label>
-
-      <label>
-        Email
-        <input type="email" placeholder="placeholder@example.com">
-      </label>
-
-      <label>
-        Message
-        <textarea rows="6"></textarea>
-      </label>
-
-      <label>
-        <input type="checkbox"> Click me if you want
-      </label>
-
-      <label>
-        Select Awards and decorations
-        <select>
-          <option>Sweden : Knight of the Order of the Seraphim</option>
-          <option>Norway : Grand Cross of the Order of St. Olav</option>
-          <option>Denmark : Knight of the Order of the Elephant</option>
-          <option>Iceland : Grand Cross with Collar of the Order of the Falcon & wife : Grand Cross</option>
-        </select>
-      </label>
-
-      <ul>
-        <li>
-          <label>
-            <input type="radio" name="foo-radio"> University of Helsinki 1990
-          </label>
-        </li>
-        <li>
-          <label>
-            <input type="radio" name="foo-radio"> University of Praha 1987
-          </label>
-        </li>
-        <li>
-          <label>
-            <input type="radio" name="foo-radio"> Åbo Akademi 1978
-          </label>
-        </li>
-      </ul>
-
-      <div>
-        <button type="button">Submit Form</button>
-      </div>
-
-    </form>
-
-  </section>
+  </form>
 
 </body>
 </html>

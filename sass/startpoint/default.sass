@@ -7,15 +7,15 @@ $rem: 16px !default
 
 
 //
-// Colors
+// Main colors
 // --------------------------------------------------
 
 $color-background: #FEFEFE !default
 $color-content: #222 !default
 $color-highlight: #00B7F9 !default
 
-$color-background--invert: invert($color-background) !default
-$color-content--invert: invert($color-content) !default
+$color-background--invert: $color-content !default
+$color-content--invert: $color-background !default
 $color-highlight--invert: $color-highlight !default
 
 
@@ -28,6 +28,14 @@ $breakpoint-s: 576px !default
 $breakpoint-m: 768px !default
 $breakpoint-l: 992px !default
 $breakpoint-xl: 1200px !default
+
+
+//
+// Spaces
+// --------------------------------------------------
+
+$space-margin: 1.5em !default
+$space-grid: 1rem !default
 
 
 //
@@ -172,13 +180,6 @@ $input-transform--focus: $input-transform--hover !default
 $input-transition--basic: all .2s !default
 $input-transition--hover: $input-transition--basic !default
 $input-transition--focus: none !default
-
-
-//
-// Grid
-// --------------------------------------------------
-
-$grid-space: 1rem !default
 
 
 //
