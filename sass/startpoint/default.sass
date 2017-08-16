@@ -18,6 +18,8 @@ $color-background: #FEFEFE !default
 $color-content: #222 !default
 $color-highlight: #00B7F9 !default
 
+// invert
+
 $color-background--invert: $color-content !default
 $color-content--invert: $color-background !default
 $color-highlight--invert: $color-highlight !default
@@ -46,13 +48,15 @@ $space-grid: 1rem !default
 // Fonts
 // --------------------------------------------------
 
+$font-color: $color-content !default
 $font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !default
 $font-line-height: 1.5 !default
 $font-letter-spacing: .02em !default
 $font-size: 1rem !default
 $font-weight: 400 !default
 
-$font-color: $color-content !default
+// invert
+
 $font-color--invert: $color-content--invert !default
 
 
@@ -62,19 +66,22 @@ $font-color--invert: $color-content--invert !default
 // Get $heading-size-scale ratio from
 // http://type-scale.com/
 
+$heading-font-color: $font-color !default
 $heading-font-family: $font-family !default
+$heading-font-weight: 300 !default
 $heading-line-height: 1.2 !default
 $heading-letter-spacing: .03em !default
-$heading-font-weight: 300 !default
-
-$heading-font-color: $font-color !default
-$heading-font-color--invert: $font-color--invert !default
+$heading-text-transform: none !default
 
 $heading-size-scale: 1.414 !default
 $heading-size-scale--s: $heading-size-scale !default
 $heading-size-scale--m: $heading-size-scale !default
 $heading-size-scale--l: 1.5 !default
 $heading-size-scale--xl: $heading-size-scale--l !default
+
+// invert
+
+$heading-font-color--invert: $font-color--invert !default
 
 
 
@@ -86,10 +93,6 @@ $link-font-color--basic: $color-highlight !default
 $link-font-color--hover: mix($color-content, $color-highlight, 30%) !default
 $link-font-color--activ: mix($color-content, $color-highlight, 50%) !default
 
-$link-font-color--basic-invert: $color-highlight--invert !default
-$link-font-color--hover-invert: mix($color-content--invert, $color-highlight--invert, 30%) !default
-$link-font-color--activ-invert: mix($color-content--invert, $color-highlight--invert, 50%) !default
-
 $link-text-decoration--basic: none !default
 $link-text-decoration--hover: underline !default
 $link-text-decoration--activ: underline !default
@@ -97,6 +100,12 @@ $link-text-decoration--activ: underline !default
 $link-transition--basic: color .2s !default
 $link-transition--hover: $link-transition--basic !default
 $link-transition--activ: none !default
+
+// invert
+
+$link-font-color--basic-invert: $color-highlight--invert !default
+$link-font-color--hover-invert: mix($color-content--invert, $color-highlight--invert, 30%) !default
+$link-font-color--activ-invert: mix($color-content--invert, $color-highlight--invert, 50%) !default
 
 
 //
@@ -116,33 +125,17 @@ $button-background--basic: $link-font-color--basic !default
 $button-background--hover: $link-font-color--hover-invert !default
 $button-background--activ: $link-font-color--activ-invert !default
 
-$button-background--basic-invert: $link-font-color--basic-invert !default
-$button-background--hover-invert: $link-font-color--hover-invert !default
-$button-background--activ-invert: $link-font-color--activ-invert !default
-
 $button-border-color--basic: $color-content !default
 $button-border-color--hover: $button-border-color--basic !default
 $button-border-color--activ: $button-border-color--basic !default
-
-$button-border-color--basic-invert: $color-content--invert !default
-$button-border-color--hover-invert: $button-border-color--basic-invert !default
-$button-border-color--activ-invert: $button-border-color--basic-invert !default
 
 $button-font-color--basic: $color-background !default
 $button-font-color--hover: $button-font-color--basic !default
 $button-font-color--activ: $button-font-color--basic !default
 
-$button-font-color--basic-invert: $color-background--invert !default
-$button-font-color--hover-invert: $button-font-color--basic-invert !default
-$button-font-color--activ-invert: $button-font-color--basic-invert !default
-
 $button-shadow-box--basic: none !default
 $button-shadow-box--hover: $button-shadow-box--basic !default
 $button-shadow-box--activ: $button-shadow-box--basic !default
-
-$button-shadow-box--basic-invert: $button-shadow-box--basic !default
-$button-shadow-box--hover-invert: $button-shadow-box--basic-invert !default
-$button-shadow-box--activ-invert: $button-shadow-box--basic-invert !default
 
 $button-transform--basic: none !default
 $button-transform--hover: $button-transform--basic !default
@@ -151,6 +144,24 @@ $button-transform--activ: translateY(1px) !default
 $button-transition--basic: color .2s, border .2s, transform .2s !default
 $button-transition--hover: $button-transition--basic !default
 $button-transition--activ: none !default
+
+// invert
+
+$button-background--basic-invert: $link-font-color--basic-invert !default
+$button-background--hover-invert: $link-font-color--hover-invert !default
+$button-background--activ-invert: $link-font-color--activ-invert !default
+
+$button-border-color--basic-invert: $color-content--invert !default
+$button-border-color--hover-invert: $button-border-color--basic-invert !default
+$button-border-color--activ-invert: $button-border-color--basic-invert !default
+
+$button-font-color--basic-invert: $color-background--invert !default
+$button-font-color--hover-invert: $button-font-color--basic-invert !default
+$button-font-color--activ-invert: $button-font-color--basic-invert !default
+
+$button-shadow-box--basic-invert: $button-shadow-box--basic !default
+$button-shadow-box--hover-invert: $button-shadow-box--basic-invert !default
+$button-shadow-box--activ-invert: $button-shadow-box--basic-invert !default
 
 
 //
