@@ -137,23 +137,63 @@
 
   > *
     display: block
-    flex-basis: auto
     padding-left: $space-grid / 2
     padding-right: $space-grid / 2
     padding-bottom: $space-grid
+    word-wrap: break-word
+
+  &[data-space="0"]
+    margin-left: 0
+    margin-right: 0
+    margin-bottom: 0
+
+    > *
+      padding-left: 0
+      padding-right: 0
+      padding-bottom: 0
+
+  &[data-space="2"]
+    margin-left: $space-grid * -1
+    margin-right: $space-grid * -1
+    margin-bottom: $space-grid * -2
+
+    > *
+      padding-left: $space-grid
+      padding-right: $space-grid
+      padding-bottom: $space-grid * 2
+
+  &[data-space="3"]
+    margin-left: $space-grid * -3 / 2
+    margin-right: $space-grid* -3 / 2
+    margin-bottom: $space-grid * -3
+
+    > *
+      padding-left: $space-grid * 3 / 2
+      padding-right: $space-grid * 3 / 2
+      padding-bottom: $space-grid * 3
+
+  &[data-space="4"]
+    margin-left: $space-grid * -4 / 2
+    margin-right: $space-grid* -4 / 2
+    margin-bottom: $space-grid * -4
+
+    > *
+      padding-left: $space-grid * 4 / 2
+      padding-right: $space-grid * 4 / 2
+      padding-bottom: $space-grid * 4
 
 [data-grid="1"] > *
-  flex-basis: 100% !important
+  width: 100%
 [data-grid="2"] > *
-  flex-basis: 50% !important
+  width: 50%
 [data-grid="3"] > *
-  flex-basis: 33.3333% !important
+  width: 33.3333%
 [data-grid="4"] > *
-  flex-basis: 25% !important
+  width: 25%
 [data-grid="5"] > *
-  flex-basis: 20% !important
+  width: 20%
 [data-grid="6"] > *
-  flex-basis: 16.6666% !important
+  width: 16.6666%
 
 @media (max-width: $breakpoint-s - 1)
   [data-grid~="1xs"] > *,
@@ -161,37 +201,37 @@
   [data-grid~="1m-"] > *,
   [data-grid~="1l-"] > *,
   [data-grid~="1xl-"] > *
-    flex-basis: 100% !important
+    width: 100%
   [data-grid~="2xs"] > *,
   [data-grid~="2s-"] > *,
   [data-grid~="2m-"] > *,
   [data-grid~="2l-"] > *,
   [data-grid~="2xl-"] > *
-    flex-basis: 50% !important
+    width: 50%
   [data-grid~="3xs"] > *,
   [data-grid~="3s-"] > *,
   [data-grid~="3m-"] > *,
   [data-grid~="3l-"] > *,
   [data-grid~="3xl-"] > *
-    flex-basis: 33.3333% !important
+    width: 33.3333%
   [data-grid~="4xs"] > *,
   [data-grid~="4s-"] > *,
   [data-grid~="4m-"] > *,
   [data-grid~="4l-"] > *,
   [data-grid~="4xl-"] > *
-    flex-basis: 25% !important
+    width: 25%
   [data-grid~="5xs"] > *,
   [data-grid~="5s-"] > *,
   [data-grid~="5m-"] > *,
   [data-grid~="5l-"] > *,
   [data-grid~="5xl-"] > *
-    flex-basis: 20% !important
+    width: 20%
   [data-grid~="6xs"] > *,
   [data-grid~="6s-"] > *,
   [data-grid~="6m-"] > *,
   [data-grid~="6l-"] > *,
   [data-grid~="6xl-"] > *
-    flex-basis: 16.6666% !important
+    width: 16.6666%
 
 @media (min-width: $breakpoint-s) and (max-width: $breakpoint-m - 1)
   [data-grid~="1s"] > *,
@@ -199,37 +239,37 @@
   [data-grid~="1m-"] > *,
   [data-grid~="1l-"] > *,
   [data-grid~="1s+"] > *
-    flex-basis: 100% !important
+    width: 100%
   [data-grid~="2s"] > *,
   [data-grid~="2s-"] > *,
   [data-grid~="2m-"] > *,
   [data-grid~="2l-"] > *,
   [data-grid~="2s+"] > *
-    flex-basis: 50% !important
+    width: 50%
   [data-grid~="3s"] > *,
   [data-grid~="3s-"] > *,
   [data-grid~="3m-"] > *,
   [data-grid~="3l-"] > *,
   [data-grid~="3s+"] > *
-    flex-basis: 33.3333% !important
+    width: 33.3333%
   [data-grid~="4s"] > *,
   [data-grid~="4s-"] > *,
   [data-grid~="4m-"] > *,
   [data-grid~="4l-"] > *,
   [data-grid~="4s+"] > *
-    flex-basis: 25% !important
+    width: 25%
   [data-grid~="5s"] > *,
   [data-grid~="5s-"] > *,
   [data-grid~="5m-"] > *,
   [data-grid~="5l-"] > *,
   [data-grid~="5s+"] > *
-    flex-basis: 20% !important
+    width: 20%
   [data-grid~="6s"] > *,
   [data-grid~="6s-"] > *,
   [data-grid~="6m-"] > *,
   [data-grid~="6l-"] > *,
   [data-grid~="6s+"] > *
-    flex-basis: 16.6666% !important
+    width: 16.6666%
 
 @media (min-width: $breakpoint-m) and (max-width: $breakpoint-l - 1)
   [data-grid~="1m"] > *,
@@ -237,37 +277,37 @@
   [data-grid~="1l-"] > *,
   [data-grid~="1m+"] > *,
   [data-grid~="1s+"] > *
-    flex-basis: 100% !important
+    width: 100%
   [data-grid~="2m"] > *,
   [data-grid~="2m-"] > *,
   [data-grid~="2l-"] > *,
   [data-grid~="2m+"] > *,
   [data-grid~="2s+"] > *
-    flex-basis: 50% !important
+    width: 50%
   [data-grid~="3m"] > *,
   [data-grid~="3m-"] > *,
   [data-grid~="3l-"] > *,
   [data-grid~="3m+"] > *,
   [data-grid~="3s+"] > *
-    flex-basis: 33.3333% !important
+    width: 33.3333%
   [data-grid~="4m"] > *,
   [data-grid~="4m-"] > *,
   [data-grid~="4l-"] > *,
   [data-grid~="4m+"] > *,
   [data-grid~="4s+"] > *
-    flex-basis: 25% !important
+    width: 25%
   [data-grid~="5m"] > *,
   [data-grid~="5m-"] > *,
   [data-grid~="5l-"] > *,
   [data-grid~="5m+"] > *,
   [data-grid~="5s+"] > *
-    flex-basis: 20% !important
+    width: 20%
   [data-grid~="6m"] > *,
   [data-grid~="6m-"] > *,
   [data-grid~="6l-"] > *,
   [data-grid~="6m+"] > *,
   [data-grid~="6s+"] > *
-    flex-basis: 16.6666% !important
+    width: 16.6666%
 
 @media (min-width: $breakpoint-l) and (max-width: $breakpoint-xl - 1)
   [data-grid~="1l"] > *,
@@ -275,37 +315,37 @@
   [data-grid~="1l+"] > *,
   [data-grid~="1m+"] > *,
   [data-grid~="1s+"] > *
-    flex-basis: 100% !important
+    width: 100%
   [data-grid~="2l"] > *,
   [data-grid~="2l-"] > *,
   [data-grid~="2l+"] > *,
   [data-grid~="2m+"] > *,
   [data-grid~="2s+"] > *
-    flex-basis: 50% !important
+    width: 50%
   [data-grid~="3l"] > *,
   [data-grid~="3l-"] > *,
   [data-grid~="3l+"] > *,
   [data-grid~="3m+"] > *,
   [data-grid~="3s+"] > *
-    flex-basis: 33.3333% !important
+    width: 33.3333%
   [data-grid~="4l"] > *,
   [data-grid~="4l-"] > *,
   [data-grid~="4l+"] > *,
   [data-grid~="4m+"] > *,
   [data-grid~="4s+"] > *
-    flex-basis: 25% !important
+    width: 25%
   [data-grid~="5l"] > *,
   [data-grid~="5l-"] > *,
   [data-grid~="5l+"] > *,
   [data-grid~="5m+"] > *,
   [data-grid~="5s+"] > *
-    flex-basis: 20% !important
+    width: 20%
   [data-grid~="6l"] > *,
   [data-grid~="6l-"] > *,
   [data-grid~="6l+"] > *,
   [data-grid~="6m+"] > *,
   [data-grid~="6s+"] > *
-    flex-basis: 16.6666% !important
+    width: 16.6666%
 
 @media (min-width: $breakpoint-xl)
   [data-grid~="1xl"] > *,
@@ -313,34 +353,34 @@
   [data-grid~="1s+"] > *,
   [data-grid~="1m+"] > *,
   [data-grid~="1l+"] > *
-    flex-basis: 100% !important
+    width: 100%
   [data-grid~="2xl"] > *,
   [data-grid~="2xs+"] > *,
   [data-grid~="2s+"] > *,
   [data-grid~="2m+"] > *,
   [data-grid~="2l+"] > *
-    flex-basis: 50% !important
+    width: 50%
   [data-grid~="3xl"] > *,
   [data-grid~="3xs+"] > *,
   [data-grid~="3s+"] > *,
   [data-grid~="3m+"] > *,
   [data-grid~="3l+"] > *
-    flex-basis: 33.3333% !important
+    width: 33.3333%
   [data-grid~="4xl"] > *,
   [data-grid~="4xs+"] > *,
   [data-grid~="4s+"] > *,
   [data-grid~="4m+"] > *,
   [data-grid~="4l+"] > *
-    flex-basis: 25% !important
+    width: 25%
   [data-grid~="5xl"] > *,
   [data-grid~="5xs+"] > *,
   [data-grid~="5s+"] > *,
   [data-grid~="5m+"] > *,
   [data-grid~="5l+"] > *
-    flex-basis: 20% !important
+    width: 20%
   [data-grid~="6xl"] > *,
   [data-grid~="6xs+"] > *,
   [data-grid~="6s+"] > *,
   [data-grid~="6m+"] > *,
   [data-grid~="6l+"] > *
-    flex-basis: 16.6666% !important
+    width: 16.6666%
