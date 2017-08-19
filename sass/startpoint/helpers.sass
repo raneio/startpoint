@@ -7,7 +7,8 @@
 // --------------------------------------------------
 // Force display to none
 
-[data-hide=""]
+[data-hide=""],
+[data-hide="true"]
   display: none !important
 
 @media (max-width: $breakpoint-s - 1)
@@ -73,7 +74,8 @@
 // --------------------------------------------------
 // Add top margin to other than first child
 
-[data-margin]
+[data-margin=""],
+[data-margin="true"]
 
   > * + *
     margin-top: $space-margin
@@ -84,7 +86,8 @@
 // --------------------------------------------------
 // Turn the colors into opposite colors
 
-[data-invert]
+[data-invert=""],
+[data-invert="true"]
   background-color: $color-background--invert
   color: $color-content--invert
 
@@ -153,13 +156,13 @@
       padding-bottom: 0
 
   &[data-space="2"]
-    margin-left: $space-grid * -1
-    margin-right: $space-grid * -1
+    margin-left: $space-grid * -2 / 2
+    margin-right: $space-grid * -2 / 2
     margin-bottom: $space-grid * -2
 
     > *
-      padding-left: $space-grid
-      padding-right: $space-grid
+      padding-left: $space-grid * 2 / 2
+      padding-right: $space-grid * 2 / 2
       padding-bottom: $space-grid * 2
 
   &[data-space="3"]
