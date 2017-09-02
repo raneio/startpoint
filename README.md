@@ -11,6 +11,4 @@ https://cdn.rawgit.com/raneio/startpoint/f6aa964c/example.html
 ### How to use
 
 1. Download Zip: https://github.com/raneio/startpoint/archive/master.zip
-1. Compile Sass: sass --watch sass/style.sass:style.min.css --style compressed
-
-
+1. Compile Sass: sass --watch demo/sass/style.sass:demo/style.min.css --style compressed

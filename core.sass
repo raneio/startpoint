@@ -1,5 +1,4 @@
 @import "default"
-@import "functions"
 
 
 //
@@ -78,6 +77,14 @@ pre
 
 
 //
+// iFrame
+// --------------------------------------------------
+
+iframe
+  border: 0
+
+
+//
 // Blockquote
 // --------------------------------------------------
 
@@ -119,9 +126,7 @@ h6
   font-size: 1rem / $heading-size-scale
 
 @if $heading-size-scale--s != $heading-size-scale
-
   @media (min-width: $breakpoint-s) and (max-width: $breakpoint-m - 1)
-
     h1
       font-size: 1rem * $heading-size-scale--s * $heading-size-scale--s * $heading-size-scale--s * $heading-size-scale--s
     h2
@@ -134,9 +139,7 @@ h6
       font-size: 1rem / $heading-size-scale--s
 
 @if $heading-size-scale--m != $heading-size-scale
-
   @media (min-width: $breakpoint-m) and (max-width: $breakpoint-l - 1)
-
     h1
       font-size: 1rem * $heading-size-scale--m * $heading-size-scale--m * $heading-size-scale--m * $heading-size-scale--m
     h2
@@ -149,9 +152,7 @@ h6
       font-size: 1rem / $heading-size-scale--m
 
 @if $heading-size-scale--l != $heading-size-scale
-
   @media (min-width: $breakpoint-l) and (max-width: $breakpoint-xl - 1)
-
     h1
       font-size: 1rem * $heading-size-scale--l * $heading-size-scale--l * $heading-size-scale--l * $heading-size-scale--l
     h2
@@ -164,9 +165,7 @@ h6
       font-size: 1rem / $heading-size-scale--l
 
 @if $heading-size-scale--xl != $heading-size-scale
-
   @media (min-width: $breakpoint-xl)
-
     h1
       font-size: 1rem * $heading-size-scale--xl * $heading-size-scale--xl * $heading-size-scale--xl * $heading-size-scale--xl
     h2
