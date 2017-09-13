@@ -72,9 +72,28 @@
 
 [data-margin=""],
 [data-margin="true"]
-
   > * + *
     margin-top: $space-margin
+
+  &[data-space="0.25"]
+    > * + *
+      margin-top: $space-margin * 0.25
+
+  &[data-space="0.5"]
+    > * + *
+      margin-top: $space-margin * 0.5
+
+  &[data-space="2"]
+    > * + *
+      margin-top: $space-margin * 2
+
+  &[data-space="3"]
+    > * + *
+      margin-top: $space-margin * 3
+
+  &[data-space="4"]
+    > * + *
+      margin-top: $space-margin * 4
 
 
 //
@@ -150,6 +169,16 @@
       padding-left: 0
       padding-right: 0
       padding-bottom: 0
+
+  &[data-space="0.25"]
+    margin-left: $space-grid * -0.25 / 2
+    margin-right: $space-grid * -0.25 / 2
+    margin-bottom: $space-grid * -0.25
+
+    > *
+      padding-left: $space-grid * 0.25 / 2
+      padding-right: $space-grid * 0.25 / 2
+      padding-bottom: $space-grid * 0.25
 
   &[data-space="0.5"]
     margin-left: $space-grid * -0.5 / 2
