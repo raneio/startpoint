@@ -1,0 +1,25 @@
+{
+  "name": "startpoint-sass",
+  "version": "0.0.1",
+  "description": "The sass-based starting point to every web projects without javascript.",
+  "main": "index.sass",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://raneio@github.com/raneio/startpoint.git"
+  },
+  "keywords": [
+    "sass",
+    "css",
+    "startpoint",
+    "bootstrap"
+  ],
+  "author": "Rane Ahonen <raneahonen@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/raneio/startpoint/issues"
+  },
+  "homepage": "https://github.com/raneio/startpoint#readme"
+}
