@@ -55,12 +55,11 @@ $time-l: 1s
 //
 // Fonts
 // --------------------------------------------------
-// (3px/$rem+em) is relative to font-size
 
 $font-color: $color-content !default
 $font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !default
 $font-line-height: 1.5 !default
-$font-letter-spacing: (0.5px/$rem+em) !default
+$font-letter-spacing: .01em !default
 $font-size: 1rem !default
 $font-weight: 400 !default
 
@@ -78,7 +77,7 @@ $heading-font-color: $font-color !default
 $heading-font-family: $font-family !default
 $heading-font-weight: 300 !default
 $heading-line-height: 1.2 !default
-$heading-letter-spacing: (1px/$rem+em) !default
+$heading-letter-spacing: .02em !default
 
 $heading-size-scale: 1.414 !default
 $heading-size-scale--s: 1.414 !default
@@ -112,7 +111,7 @@ $link-font-color--activ-invert: mix($color-content--invert, $link-font-color--ba
 // Buttons
 // --------------------------------------------------
 
-$button-border-radius: (2px/$rem+em) !default
+$button-border-radius: .03em !default
 $button-font-family: $font-family !default
 $button-font-size: 1em !default
 $button-font-weight: 400 !default
@@ -164,7 +163,7 @@ $button-shadow-box--activ-invert: $button-shadow-box--activ !default
 // Inputs
 // --------------------------------------------------
 
-$input-border-radius: (2px/$rem+em) !default
+$input-border-radius: .03em !default
 $input-color-background: #FFFFFF !default
 $input-color-content: #333333 !default
 $input-font-family: $font-family !default
@@ -194,9 +193,9 @@ $input-transform--basic: none !default
 $input-transform--hover: none !default
 $input-transform--focus: none !default
 
-$input-transition--basic: border .2s !default
-$input-transition--hover: border .2s !default
-$input-transition--focus: border .2s !default
+$input-transition--basic: border $time-s !default
+$input-transition--hover: border $time-s !default
+$input-transition--focus: border $time-s !default
 
 
 //
