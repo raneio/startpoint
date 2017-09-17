@@ -6,17 +6,17 @@
 $rem: 14px !default
 $rem--s: 14px !default
 $rem--m: 16px !default
-$rem--l: 16px !default
-$rem--xl: 16px !default
+$rem--l: 18px !default
+$rem--xl: 18px !default
 
 
 //
 // Main colors
 // --------------------------------------------------
 
-$color-background: #FEFEFE !default
-$color-content: #222222 !default
-$color-highlight: #00B7F9 !default
+$color-background: #FFFFFF !default
+$color-content: #000000 !default
+$color-highlight: #1DABFC !default
 
 // invert
 $color-background--invert: $color-content !default
@@ -33,14 +33,6 @@ $breakpoint-s: 576px !default
 $breakpoint-m: 768px !default
 $breakpoint-l: 992px !default
 $breakpoint-xl: 1200px !default
-
-
-//
-// Spaces
-// --------------------------------------------------
-
-$space-margin: 1.5em !default
-$space-grid: 1rem !default
 
 
 //
@@ -75,15 +67,15 @@ $font-color--invert: $color-content--invert !default
 
 $heading-font-color: $font-color !default
 $heading-font-family: $font-family !default
-$heading-font-weight: 300 !default
+$heading-font-weight: 500 !default
 $heading-line-height: 1.2 !default
 $heading-letter-spacing: .02em !default
 
 $heading-size-scale: 1.414 !default
 $heading-size-scale--s: 1.414 !default
 $heading-size-scale--m: 1.414 !default
-$heading-size-scale--l: 1.5 !default
-$heading-size-scale--xl: 1.5 !default
+$heading-size-scale--l: 1.414 !default
+$heading-size-scale--xl: 1.414 !default
 
 // invert
 $heading-font-color--invert: $font-color--invert !default
@@ -111,59 +103,59 @@ $link-font-color--activ-invert: mix($color-content--invert, $link-font-color--ba
 // Buttons
 // --------------------------------------------------
 
-$button-border-radius: .03em !default
+$button-border-radius: .3em !default
 $button-font-family: $font-family !default
 $button-font-size: 1em !default
-$button-font-weight: 400 !default
-$button-padding: .5em 1em !default
+$button-font-weight: 500 !default
+$button-padding: 1em 2em !default
 
-$button-background--basic: transparent !default
-$button-background--hover: transparent !default
-$button-background--activ: transparent !default
+$button-background--basic: $color-highlight !default
+$button-background--hover: mix($color-background, $color-highlight, 5%) !default
+$button-background--activ: mix($color-background, $color-highlight, 5%) !default
 
-$button-border--basic: 1px solid $link-font-color--basic !default
-$button-border--hover: 1px solid $link-font-color--hover !default
-$button-border--activ: 1px solid $link-font-color--activ !default
+$button-border--basic: none !default
+$button-border--hover: none !default
+$button-border--activ: none !default
 
-$button-font-color--basic: $link-font-color--basic !default
-$button-font-color--hover: $link-font-color--hover !default
-$button-font-color--activ: $link-font-color--activ !default
+$button-font-color--basic: $color-background !default
+$button-font-color--hover: $color-background !default
+$button-font-color--activ: $color-background !default
 
-$button-shadow-box--basic: none !default
-$button-shadow-box--hover: none !default
-$button-shadow-box--activ: none !default
+$button-shadow-box--basic: 0 1px 10px mix($color-content, transparent, 10%), 0 1px 1px mix($color-content, transparent, 10%) !default
+$button-shadow-box--hover: 0 2px 20px mix($color-content, transparent, 10%) !default
+$button-shadow-box--activ: $button-shadow-box--hover !default
 
 $button-transform--basic: none !default
 $button-transform--hover: none !default
 $button-transform--activ: translateY(1px) !default
 
-$button-transition--basic: color $time-s, border $time-s !default
-$button-transition--hover: color $time-s, border $time-s !default
-$button-transition--activ: color $time-s, border $time-s !default
+$button-transition--basic: all $time-s !default
+$button-transition--hover: all $time-s !default
+$button-transition--activ: all $time-s !default
 
 // invert
-$button-background--basic-invert: $link-font-color--basic-invert !default
-$button-background--hover-invert: $link-font-color--hover-invert !default
-$button-background--activ-invert: $link-font-color--activ-invert !default
+$button-background--basic-invert: $color-highlight !default
+$button-background--hover-invert: mix($color-background--invert, $color-highlight, 5%) !default
+$button-background--activ-invert: mix($color-background--invert, $color-highlight, 5%) !default
 
-$button-border--basic-invert: 1px solid $link-font-color--basic-invert !default
-$button-border--hover-invert: 1px solid $link-font-color--hover-invert !default
-$button-border--activ-invert: 1px solid $link-font-color--activ-invert !default
+$button-border--basic-invert: none !default
+$button-border--hover-invert: none !default
+$button-border--activ-invert: none !default
 
-$button-font-color--basic-invert: $link-font-color--basic-invert !default
-$button-font-color--hover-invert: $link-font-color--hover-invert !default
-$button-font-color--activ-invert: $link-font-color--activ-invert !default
+$button-font-color--basic-invert: $color-background--invert !default
+$button-font-color--hover-invert: $color-background--invert !default
+$button-font-color--activ-invert: $color-background--invert !default
 
-$button-shadow-box--basic-invert: $button-shadow-box--basic !default
-$button-shadow-box--hover-invert: $button-shadow-box--hover !default
-$button-shadow-box--activ-invert: $button-shadow-box--activ !default
+$button-shadow-box--basic-invert: 0 1px 10px mix($color-content--invert, transparent, 10%), 0 1px 1px mix($color-content--invert, transparent, 10%) !default
+$button-shadow-box--hover-invert: $button-shadow-box--basic-invert !default
+$button-shadow-box--activ-invert: $button-shadow-box--basic-invert !default
 
 
 //
 // Inputs
 // --------------------------------------------------
 
-$input-border-radius: .03em !default
+$input-border-radius: .3em !default
 $input-color-background: #FFFFFF !default
 $input-color-content: #333333 !default
 $input-font-family: $font-family !default
@@ -193,9 +185,9 @@ $input-transform--basic: none !default
 $input-transform--hover: none !default
 $input-transform--focus: none !default
 
-$input-transition--basic: border $time-s !default
-$input-transition--hover: border $time-s !default
-$input-transition--focus: border $time-s !default
+$input-transition--basic: all $time-s !default
+$input-transition--hover: all $time-s !default
+$input-transition--focus: all $time-s !default
 
 
 //

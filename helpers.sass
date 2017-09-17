@@ -3,8 +3,7 @@
 // --------------------------------------------------
 // Force display to none
 
-[data-hide=""],
-[data-hide="true"]
+[data-hide=""]
   display: none !important
 
 @media (max-width: $breakpoint-s - 1)
@@ -49,51 +48,38 @@
 
 
 //
-// Width
-// --------------------------------------------------
-
-[data-width="s"]
-  max-width: $breakpoint-s !important
-
-[data-width="m"]
-  max-width: $breakpoint-m !important
-
-[data-width="l"]
-  max-width: $breakpoint-l !important
-
-[data-width="xl"]
-  max-width: $breakpoint-xl !important
-
-
-//
 // Auto Margin
 // --------------------------------------------------
 // Add top margin to other than first child
 
 [data-margin=""],
-[data-margin="true"]
+[data-margin="auto"]
   > * + *
-    margin-top: $space-margin
+    margin-top: 1.5em
 
-  &[data-space="0.25"]
-    > * + *
-      margin-top: $space-margin * 0.25
+[data-margin="1/4"]
+  > * + *
+    margin-top: 1rem * 0.25
 
-  &[data-space="0.5"]
-    > * + *
-      margin-top: $space-margin * 0.5
+[data-margin="1/2"]
+  > * + *
+    margin-top: 1rem * 0.5
+    
+[data-margin="1"]
+  > * + *
+    margin-top: 1rem * 1
 
-  &[data-space="2"]
-    > * + *
-      margin-top: $space-margin * 2
+[data-margin="2"]
+  > * + *
+    margin-top: 1rem * 2
 
-  &[data-space="3"]
-    > * + *
-      margin-top: $space-margin * 3
+[data-margin="3"]
+  > * + *
+    margin-top: 1rem * 3
 
-  &[data-space="4"]
-    > * + *
-      margin-top: $space-margin * 4
+[data-margin="4"]
+  > * + *
+    margin-top: 1rem * 3
 
 
 //
@@ -101,8 +87,7 @@
 // --------------------------------------------------
 // Turn the colors into opposite colors
 
-[data-invert=""],
-[data-invert="true"]
+[data-invert]
   background-color: $color-background--invert
   color: $color-content--invert
 
@@ -143,24 +128,76 @@
 
 
 //
+// Container
+// --------------------------------------------------
+
+[data-container]
+  margin-left: auto
+  margin-right: auto
+  width: calc(100% - 2rem * 2)
+
+  &[data-padding="1/4"]
+    padding-top: 1rem
+    padding-bottom: 1rem
+
+  &[data-padding="1/2"]
+    padding-top: 2rem
+    padding-bottom: 2rem
+
+  &[data-padding=""],
+  &[data-padding="1"]
+    padding-top: 4rem
+    padding-bottom: 4rem
+
+  &[data-padding="2"]
+    padding-top: 8rem
+    padding-bottom: 8rem
+
+  &[data-padding="3"]
+    padding-top: 12rem
+    padding-bottom: 12rem
+
+  &[data-padding="4"]
+    padding-top: 16rem
+    padding-bottom: 16rem
+
+[data-container="s"]
+  max-width: $breakpoint-s
+
+[data-container="m"]
+  max-width: $breakpoint-m
+
+[data-container="l"]
+  max-width: $breakpoint-l
+
+[data-container=""],
+[data-container="xl"]
+  max-width: $breakpoint-xl
+
+
+//
 // Grid
 // --------------------------------------------------
 
 [data-grid]
   display: flex
   flex-wrap: wrap
-  margin-left: $space-grid / 2 * -1
-  margin-right: $space-grid / 2 * -1
-  margin-bottom: $space-grid * -1
 
   > *
     display: block
-    padding-left: $space-grid / 2
-    padding-right: $space-grid / 2
-    padding-bottom: $space-grid
     word-wrap: break-word
 
-  &[data-space="0"]
+  &[data-grid=""],
+  &[data-grid="auto"]
+    display: inline-flex
+    flex-wrap: nowrap
+
+  &[data-margin]
+    > * + *
+      margin-top: 0
+
+  &,
+  &[data-margin="0"]
     margin-left: 0
     margin-right: 0
     margin-bottom: 0
@@ -170,55 +207,66 @@
       padding-right: 0
       padding-bottom: 0
 
-  &[data-space="0.25"]
-    margin-left: $space-grid * -0.25 / 2
-    margin-right: $space-grid * -0.25 / 2
-    margin-bottom: $space-grid * -0.25
+  &[data-margin="1/4"]
+    margin-left: 1rem * -0.25 / 2
+    margin-right: 1rem * -0.25 / 2
+    margin-bottom: 1rem * -0.25
 
     > *
-      padding-left: $space-grid * 0.25 / 2
-      padding-right: $space-grid * 0.25 / 2
-      padding-bottom: $space-grid * 0.25
+      padding-left: 1rem * 0.25 / 2
+      padding-right: 1rem * 0.25 / 2
+      padding-bottom: 1rem * 0.25
 
-  &[data-space="0.5"]
-    margin-left: $space-grid * -0.5 / 2
-    margin-right: $space-grid * -0.5 / 2
-    margin-bottom: $space-grid * -0.5
-
-    > *
-      padding-left: $space-grid * 0.5 / 2
-      padding-right: $space-grid * 0.5 / 2
-      padding-bottom: $space-grid * 0.5
-
-  &[data-space="2"]
-    margin-left: $space-grid * -2 / 2
-    margin-right: $space-grid * -2 / 2
-    margin-bottom: $space-grid * -2
+  &[data-margin="1/2"]
+    margin-left: 1rem * -0.5 / 2
+    margin-right: 1rem * -0.5 / 2
+    margin-bottom: 1rem * -0.5
 
     > *
-      padding-left: $space-grid * 2 / 2
-      padding-right: $space-grid * 2 / 2
-      padding-bottom: $space-grid * 2
+      padding-left: 1rem * 0.5 / 2
+      padding-right: 1rem * 0.5 / 2
+      padding-bottom: 1rem * 0.5
 
-  &[data-space="3"]
-    margin-left: $space-grid * -3 / 2
-    margin-right: $space-grid* -3 / 2
-    margin-bottom: $space-grid * -3
-
-    > *
-      padding-left: $space-grid * 3 / 2
-      padding-right: $space-grid * 3 / 2
-      padding-bottom: $space-grid * 3
-
-  &[data-space="4"]
-    margin-left: $space-grid * -4 / 2
-    margin-right: $space-grid* -4 / 2
-    margin-bottom: $space-grid * -4
+  &[data-margin=""],
+  &[data-margin="1"]
+    margin-left: 1rem * -1 / 2
+    margin-right: 1rem * -1 / 2
+    margin-bottom: 1rem * -1
 
     > *
-      padding-left: $space-grid * 4 / 2
-      padding-right: $space-grid * 4 / 2
-      padding-bottom: $space-grid * 4
+      padding-left: 1rem * 1 / 2
+      padding-right: 1rem * 1 / 2
+      padding-bottom: 1rem * 1
+
+  &[data-margin="2"]
+    margin-left: 1rem * -2 / 2
+    margin-right: 1rem * -2 / 2
+    margin-bottom: 1rem * -2
+
+    > *
+      padding-left: 1rem * 2 / 2
+      padding-right: 1rem * 2 / 2
+      padding-bottom: 1rem * 2
+
+  &[data-margin="3"]
+    margin-left: 1rem * -3 / 2
+    margin-right: 1rem* -3 / 2
+    margin-bottom: 1rem * -3
+
+    > *
+      padding-left: 1rem * 3 / 2
+      padding-right: 1rem * 3 / 2
+      padding-bottom: 1rem * 3
+
+  &[data-margin="4"]
+    margin-left: 1rem * -4 / 2
+    margin-right: 1rem* -4 / 2
+    margin-bottom: 1rem * -4
+
+    > *
+      padding-left: 1rem * 4 / 2
+      padding-right: 1rem * 4 / 2
+      padding-bottom: 1rem * 4
 
 [data-grid="1"] > *
   width: 100%
