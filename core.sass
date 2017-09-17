@@ -110,7 +110,6 @@ h6
   letter-spacing: $heading-letter-spacing
   line-height: $heading-line-height
   margin: 0
-  text-transform: $heading-text-transform
 
 h1
   font-size: 1rem * $heading-size-scale * $heading-size-scale * $heading-size-scale * $heading-size-scale
@@ -185,17 +184,14 @@ h6
 a
   color: $link-font-color--basic
   text-decoration: $link-text-decoration--basic
-  transition: $link-transition--basic
 
   &:hover
     color: $link-font-color--hover
     text-decoration: $link-text-decoration--hover
-    transition: $link-transition--hover
 
   &:active
     color: $link-font-color--activ
     text-decoration: $link-text-decoration--activ
-    transition: $link-transition--activ
 
 
 //
@@ -204,9 +200,7 @@ a
 
 button
   background: $button-background--basic
-  border-color: $button-border-color--basic
-  border-style: $button-border-style
-  border-width: $button-border-width
+  border: $button-border--basic
   border-radius: $button-border-radius
   box-shadow: $button-shadow-box--basic
   color: $button-font-color--basic
@@ -223,7 +217,7 @@ button
 
   &:hover
     background: $button-background--hover
-    border-color: $button-border-color--hover
+    border: $button-border--hover
     box-shadow: $button-shadow-box--hover
     color: $button-font-color--hover
     transition: $button-transition--hover
@@ -231,7 +225,7 @@ button
 
   &:active
     background: $button-background--activ
-    border-color: $button-border-color--activ
+    border: $button-border--activ
     box-shadow: $button-shadow-box--activ
     color: $button-font-color--activ
     transition: $button-transition--activ
@@ -314,6 +308,7 @@ select:focus
   background-image: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' version='1.1' width='12' height='14' %3E %3Cpolygon points='0,6 6,0 12,6' fill='#{svg-safe-hex($input-select-arrow-color)}'/%3E %3Cpolygon points='0,8 12,8 6,14' fill='#{svg-safe-hex($input-select-arrow-color)}'/%3E %3C/svg%3E")
   background-repeat: no-repeat
   background-position: right 12px center
+  padding-right: 36px
 
 label
   display: block
