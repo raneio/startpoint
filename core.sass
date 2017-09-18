@@ -9,22 +9,22 @@
   font-size: $rem
 
 @if $rem--s != $rem
-  @media (min-width: $breakpoint-s) and (max-width: $breakpoint-m - 1)
+  @media (min-width: $breakpoint--s) and (max-width: $breakpoint--m - 1)
     \:root
       font-size: $rem--s
 
 @if $rem--m != $rem
-  @media (min-width: $breakpoint-m) and (max-width: $breakpoint-l - 1)
+  @media (min-width: $breakpoint--m) and (max-width: $breakpoint--l - 1)
     \:root
       font-size: $rem--m
 
 @if $rem--l != $rem
-  @media (min-width: $breakpoint-l) and (max-width: $breakpoint-xl - 1)
+  @media (min-width: $breakpoint--l) and (max-width: $breakpoint--xl - 1)
     \:root
       font-size: $rem--l
 
 @if $rem--xl != $rem
-  @media (min-width: $breakpoint-xl)
+  @media (min-width: $breakpoint--xl)
     \:root
       font-size: $rem--xl
 
@@ -46,7 +46,7 @@
 html
   box-sizing: border-box
   min-height: 100vh
-  width: 100vw
+  width: 100%
 
 body
   background-color: $color-background
@@ -55,7 +55,7 @@ body
   font-weight: $font-weight
   line-height: $font-line-height
   min-height: 100vh
-  width: 100vw
+  width: 100%
   -moz-osx-font-smoothing: grayscale
   -webkit-font-smoothing: antialiased
 
@@ -125,7 +125,7 @@ h6
   font-size: 1rem / $heading-size-scale
 
 @if $heading-size-scale--s != $heading-size-scale
-  @media (min-width: $breakpoint-s) and (max-width: $breakpoint-m - 1)
+  @media (min-width: $breakpoint--s) and (max-width: $breakpoint--m - 1)
     h1
       font-size: 1rem * $heading-size-scale--s * $heading-size-scale--s * $heading-size-scale--s * $heading-size-scale--s
     h2
@@ -138,7 +138,7 @@ h6
       font-size: 1rem / $heading-size-scale--s
 
 @if $heading-size-scale--m != $heading-size-scale
-  @media (min-width: $breakpoint-m) and (max-width: $breakpoint-l - 1)
+  @media (min-width: $breakpoint--m) and (max-width: $breakpoint--l - 1)
     h1
       font-size: 1rem * $heading-size-scale--m * $heading-size-scale--m * $heading-size-scale--m * $heading-size-scale--m
     h2
@@ -151,7 +151,7 @@ h6
       font-size: 1rem / $heading-size-scale--m
 
 @if $heading-size-scale--l != $heading-size-scale
-  @media (min-width: $breakpoint-l) and (max-width: $breakpoint-xl - 1)
+  @media (min-width: $breakpoint--l) and (max-width: $breakpoint--xl - 1)
     h1
       font-size: 1rem * $heading-size-scale--l * $heading-size-scale--l * $heading-size-scale--l * $heading-size-scale--l
     h2
@@ -164,7 +164,7 @@ h6
       font-size: 1rem / $heading-size-scale--l
 
 @if $heading-size-scale--xl != $heading-size-scale
-  @media (min-width: $breakpoint-xl)
+  @media (min-width: $breakpoint--xl)
     h1
       font-size: 1rem * $heading-size-scale--xl * $heading-size-scale--xl * $heading-size-scale--xl * $heading-size-scale--xl
     h2
@@ -309,6 +309,12 @@ select:focus
   background-repeat: no-repeat
   background-position: right 12px center
   padding-right: 36px
+
+
+input[type="checkbox"],
+input[type="radio"]
+  margin-left: 5px
+  margin-right: 5px
 
 label
   display: block

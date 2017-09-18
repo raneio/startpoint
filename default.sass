@@ -29,19 +29,30 @@ $color-highlight--invert: $color-highlight !default
 // --------------------------------------------------
 // Default brakespoints from Bootstrap 4
 
-$breakpoint-s: 576px !default
-$breakpoint-m: 768px !default
-$breakpoint-l: 992px !default
-$breakpoint-xl: 1200px !default
+$breakpoint--s: 576px !default
+$breakpoint--m: 768px !default
+$breakpoint--l: 992px !default
+$breakpoint--xl: 1200px !default
+
+
+//
+// Spaces
+// --------------------------------------------------
+
+$space-container--x: 2rem !default
+$space-container--y: 4rem !default
+$space-grid: 2rem !default
+$space-margin: 1rem !default
+$space-margin-auto: 1.5em !default
 
 
 //
 // Times
 // --------------------------------------------------
 
-$time-s: .2s
-$time-m: .5s
-$time-l: 1s
+$time--s: .2s !default
+$time--m: .5s !default
+$time--l: 1s !default
 
 
 //
@@ -129,14 +140,14 @@ $button-transform--basic: none !default
 $button-transform--hover: none !default
 $button-transform--activ: translateY(1px) !default
 
-$button-transition--basic: all $time-s !default
-$button-transition--hover: all $time-s !default
-$button-transition--activ: all $time-s !default
+$button-transition--basic: all $time--s !default
+$button-transition--hover: all $time--s !default
+$button-transition--activ: all $time--s !default
 
 // invert
-$button-background--basic-invert: $color-highlight !default
-$button-background--hover-invert: mix($color-background--invert, $color-highlight, 10%) !default
-$button-background--activ-invert: mix($color-background--invert, $color-highlight, 10%) !default
+$button-background--basic-invert: $button-background--basic !default
+$button-background--hover-invert: $button-background--hover !default
+$button-background--activ-invert: $button-background--activ !default
 
 $button-border--basic-invert: none !default
 $button-border--hover-invert: none !default
@@ -185,9 +196,9 @@ $input-transform--basic: none !default
 $input-transform--hover: none !default
 $input-transform--focus: none !default
 
-$input-transition--basic: all $time-s !default
-$input-transition--hover: all $time-s !default
-$input-transition--focus: all $time-s !default
+$input-transition--basic: all $time--s !default
+$input-transition--hover: all $time--s !default
+$input-transition--focus: all $time--s !default
 
 
 //
