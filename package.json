@@ -1,6 +1,6 @@
 {
   "name": "startpoint-sass",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "The sass-based starting point to every web projects without javascript.",
   "main": "index.sass",
   "scripts": {
