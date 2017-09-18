@@ -14,12 +14,12 @@ https://cdn.rawgit.com/raneio/startpoint/f6aa964c/example.html
 1. Import to your main sass file `@import 'node_modules/startpoint-sass/index.sass'`
 
 
-### How to compile demo sass
+### How to compile demo site
 
-1. Install [Sass](http://sass-lang.com/install)
+1. `npm install`
 1. `npm run demo`
 
 
 ### Dependencies
 
-No dependencies, but we recommend to use [Normalize](https://necolas.github.io/normalize.css/)
+No dependencies, but we recommend to use Startpoint with [Normalize](https://necolas.github.io/normalize.css/)
