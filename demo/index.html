@@ -9,26 +9,26 @@
 </head>
 <body>
 
-  <section class="container" data-margin>
+  <section data-container data-margin="auto">
 
-    <h1>Startpoint <span data-hide="s-">Example</span></h1>
+    <h1>Startpoint <span data-hide="xs s">example</span></h1>
 
     <a href="https://github.com/raneio/startpoint">https://github.com/raneio/startpoint</a>
 
-    <p>Mauno Henrik Koivisto (25 November 1923 – 12 May 2017) was a Finnish politician who served as the ninth President of Finland from 1982 to 1994. He also served twice as Prime Minister, from 1968 to 1970 and 1979 to 1982. He was the first Social Democrat to be elected President of Finland.</p>
+    <p>Broadside spike dead men tell no tales barque swing the lead prow Plate Fleet execution dock line aye. Rutters skysail landlubber or just lubber bring a spring upon her cable chase guns fathom strike colors draft yawl killick. Topmast American Main keel capstan yardarm matey cable driver fore topgallant.</p>
 
   </section>
 
   <section data-invert>
-    <div class="container" data-margin>
+    <div data-container data-margin="auto">
 
       <h3>Invert colors</h3>
 
       <ul class="bullets">
-        <li><i>Kaksi kautta</i>, 1994 <a href="#">ISBN 951-26-3947-5</a></li>
-        <li><i>Historian tekijät</i>, 1995 <a href="#">ISBN 951-26-4082-1</a></li>
-        <li><i>Liikkeen suunta</i>, 1997 <a href="#">ISBN 951-26-4272-7</a></li>
-        <li><i>Koulussa ja sodassa</i>, 1998 <a href="#">ISBN 951-26-4384-7</a></li>
+        <li>Broadside spike dead men tell no tales barque swing the lead prow Plate Fleet execution dock line aye.</li>
+        <li>Hardtack gun bilge water <a href="#">Igrapple</a> hempe. </li>
+        <li>Parley pinnace run a rig run a shot across the bow jolly.</li>
+        <li>Privateer pillage spirits broadside quarter carouser doubloon schooner hail-shot fire in the hole.</li>
       </ul>
 
       <button type="button">Invert button</button>
@@ -36,49 +36,45 @@
     </div>
   </section>
 
-  <section class="container" data-margin>
+  <section data-container data-margin>
 
     <h3>Grid</h3>
 
-    <section data-grid="1xs 2s 2m 3l+">
+    <div data-grid="2 m3 l4 /2">
       <div>
-        <img src="https://unsplash.it/450/200?image=1084" alt="">
+        <img src="https://unsplash.it/450/300?image=1050" alt="">
       </div>
       <div>
-        <img src="https://unsplash.it/450/200?image=1074" alt="">
+        <img src="https://unsplash.it/450/300?image=1038" alt="">
       </div>
       <div>
-        <img src="https://unsplash.it/450/200?image=1062" alt="">
+        <img src="https://unsplash.it/450/300?image=969" alt="">
       </div>
       <div>
-        <img src="https://unsplash.it/450/200?image=1024" alt="">
+        <img src="https://unsplash.it/450/300?image=1024" alt="">
       </div>
       <div>
-        <img src="https://unsplash.it/450/200?image=1020" alt="">
+        <img src="https://unsplash.it/450/300?image=871" alt="">
       </div>
       <div>
-        <img src="https://unsplash.it/450/200?image=1003" alt="">
+        <img src="https://unsplash.it/450/300?image=645" alt="">
       </div>
-    </section>
+    </div>
 
   </section>
 
-  <form class="container" data-margin>
+  <form data-container="s" data-margin>
 
     <h3>Form</h3>
 
     <label>
       Name
-      <input type="text" placeholder="Give your name">
+      <input type="text" placeholder="This is placeholder">
     </label>
 
     <label>
       Message
       <textarea rows="3"></textarea>
-    </label>
-
-    <label>
-      <input type="checkbox"> Click me if you want
     </label>
 
     <label>
@@ -91,23 +87,22 @@
       </select>
     </label>
 
-    <ul>
-      <li>
-        <label>
-          <input type="radio" name="foo-radio"> University of Helsinki 1990
-        </label>
-      </li>
-      <li>
-        <label>
-          <input type="radio" name="foo-radio"> University of Praha 1987
-        </label>
-      </li>
-      <li>
-        <label>
-          <input type="radio" name="foo-radio"> Åbo Akademi 1978
-        </label>
-      </li>
-    </ul>
+    <div data-margin="/4">
+      <label>
+        <input type="radio" name="example">
+        University of Helsinki 1990
+      </label>
+
+      <label>
+        <input type="radio" name="example">
+        University of Praha 1987
+      </label>
+
+      <label>
+        <input type="radio" name="example">
+        Åbo Akademi 1978
+      </label>
+    </div>
 
     <div>
       <button type="button">Submit Form</button>
