@@ -223,6 +223,9 @@ select {
   select::placeholder {
     color: #c2c2c2; }
 
+textarea {
+  resize: vertical; }
+
 select {
   -webkit-appearance: none;
   -moz-appearance: none; }
