@@ -5,7 +5,7 @@ The Sass-based starting point to web projects. Pure Sass, no Javascript.
 
 ### Example
 
-https://cdn.rawgit.com/raneio/startpoint/f6aa964c/example.html
+https://startpoint.netlify.com/
 
 
 ### How to use
