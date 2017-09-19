@@ -123,11 +123,12 @@
 [data-container~="xl"]
   margin-left: auto
   margin-right: auto
-  width: calc(100% - #{$space-container--x} * 2)
+  width: 100%
   max-width: $breakpoint--xl
   padding-top: $space-container--y
   padding-bottom: $space-container--y
-  overflow: hidden
+  padding-left: $space-container--x
+  padding-right: $space-container--x
 
 [data-container~="fluid"]
   max-width: none
@@ -181,13 +182,14 @@
   margin-left: $space-grid * -1 / 2
   margin-right: $space-grid * -1 / 2
   margin-bottom: $space-grid * -1
-  width: 100%
 
   > *
     word-wrap: break-word
     padding-left: $space-grid * 1 / 2
     padding-right: $space-grid * 1 / 2
     padding-bottom: $space-grid * 1
+
+  > :not([data-grid])
     flex: 1
 
 [data-grid~="1"],
@@ -224,14 +226,15 @@
   flex-wrap: wrap
 
   > *
-    flex: 0 0 auto
     width: 100%
+
+  > :not([data-grid])
+    flex: 0 0 auto
 
 [data-grid~="inline"]
   display: inline-flex
-  width: auto
 
-  > *
+  > :not([data-grid])
     flex: 0 1 auto
 
 [data-grid~="1"] > *
