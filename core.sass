@@ -49,7 +49,7 @@ html
   width: 100%
 
 body
-  background-color: $color-background
+  background-color: $color-bg
   color: $font-color
   font-family: $font-family
   font-weight: $font-weight
@@ -82,16 +82,6 @@ pre
 
 iframe
   border: 0
-
-
-//
-// Blockquote
-// --------------------------------------------------
-
-blockquote
-  padding-left: 1rem
-  border-left: 3px solid mix($color-content, $color-background, 10%)
-  color: mix($color-background, $color-content, 10%)
 
 
 //
@@ -199,7 +189,7 @@ a
 // --------------------------------------------------
 
 button
-  background: $button-background--basic
+  background: $button-bg--basic
   border: $button-border--basic
   border-radius: $button-border-radius
   box-shadow: $button-shadow-box--basic
@@ -216,7 +206,7 @@ button
   -webkit-font-smoothing: inherit
 
   &:hover
-    background: $button-background--hover
+    background: $button-bg--hover
     border: $button-border--hover
     box-shadow: $button-shadow-box--hover
     color: $button-font-color--hover
@@ -224,7 +214,7 @@ button
     transform: $button-transform--hover
 
   &:active
-    background: $button-background--activ
+    background: $button-bg--activ
     border: $button-border--activ
     box-shadow: $button-shadow-box--activ
     color: $button-font-color--activ
@@ -264,7 +254,7 @@ input[type="week"],
 input:not([type]),
 textarea,
 select
-  background: $input-background--basic
+  background: $input-bg--basic
   border: $input-border--basic
   border-radius: $input-border-radius
   box-shadow: $input-shadow-box--basic
@@ -280,7 +270,7 @@ select
   width: 100%
 
   &:hover
-    background: $input-background--hover
+    background: $input-bg--hover
     border: $input-border--hover
     box-shadow: $input-shadow-box--hover
     color: $input-font-color--hover
@@ -288,7 +278,7 @@ select
     transform: $input-transform--hover
 
   &:focus
-    background: $input-background--focus
+    background: $input-bg--focus
     border: $input-border--focus
     box-shadow: $input-shadow-box--focus
     color: $input-font-color--focus

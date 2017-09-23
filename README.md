@@ -2,7 +2,7 @@
 
 The Sass-based starting point to web projects. Pure Sass, no Javascript.
 
-*We can't promise backwards compatible before version 1.0.0*
+*I can't promise backwards compatible before version 1.0.0*
 
 
 ### Author
@@ -12,13 +12,12 @@ Rane Ahonen, [Rane.io](https://rane.io)
 
 ### How to install
 
-1. Install `npm install --save startpoint-sass`
+1. `npm install --save startpoint-sass`
 1. Import to your main sass file `@import 'node_modules/startpoint-sass/index.sass'`
 
 
 ### How to test with demo site
 
-1. `npm install`
 1. `npm install --save-dev node-sass`
 1. Copy variables from `./default.sass` to `./demo/sass/variables.sass`
 1. Make some changes to `./demo/sass/variables.sass`
@@ -38,4 +37,4 @@ Coming later :(
 
 ### Dependencies
 
-No dependencies, but we recommend to use Startpoint with [Normalize](https://necolas.github.io/normalize.css/)
+No dependencies, but I recommend to use [Normalize](https://necolas.github.io/normalize.css/)

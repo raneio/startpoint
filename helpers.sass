@@ -76,8 +76,8 @@
 // Turn the colors into opposite colors
 
 [data-invert]
-  background-color: $color-background--invert
-  color: $color-content--invert
+  background-color: $color-bg--invert
+  color: $font-color--invert
 
   a
     color: $link-font-color--basic-invert
@@ -97,19 +97,19 @@
     color: $heading-font-color--invert
 
   button
-    background: $button-background--basic-invert
+    background: $button-bg--basic-invert
     border: $button-border--basic-invert
     box-shadow: $button-shadow-box--basic-invert
     color: $button-font-color--basic-invert
 
     &:hover
-      background: $button-background--hover-invert
+      background: $button-bg--hover-invert
       border: $button-border--hover-invert
       box-shadow: $button-shadow-box--hover-invert
       color: $button-font-color--hover-invert
 
     &:active
-      background: $button-background--activ-invert
+      background: $button-bg--activ-invert
       border: $button-border--activ-invert
       box-shadow: $button-shadow-box--activ-invert
       color: $button-font-color--activ-invert
@@ -198,30 +198,30 @@
 [data-grid~="4"],
 [data-grid~="5"],
 [data-grid~="6"],
-[data-grid~="s1"],
-[data-grid~="s2"],
-[data-grid~="s3"],
-[data-grid~="s4"],
-[data-grid~="s5"],
-[data-grid~="s6"],
-[data-grid~="m1"],
-[data-grid~="m2"],
-[data-grid~="m3"],
-[data-grid~="m4"],
-[data-grid~="m5"],
-[data-grid~="m6"],
-[data-grid~="l1"],
-[data-grid~="l2"],
-[data-grid~="l3"],
-[data-grid~="l4"],
-[data-grid~="l5"],
-[data-grid~="l6"],
-[data-grid~="xl1"],
-[data-grid~="xl2"],
-[data-grid~="xl3"],
-[data-grid~="xl4"],
-[data-grid~="xl5"],
-[data-grid~="xl6"]
+[data-grid~="1s"],
+[data-grid~="2s"],
+[data-grid~="3s"],
+[data-grid~="4s"],
+[data-grid~="5s"],
+[data-grid~="6s"],
+[data-grid~="1m"],
+[data-grid~="2m"],
+[data-grid~="3m"],
+[data-grid~="4m"],
+[data-grid~="5m"],
+[data-grid~="6m"],
+[data-grid~="1l"],
+[data-grid~="2l"],
+[data-grid~="3l"],
+[data-grid~="4l"],
+[data-grid~="5l"],
+[data-grid~="6l"],
+[data-grid~="1xl"],
+[data-grid~="2xl"],
+[data-grid~="3xl"],
+[data-grid~="4xl"],
+[data-grid~="5xl"],
+[data-grid~="6xl"]
   display: flex
   flex-wrap: wrap
 
@@ -251,137 +251,137 @@
   width: 16.6666%
 
 @media (min-width: $breakpoint--s)
-  [data-grid~="xl1"] > *
+  [data-grid~="1xl"] > *
     width: 100%
-  [data-grid~="xl2"] > *
+  [data-grid~="2xl"] > *
     width: 50%
-  [data-grid~="xl3"] > *
+  [data-grid~="3xl"] > *
     width: 33.3333%
-  [data-grid~="xl4"] > *
+  [data-grid~="4xl"] > *
     width: 25%
-  [data-grid~="xl5"] > *
+  [data-grid~="5xl"] > *
     width: 20%
-  [data-grid~="xl6"] > *
+  [data-grid~="6xl"] > *
     width: 16.6666%
 
-  [data-grid~="l1"] > *
+  [data-grid~="1l"] > *
     width: 100%
-  [data-grid~="l2"] > *
+  [data-grid~="2l"] > *
     width: 50%
-  [data-grid~="l3"] > *
+  [data-grid~="3l"] > *
     width: 33.3333%
-  [data-grid~="l4"] > *
+  [data-grid~="4l"] > *
     width: 25%
-  [data-grid~="l5"] > *
+  [data-grid~="5l"] > *
     width: 20%
-  [data-grid~="l6"] > *
+  [data-grid~="6l"] > *
     width: 16.6666%
 
-  [data-grid~="m1"] > *
+  [data-grid~="1m"] > *
     width: 100%
-  [data-grid~="m2"] > *
+  [data-grid~="2m"] > *
     width: 50%
-  [data-grid~="m3"] > *
+  [data-grid~="3m"] > *
     width: 33.3333%
-  [data-grid~="m4"] > *
+  [data-grid~="4m"] > *
     width: 25%
-  [data-grid~="m5"] > *
+  [data-grid~="5m"] > *
     width: 20%
-  [data-grid~="m6"] > *
+  [data-grid~="6m"] > *
     width: 16.6666%
 
-  [data-grid~="s1"] > *
+  [data-grid~="1s"] > *
     width: 100%
-  [data-grid~="s2"] > *
+  [data-grid~="2s"] > *
     width: 50%
-  [data-grid~="s3"] > *
+  [data-grid~="3s"] > *
     width: 33.3333%
-  [data-grid~="s4"] > *
+  [data-grid~="4s"] > *
     width: 25%
-  [data-grid~="s5"] > *
+  [data-grid~="5s"] > *
     width: 20%
-  [data-grid~="s6"] > *
+  [data-grid~="6s"] > *
     width: 16.6666%
 
 @media (min-width: $breakpoint--m)
-  [data-grid~="xl1"] > *
+  [data-grid~="1xl"] > *
     width: 100%
-  [data-grid~="xl2"] > *
+  [data-grid~="2xl"] > *
     width: 50%
-  [data-grid~="xl3"] > *
+  [data-grid~="3xl"] > *
     width: 33.3333%
-  [data-grid~="xl4"] > *
+  [data-grid~="4xl"] > *
     width: 25%
-  [data-grid~="xl5"] > *
+  [data-grid~="5xl"] > *
     width: 20%
-  [data-grid~="xl6"] > *
+  [data-grid~="6xl"] > *
     width: 16.6666%
 
-  [data-grid~="l1"] > *
+  [data-grid~="1l"] > *
     width: 100%
-  [data-grid~="l2"] > *
+  [data-grid~="2l"] > *
     width: 50%
-  [data-grid~="l3"] > *
+  [data-grid~="3l"] > *
     width: 33.3333%
-  [data-grid~="l4"] > *
+  [data-grid~="4l"] > *
     width: 25%
-  [data-grid~="l5"] > *
+  [data-grid~="5l"] > *
     width: 20%
-  [data-grid~="l6"] > *
+  [data-grid~="6l"] > *
     width: 16.6666%
 
-  [data-grid~="m1"] > *
+  [data-grid~="1m"] > *
     width: 100%
-  [data-grid~="m2"] > *
+  [data-grid~="2m"] > *
     width: 50%
-  [data-grid~="m3"] > *
+  [data-grid~="3m"] > *
     width: 33.3333%
-  [data-grid~="m4"] > *
+  [data-grid~="4m"] > *
     width: 25%
-  [data-grid~="m5"] > *
+  [data-grid~="5m"] > *
     width: 20%
-  [data-grid~="m6"] > *
+  [data-grid~="6m"] > *
     width: 16.6666%
 
 @media (min-width: $breakpoint--l)
-  [data-grid~="xl1"] > *
+  [data-grid~="1xl"] > *
     width: 100%
-  [data-grid~="xl2"] > *
+  [data-grid~="2xl"] > *
     width: 50%
-  [data-grid~="xl3"] > *
+  [data-grid~="3xl"] > *
     width: 33.3333%
-  [data-grid~="xl4"] > *
+  [data-grid~="4xl"] > *
     width: 25%
-  [data-grid~="xl5"] > *
+  [data-grid~="5xl"] > *
     width: 20%
-  [data-grid~="xl6"] > *
+  [data-grid~="6xl"] > *
     width: 16.6666%
 
-  [data-grid~="l1"] > *
+  [data-grid~="1l"] > *
     width: 100%
-  [data-grid~="l2"] > *
+  [data-grid~="2l"] > *
     width: 50%
-  [data-grid~="l3"] > *
+  [data-grid~="3l"] > *
     width: 33.3333%
-  [data-grid~="l4"] > *
+  [data-grid~="4l"] > *
     width: 25%
-  [data-grid~="l5"] > *
+  [data-grid~="5l"] > *
     width: 20%
-  [data-grid~="l6"] > *
+  [data-grid~="6l"] > *
     width: 16.6666%
 
 @media (min-width: $breakpoint--xl)
-  [data-grid~="xl1"] > *
+  [data-grid~="1xl"] > *
     width: 100%
-  [data-grid~="xl2"] > *
+  [data-grid~="2xl"] > *
     width: 50%
-  [data-grid~="xl3"] > *
+  [data-grid~="3xl"] > *
     width: 33.3333%
-  [data-grid~="xl4"] > *
+  [data-grid~="4xl"] > *
     width: 25%
-  [data-grid~="xl5"] > *
+  [data-grid~="5xl"] > *
     width: 20%
-  [data-grid~="xl6"] > *
+  [data-grid~="6xl"] > *
     width: 16.6666%
 
 [data-grid~="*0"]
