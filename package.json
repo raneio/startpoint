@@ -3,7 +3,7 @@
   "version": "0.0.9",
   "description": "The sass-based starting point to every web projects without javascript.",
   "scripts": {
-    "demo": "node-sass demo/sass/style.sass demo/style.min.css --style compressed"
+    "demo": "node-sass demo/sass/style.sass demo/style.min.css --output-style compressed"
   },
   "repository": {
     "type": "git",

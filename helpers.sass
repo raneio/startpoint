@@ -3,28 +3,29 @@
 // --------------------------------------------------
 // Force display to none
 
-[data-hide=""]
-  display: none !important
-
-@media (max-width: $breakpoint--s - 1)
-  [data-hide~="xs"]
+@if $helper-hide == true
+  [data-hide=""]
     display: none !important
 
-@media (min-width: $breakpoint--s) and (max-width: $breakpoint--m - 1)
-  [data-hide~="s"]
-    display: none !important
+  @media (max-width: $breakpoint--s - 1)
+    [data-hide~="xs"]
+      display: none !important
 
-@media (min-width: $breakpoint--m) and (max-width: $breakpoint--l - 1)
-  [data-hide~="m"]
-    display: none !important
+  @media (min-width: $breakpoint--s) and (max-width: $breakpoint--m - 1)
+    [data-hide~="s"]
+      display: none !important
 
-@media (min-width: $breakpoint--l) and (max-width: $breakpoint--xl - 1)
-  [data-hide~="l"]
-    display: none !important
+  @media (min-width: $breakpoint--m) and (max-width: $breakpoint--l - 1)
+    [data-hide~="m"]
+      display: none !important
 
-@media (min-width: $breakpoint--xl)
-  [data-hide~="xl"]
-    display: none !important
+  @media (min-width: $breakpoint--l) and (max-width: $breakpoint--xl - 1)
+    [data-hide~="l"]
+      display: none !important
+
+  @media (min-width: $breakpoint--xl)
+    [data-hide~="xl"]
+      display: none !important
 
 
 //
@@ -32,42 +33,43 @@
 // --------------------------------------------------
 // Add top margin to other than first child
 
-[data-margin],
-[data-margin~="*1"]
-  > * + *
-    margin-top: $space-margin
+@if $helper-margin == true
+  [data-margin],
+  [data-margin~="*1"]
+    > * + *
+      margin-top: $space-margin
 
-[data-margin="auto"]
-  > * + *
-    margin-top: $space-margin-auto
+  [data-margin="auto"]
+    > * + *
+      margin-top: $space-margin-auto
 
-[data-margin="*0"]
-  > * + *
-    margin-top: 0
+  [data-margin="*0"]
+    > * + *
+      margin-top: 0
 
-[data-margin="/4"]
-  > * + *
-    margin-top: $space-margin / 4
+  [data-margin="/4"]
+    > * + *
+      margin-top: $space-margin / 4
 
-[data-margin="/3"]
-  > * + *
-    margin-top: $space-margin / 3
+  [data-margin="/3"]
+    > * + *
+      margin-top: $space-margin / 3
 
-[data-margin="/2"]
-  > * + *
-    margin-top: $space-margin / 2
+  [data-margin="/2"]
+    > * + *
+      margin-top: $space-margin / 2
 
-[data-margin="*2"]
-  > * + *
-    margin-top: $space-margin * 2
+  [data-margin="*2"]
+    > * + *
+      margin-top: $space-margin * 2
 
-[data-margin="*3"]
-  > * + *
-    margin-top: $space-margin * 3
+  [data-margin="*3"]
+    > * + *
+      margin-top: $space-margin * 3
 
-[data-margin="*4"]
-  > * + *
-    margin-top: $space-margin * 4
+  [data-margin="*4"]
+    > * + *
+      margin-top: $space-margin * 4
 
 
 //
@@ -75,381 +77,385 @@
 // --------------------------------------------------
 // Turn the colors into opposite colors
 
-[data-invert]
-  background-color: $color-bg--invert
-  color: $font-color--invert
+@if $helper-invert == true
+  [data-invert]
+    background-color: $color-bg--invert
+    color: $font-color--invert
 
-  a
-    color: $link-font-color--basic-invert
+    a
+      color: $link-font-color--basic-invert
 
-    &:hover
-      color: $link-font-color--hover-invert
+      &:hover
+        color: $link-font-color--hover-invert
 
-    &:active
-      color: $link-font-color--activ-invert
+      &:active
+        color: $link-font-color--activ-invert
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6
-    color: $heading-font-color--invert
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6
+      color: $heading-font-color--invert
 
-  button
-    background: $button-bg--basic-invert
-    border: $button-border--basic-invert
-    box-shadow: $button-shadow-box--basic-invert
-    color: $button-font-color--basic-invert
+    button
+      background: $button-bg--basic-invert
+      border-color: $button-border-color--basic-invert
+      box-shadow: $button-shadow-box--basic-invert
+      color: $button-font-color--basic-invert
+      color: $button-font-color--basic-invert
 
-    &:hover
-      background: $button-bg--hover-invert
-      border: $button-border--hover-invert
-      box-shadow: $button-shadow-box--hover-invert
-      color: $button-font-color--hover-invert
+      &:hover
+        background: $button-bg--hover-invert
+        border-color: $button-border-color--hover-invert
+        box-shadow: $button-shadow-box--hover-invert
+        color: $button-font-color--hover-invert
 
-    &:active
-      background: $button-bg--activ-invert
-      border: $button-border--activ-invert
-      box-shadow: $button-shadow-box--activ-invert
-      color: $button-font-color--activ-invert
+      &:active
+        background: $button-bg--activ-invert
+        border-color: $button-border-color--activ-invert
+        box-shadow: $button-shadow-box--activ-invert
+        color: $button-font-color--activ-invert
 
 
 //
 // Container
 // --------------------------------------------------
 
-[data-container],
-[data-container~="xl"]
-  margin-left: auto
-  margin-right: auto
-  width: 100%
-  max-width: $breakpoint--xl
-  padding-top: $space-container--y
-  padding-bottom: $space-container--y
-  padding-left: $space-container--x
-  padding-right: $space-container--x
+@if $helper-grid == true
+  [data-container],
+  [data-container~="xl"]
+    margin-left: auto
+    margin-right: auto
+    width: 100%
+    max-width: $breakpoint--xl
+    padding-top: $space-container--y
+    padding-bottom: $space-container--y
+    padding-left: $space-container--x
+    padding-right: $space-container--x
 
-[data-container~="fluid"]
-  max-width: none
+  [data-container~="fluid"]
+    max-width: none
 
-[data-container~="s"]
-  max-width: $breakpoint--s
+  [data-container~="s"]
+    max-width: $breakpoint--s
 
-[data-container~="m"]
-  max-width: $breakpoint--m
+  [data-container~="m"]
+    max-width: $breakpoint--m
 
-[data-container~="l"]
-  max-width: $breakpoint--l
+  [data-container~="l"]
+    max-width: $breakpoint--l
 
-[data-container~="*0"]
-  padding-top: 0
-  padding-bottom: 0
+  [data-container~="*0"]
+    padding-top: 0
+    padding-bottom: 0
 
-[data-container~="/4"]
-  padding-top: $space-container--y / 4
-  padding-bottom: $space-container--y / 4
+  [data-container~="/4"]
+    padding-top: $space-container--y / 4
+    padding-bottom: $space-container--y / 4
 
-[data-container~="/3"]
-  padding-top: $space-container--y / 3
-  padding-bottom: $space-container--y / 3
+  [data-container~="/3"]
+    padding-top: $space-container--y / 3
+    padding-bottom: $space-container--y / 3
 
-[data-container~="/2"]
-  padding-top: $space-container--y / 2
-  padding-bottom: $space-container--y / 2
+  [data-container~="/2"]
+    padding-top: $space-container--y / 2
+    padding-bottom: $space-container--y / 2
 
-[data-container~="*2"]
-  padding-top: $space-container--y * 2
-  padding-bottom: $space-container--y * 2
+  [data-container~="*2"]
+    padding-top: $space-container--y * 2
+    padding-bottom: $space-container--y * 2
 
-[data-container~="*3"]
-  padding-top: $space-container--y * 3
-  padding-bottom: $space-container--y * 3
+  [data-container~="*3"]
+    padding-top: $space-container--y * 3
+    padding-bottom: $space-container--y * 3
 
-[data-container~="*4"]
-  padding-top: $space-container--y * 4
-  padding-bottom: $space-container--y * 4
+  [data-container~="*4"]
+    padding-top: $space-container--y * 4
+    padding-bottom: $space-container--y * 4
 
 
 //
 // Grid
 // --------------------------------------------------
 
-[data-grid],
-[data-grid~="auto"]
-  display: flex
-  flex-wrap: nowrap
-  margin-left: $space-grid * -1 / 2
-  margin-right: $space-grid * -1 / 2
-  margin-bottom: $space-grid * -1
+@if $helper-grid == true
+  [data-grid],
+  [data-grid~="auto"]
+    display: flex
+    flex-wrap: nowrap
+    margin-left: $space-grid * -1 / 2
+    margin-right: $space-grid * -1 / 2
+    margin-bottom: $space-grid * -1
 
-  > *
-    word-wrap: break-word
-    padding-left: $space-grid * 1 / 2
-    padding-right: $space-grid * 1 / 2
-    padding-bottom: $space-grid * 1
+    > *
+      word-wrap: break-word
+      padding-left: $space-grid * 1 / 2
+      padding-right: $space-grid * 1 / 2
+      padding-bottom: $space-grid * 1
 
-  > :not([data-grid])
-    flex: 1
+    > :not([data-grid])
+      flex: 1
 
-[data-grid~="1"],
-[data-grid~="2"],
-[data-grid~="3"],
-[data-grid~="4"],
-[data-grid~="5"],
-[data-grid~="6"],
-[data-grid~="1s"],
-[data-grid~="2s"],
-[data-grid~="3s"],
-[data-grid~="4s"],
-[data-grid~="5s"],
-[data-grid~="6s"],
-[data-grid~="1m"],
-[data-grid~="2m"],
-[data-grid~="3m"],
-[data-grid~="4m"],
-[data-grid~="5m"],
-[data-grid~="6m"],
-[data-grid~="1l"],
-[data-grid~="2l"],
-[data-grid~="3l"],
-[data-grid~="4l"],
-[data-grid~="5l"],
-[data-grid~="6l"],
-[data-grid~="1xl"],
-[data-grid~="2xl"],
-[data-grid~="3xl"],
-[data-grid~="4xl"],
-[data-grid~="5xl"],
-[data-grid~="6xl"]
-  display: flex
-  flex-wrap: wrap
+  [data-grid~="1"],
+  [data-grid~="2"],
+  [data-grid~="3"],
+  [data-grid~="4"],
+  [data-grid~="5"],
+  [data-grid~="6"],
+  [data-grid~="1s"],
+  [data-grid~="2s"],
+  [data-grid~="3s"],
+  [data-grid~="4s"],
+  [data-grid~="5s"],
+  [data-grid~="6s"],
+  [data-grid~="1m"],
+  [data-grid~="2m"],
+  [data-grid~="3m"],
+  [data-grid~="4m"],
+  [data-grid~="5m"],
+  [data-grid~="6m"],
+  [data-grid~="1l"],
+  [data-grid~="2l"],
+  [data-grid~="3l"],
+  [data-grid~="4l"],
+  [data-grid~="5l"],
+  [data-grid~="6l"],
+  [data-grid~="1xl"],
+  [data-grid~="2xl"],
+  [data-grid~="3xl"],
+  [data-grid~="4xl"],
+  [data-grid~="5xl"],
+  [data-grid~="6xl"]
+    display: flex
+    flex-wrap: wrap
 
-  > *
+    > *
+      width: 100%
+
+    > :not([data-grid])
+      flex: 0 0 auto
+
+  [data-grid~="inline"]
+    display: inline-flex
+
+    > :not([data-grid])
+      flex: 0 1 auto
+
+  [data-grid~="1"] > *
     width: 100%
-
-  > :not([data-grid])
-    flex: 0 0 auto
-
-[data-grid~="inline"]
-  display: inline-flex
-
-  > :not([data-grid])
-    flex: 0 1 auto
-
-[data-grid~="1"] > *
-  width: 100%
-[data-grid~="2"] > *
-  width: 50%
-[data-grid~="3"] > *
-  width: 33.3333%
-[data-grid~="4"] > *
-  width: 25%
-[data-grid~="5"] > *
-  width: 20%
-[data-grid~="6"] > *
-  width: 16.6666%
-
-@media (min-width: $breakpoint--s)
-  [data-grid~="1xl"] > *
-    width: 100%
-  [data-grid~="2xl"] > *
+  [data-grid~="2"] > *
     width: 50%
-  [data-grid~="3xl"] > *
+  [data-grid~="3"] > *
     width: 33.3333%
-  [data-grid~="4xl"] > *
+  [data-grid~="4"] > *
     width: 25%
-  [data-grid~="5xl"] > *
+  [data-grid~="5"] > *
     width: 20%
-  [data-grid~="6xl"] > *
+  [data-grid~="6"] > *
     width: 16.6666%
 
-  [data-grid~="1l"] > *
-    width: 100%
-  [data-grid~="2l"] > *
-    width: 50%
-  [data-grid~="3l"] > *
-    width: 33.3333%
-  [data-grid~="4l"] > *
-    width: 25%
-  [data-grid~="5l"] > *
-    width: 20%
-  [data-grid~="6l"] > *
-    width: 16.6666%
+  @media (min-width: $breakpoint--s)
+    [data-grid~="1xl"] > *
+      width: 100%
+    [data-grid~="2xl"] > *
+      width: 50%
+    [data-grid~="3xl"] > *
+      width: 33.3333%
+    [data-grid~="4xl"] > *
+      width: 25%
+    [data-grid~="5xl"] > *
+      width: 20%
+    [data-grid~="6xl"] > *
+      width: 16.6666%
 
-  [data-grid~="1m"] > *
-    width: 100%
-  [data-grid~="2m"] > *
-    width: 50%
-  [data-grid~="3m"] > *
-    width: 33.3333%
-  [data-grid~="4m"] > *
-    width: 25%
-  [data-grid~="5m"] > *
-    width: 20%
-  [data-grid~="6m"] > *
-    width: 16.6666%
+    [data-grid~="1l"] > *
+      width: 100%
+    [data-grid~="2l"] > *
+      width: 50%
+    [data-grid~="3l"] > *
+      width: 33.3333%
+    [data-grid~="4l"] > *
+      width: 25%
+    [data-grid~="5l"] > *
+      width: 20%
+    [data-grid~="6l"] > *
+      width: 16.6666%
 
-  [data-grid~="1s"] > *
-    width: 100%
-  [data-grid~="2s"] > *
-    width: 50%
-  [data-grid~="3s"] > *
-    width: 33.3333%
-  [data-grid~="4s"] > *
-    width: 25%
-  [data-grid~="5s"] > *
-    width: 20%
-  [data-grid~="6s"] > *
-    width: 16.6666%
+    [data-grid~="1m"] > *
+      width: 100%
+    [data-grid~="2m"] > *
+      width: 50%
+    [data-grid~="3m"] > *
+      width: 33.3333%
+    [data-grid~="4m"] > *
+      width: 25%
+    [data-grid~="5m"] > *
+      width: 20%
+    [data-grid~="6m"] > *
+      width: 16.6666%
 
-@media (min-width: $breakpoint--m)
-  [data-grid~="1xl"] > *
-    width: 100%
-  [data-grid~="2xl"] > *
-    width: 50%
-  [data-grid~="3xl"] > *
-    width: 33.3333%
-  [data-grid~="4xl"] > *
-    width: 25%
-  [data-grid~="5xl"] > *
-    width: 20%
-  [data-grid~="6xl"] > *
-    width: 16.6666%
+    [data-grid~="1s"] > *
+      width: 100%
+    [data-grid~="2s"] > *
+      width: 50%
+    [data-grid~="3s"] > *
+      width: 33.3333%
+    [data-grid~="4s"] > *
+      width: 25%
+    [data-grid~="5s"] > *
+      width: 20%
+    [data-grid~="6s"] > *
+      width: 16.6666%
 
-  [data-grid~="1l"] > *
-    width: 100%
-  [data-grid~="2l"] > *
-    width: 50%
-  [data-grid~="3l"] > *
-    width: 33.3333%
-  [data-grid~="4l"] > *
-    width: 25%
-  [data-grid~="5l"] > *
-    width: 20%
-  [data-grid~="6l"] > *
-    width: 16.6666%
+  @media (min-width: $breakpoint--m)
+    [data-grid~="1xl"] > *
+      width: 100%
+    [data-grid~="2xl"] > *
+      width: 50%
+    [data-grid~="3xl"] > *
+      width: 33.3333%
+    [data-grid~="4xl"] > *
+      width: 25%
+    [data-grid~="5xl"] > *
+      width: 20%
+    [data-grid~="6xl"] > *
+      width: 16.6666%
 
-  [data-grid~="1m"] > *
-    width: 100%
-  [data-grid~="2m"] > *
-    width: 50%
-  [data-grid~="3m"] > *
-    width: 33.3333%
-  [data-grid~="4m"] > *
-    width: 25%
-  [data-grid~="5m"] > *
-    width: 20%
-  [data-grid~="6m"] > *
-    width: 16.6666%
+    [data-grid~="1l"] > *
+      width: 100%
+    [data-grid~="2l"] > *
+      width: 50%
+    [data-grid~="3l"] > *
+      width: 33.3333%
+    [data-grid~="4l"] > *
+      width: 25%
+    [data-grid~="5l"] > *
+      width: 20%
+    [data-grid~="6l"] > *
+      width: 16.6666%
 
-@media (min-width: $breakpoint--l)
-  [data-grid~="1xl"] > *
-    width: 100%
-  [data-grid~="2xl"] > *
-    width: 50%
-  [data-grid~="3xl"] > *
-    width: 33.3333%
-  [data-grid~="4xl"] > *
-    width: 25%
-  [data-grid~="5xl"] > *
-    width: 20%
-  [data-grid~="6xl"] > *
-    width: 16.6666%
+    [data-grid~="1m"] > *
+      width: 100%
+    [data-grid~="2m"] > *
+      width: 50%
+    [data-grid~="3m"] > *
+      width: 33.3333%
+    [data-grid~="4m"] > *
+      width: 25%
+    [data-grid~="5m"] > *
+      width: 20%
+    [data-grid~="6m"] > *
+      width: 16.6666%
 
-  [data-grid~="1l"] > *
-    width: 100%
-  [data-grid~="2l"] > *
-    width: 50%
-  [data-grid~="3l"] > *
-    width: 33.3333%
-  [data-grid~="4l"] > *
-    width: 25%
-  [data-grid~="5l"] > *
-    width: 20%
-  [data-grid~="6l"] > *
-    width: 16.6666%
+  @media (min-width: $breakpoint--l)
+    [data-grid~="1xl"] > *
+      width: 100%
+    [data-grid~="2xl"] > *
+      width: 50%
+    [data-grid~="3xl"] > *
+      width: 33.3333%
+    [data-grid~="4xl"] > *
+      width: 25%
+    [data-grid~="5xl"] > *
+      width: 20%
+    [data-grid~="6xl"] > *
+      width: 16.6666%
 
-@media (min-width: $breakpoint--xl)
-  [data-grid~="1xl"] > *
-    width: 100%
-  [data-grid~="2xl"] > *
-    width: 50%
-  [data-grid~="3xl"] > *
-    width: 33.3333%
-  [data-grid~="4xl"] > *
-    width: 25%
-  [data-grid~="5xl"] > *
-    width: 20%
-  [data-grid~="6xl"] > *
-    width: 16.6666%
+    [data-grid~="1l"] > *
+      width: 100%
+    [data-grid~="2l"] > *
+      width: 50%
+    [data-grid~="3l"] > *
+      width: 33.3333%
+    [data-grid~="4l"] > *
+      width: 25%
+    [data-grid~="5l"] > *
+      width: 20%
+    [data-grid~="6l"] > *
+      width: 16.6666%
 
-[data-grid~="*0"]
-  margin-left: 0
-  margin-right: 0
-  margin-bottom: 0
+  @media (min-width: $breakpoint--xl)
+    [data-grid~="1xl"] > *
+      width: 100%
+    [data-grid~="2xl"] > *
+      width: 50%
+    [data-grid~="3xl"] > *
+      width: 33.3333%
+    [data-grid~="4xl"] > *
+      width: 25%
+    [data-grid~="5xl"] > *
+      width: 20%
+    [data-grid~="6xl"] > *
+      width: 16.6666%
 
-  > *
-    padding-left: 0
-    padding-right: 0
-    padding-bottom: 0
+  [data-grid~="*0"]
+    margin-left: 0
+    margin-right: 0
+    margin-bottom: 0
 
-[data-grid~="/4"]
-  margin-left: $space-grid / -4 / 2
-  margin-right: $space-grid / -4 / 2
-  margin-bottom: $space-grid / -4
+    > *
+      padding-left: 0
+      padding-right: 0
+      padding-bottom: 0
 
-  > *
-    padding-left: $space-grid / 4 / 2
-    padding-right: $space-grid / 4 / 2
-    padding-bottom: $space-grid / 4
+  [data-grid~="/4"]
+    margin-left: $space-grid / -4 / 2
+    margin-right: $space-grid / -4 / 2
+    margin-bottom: $space-grid / -4
 
-[data-grid~="/3"]
-  margin-left: $space-grid / -3 / 2
-  margin-right: $space-grid / -3 / 2
-  margin-bottom: $space-grid / -3
+    > *
+      padding-left: $space-grid / 4 / 2
+      padding-right: $space-grid / 4 / 2
+      padding-bottom: $space-grid / 4
 
-  > *
-    padding-left: $space-grid / 3 / 2
-    padding-right: $space-grid / 3 / 2
-    padding-bottom: $space-grid / 3
+  [data-grid~="/3"]
+    margin-left: $space-grid / -3 / 2
+    margin-right: $space-grid / -3 / 2
+    margin-bottom: $space-grid / -3
 
-[data-grid~="/2"]
-  margin-left: $space-grid / -2 / 2
-  margin-right: $space-grid / -2 / 2
-  margin-bottom: $space-grid / -2
+    > *
+      padding-left: $space-grid / 3 / 2
+      padding-right: $space-grid / 3 / 2
+      padding-bottom: $space-grid / 3
 
-  > *
-    padding-left: $space-grid / 2 / 2
-    padding-right: $space-grid / 2 / 2
-    padding-bottom: $space-grid / 2
+  [data-grid~="/2"]
+    margin-left: $space-grid / -2 / 2
+    margin-right: $space-grid / -2 / 2
+    margin-bottom: $space-grid / -2
 
-[data-grid~="*2"]
-  margin-left: $space-grid * -2 / 2
-  margin-right: $space-grid * -2 / 2
-  margin-bottom: $space-grid * -2
+    > *
+      padding-left: $space-grid / 2 / 2
+      padding-right: $space-grid / 2 / 2
+      padding-bottom: $space-grid / 2
 
-  > *
-    padding-left: $space-grid * 2 / 2
-    padding-right: $space-grid * 2 / 2
-    padding-bottom: $space-grid * 2
+  [data-grid~="*2"]
+    margin-left: $space-grid * -2 / 2
+    margin-right: $space-grid * -2 / 2
+    margin-bottom: $space-grid * -2
 
-[data-grid~="*3"]
-  margin-left: $space-grid * -3 / 2
-  margin-right: $space-grid * -3 / 2
-  margin-bottom: $space-grid * -3
+    > *
+      padding-left: $space-grid * 2 / 2
+      padding-right: $space-grid * 2 / 2
+      padding-bottom: $space-grid * 2
 
-  > *
-    padding-left: $space-grid * 3 / 2
-    padding-right: $space-grid * 3 / 2
-    padding-bottom: $space-grid * 3
+  [data-grid~="*3"]
+    margin-left: $space-grid * -3 / 2
+    margin-right: $space-grid * -3 / 2
+    margin-bottom: $space-grid * -3
 
-[data-grid~="*4"]
-  margin-left: $space-grid * -4 / 2
-  margin-right: $space-grid * -4 / 2
-  margin-bottom: $space-grid * -4
+    > *
+      padding-left: $space-grid * 3 / 2
+      padding-right: $space-grid * 3 / 2
+      padding-bottom: $space-grid * 3
 
-  > *
-    padding-left: $space-grid * 4 / 2
-    padding-right: $space-grid * 4 / 2
-    padding-bottom: $space-grid * 4
+  [data-grid~="*4"]
+    margin-left: $space-grid * -4 / 2
+    margin-right: $space-grid * -4 / 2
+    margin-bottom: $space-grid * -4
+
+    > *
+      padding-left: $space-grid * 4 / 2
+      padding-right: $space-grid * 4 / 2
+      padding-bottom: $space-grid * 4

@@ -38,3 +38,6 @@ Coming later :(
 ### Dependencies
 
 No dependencies, but I recommend to use [Normalize](https://necolas.github.io/normalize.css/)
+
+### Licenses
+[MIT](https://spdx.org/licenses/MIT.html)
