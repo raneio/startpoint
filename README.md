@@ -2,7 +2,7 @@
 
 The Sass-based starting point to web projects. Pure Sass, no Javascript.
 
-*I can't promise backwards compatible before version 1.0.0*
+ ***!!! I can't promise backwards compatible before version 1.0.0 !!!***
 
 
 ### Author
