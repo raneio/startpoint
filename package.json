@@ -1,6 +1,6 @@
 {
   "name": "startpoint-sass",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "The sass-based starting point to every web projects without javascript.",
   "scripts": {
     "demo": "node-sass demo/sass/style.sass demo/style.min.css --output-style compressed"
