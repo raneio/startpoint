@@ -5,9 +5,9 @@ The Sass-based starting point to web projects. Pure Sass, no Javascript.
  ***!!! I can't promise backwards compatible before version 1.0.0 !!!***
 
 
-### Author
+## Docs
 
-Rane Ahonen, [Rane.io](https://rane.io)
+**[https://www.rane.io/starpoint](https://www.rane.io/starpoint)**
 
 
 ### How to install
@@ -25,19 +25,15 @@ Rane Ahonen, [Rane.io](https://rane.io)
 1. Open `./demo/index.html` with your browser
 
 
-### Example
-
-https://startpoint.rane.io
-
-
-### Docs
-
-Coming later :(
-
-
 ### Dependencies
 
 No dependencies, but I recommend to use [Normalize](https://necolas.github.io/normalize.css/)
+
+
+### Author
+
+Rane Ahonen, [Rane.io](https://www.rane.io)
+
 
 ### Licenses
 [MIT](https://spdx.org/licenses/MIT.html)
