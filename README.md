@@ -27,7 +27,7 @@ Rane Ahonen, [Rane.io](https://rane.io)
 
 ### Example
 
-https://startpoint.netlify.com/
+https://startpoint.rane.io
 
 
 ### Docs
