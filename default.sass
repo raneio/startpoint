@@ -2,7 +2,6 @@
 // Config
 // --------------------------------------------------
 // $rem is font size and others is relative to it
-// bg = background, fg = foreground, hl = highlight
 
 $rem: 14px !default
 $rem--s: 14px !default
@@ -10,17 +9,32 @@ $rem--m: 16px !default
 $rem--l: 18px !default
 $rem--xl: 18px !default
 
+$list-space-factors: 4 3 2 1 0 0.5 0.25 !default
+$list-grid-cols: 1 2 3 4 5 6 !default
+
+$helper-hide: true !default
+$helper-margin: true !default
+$helper-invert: true !default
+$helper-container: true !default
+$helper-grid: true !default
+
+
+//
+// General
+// --------------------------------------------------
+// bg = background, fg = foreground, hl = highlight
+
+$breakpoint--s: 576px !default
+$breakpoint--m: 768px !default
+$breakpoint--l: 992px !default
+$breakpoint--xl: 1200px !default
+
 $color-bg: #FFFFFF !default
 $color-fg: #000000 !default
 $color-hl: #1DABFC !default
 $color-bg--invert: $color-fg !default
 $color-fg--invert: $color-bg !default
 $color-hl--invert: $color-hl !default
-
-$breakpoint--s: 576px !default
-$breakpoint--m: 768px !default
-$breakpoint--l: 992px !default
-$breakpoint--xl: 1200px !default
 
 $space-container--x: 2rem !default
 $space-container--y: 4rem !default
@@ -32,6 +46,10 @@ $time--s: .2s !default
 $time--m: .5s !default
 $time--l: 1s !default
 
+$border-radius--s: .3rem !default
+$border-radius--m: .6rem !default
+$border-radius--l: 1rem !default
+
 $box-shadow--s: 0 1px 5px mix($color-fg, transparent, 5%) !default
 $box-shadow--m: 0 1px 10px mix($color-fg, transparent, 10%), 0 1px 1px mix($color-fg, transparent, 5%) !default
 $box-shadow--l: 0 3px 30px mix($color-fg, transparent, 10%), 0 1px 3px mix($color-fg, transparent, 5%) !default
@@ -39,14 +57,6 @@ $box-shadow--s-invert: 0 1px 5px mix($color-fg--invert, transparent, 5%) !defaul
 $box-shadow--m-invert: 0 1px 10px mix($color-fg--invert, transparent, 10%), 0 1px 1px mix($color-fg--invert, transparent, 5%) !default
 $box-shadow--l-invert: 0 3px 30px mix($color-fg--invert, transparent, 10%), 0 1px 3px mix($color-fg--invert, transparent, 5%) !default
 
-$helper-hide: true !default
-$helper-margin: true !default
-$helper-invert: true !default
-$helper-container: true !default
-$helper-grid: true !default
-
-$list-space-factors: 4 3 2 1 0 0.5 0.25 !default
-$list-grid-cols: 2 3 4 5 6 !default
 
 //
 // Fonts
@@ -73,12 +83,8 @@ $heading-font-family: $font-family !default
 $heading-font-weight: 500 !default
 $heading-line-height: 1.2 !default
 $heading-letter-spacing: .02em !default
-
 $heading-size-scale: 1.414 !default
-$heading-size-scale--s: 1.414 !default
-$heading-size-scale--m: 1.414 !default
-$heading-size-scale--l: 1.414 !default
-$heading-size-scale--xl: 1.414 !default
+$headint-text-transform: uppercase
 
 // invert
 $heading-font-color--invert: $color-fg--invert !default
@@ -114,7 +120,7 @@ $link-font-color--activ-invert: mix($color-fg--invert, $link-font-color--basic-i
 // Buttons
 // --------------------------------------------------
 
-$button-border-radius: .3em !default
+$button-border-radius: $border-radius--s !default
 $button-font-family: $font-family !default
 $button-font-size: 1em !default
 $button-font-weight: 500 !default
@@ -124,9 +130,9 @@ $button-bg--basic: $color-hl !default
 $button-bg--hover: mix($color-bg, $color-hl, 10%) !default
 $button-bg--activ: mix($color-bg, $color-hl, 10%) !default
 
-$button-border--basic: 1px solid $button-bg--basic !default
-$button-border--hover: 1px solid $button-bg--hover !default
-$button-border--activ: 1px solid $button-bg--activ !default
+$button-border--basic: 1px solid $color-hl !default
+$button-border--hover: 1px solid mix($color-bg, $color-hl, 10%) !default
+$button-border--activ: 1px solid mix($color-bg, $color-hl, 10%) !default
 
 $button-font-color--basic: $color-bg !default
 $button-font-color--hover: $color-bg !default
@@ -145,13 +151,13 @@ $button-transition--hover: background-color $time--s !default
 $button-transition--activ: background-color $time--s !default
 
 // invert
-$button-bg--basic-invert: $button-bg--basic !default
-$button-bg--hover-invert: $button-bg--hover !default
-$button-bg--activ-invert: $button-bg--activ !default
+$button-bg--basic-invert: $color-hl--invert !default
+$button-bg--hover-invert: mix($color-bg--invert, $color-hl--invert, 10%) !default
+$button-bg--activ-invert: mix($color-bg--invert, $color-hl--invert, 10%) !default
 
-$button-border-color--basic-invert: $button-bg--basic-invert !default
-$button-border-color--hover-invert: $button-bg--hover-invert !default
-$button-border-color--activ-invert: $button-bg--activ-invert !default
+$button-border-color--basic-invert: $color-hl--invert !default
+$button-border-color--hover-invert: mix($color-bg--invert, $color-hl--invert, 10%) !default
+$button-border-color--activ-invert: mix($color-bg--invert, $color-hl--invert, 10%) !default
 
 $button-font-color--basic-invert: $color-bg--invert !default
 $button-font-color--hover-invert: $color-bg--invert !default
@@ -166,9 +172,11 @@ $button-shadow-box--activ-invert: $box-shadow--l-invert !default
 // Inputs
 // --------------------------------------------------
 
-$input-border-radius: .3em !default
 $input-color-bg: $color-bg !default
 $input-color-fg: $color-fg !default
+$input-color-hl: $color-hl !default
+
+$input-border-radius: $border-radius--s !default
 $input-font-family: $font-family !default
 $input-font-size: 1rem !default
 $input-font-weight: 400 !default
@@ -182,7 +190,7 @@ $input-bg--focus: $input-color-bg !default
 
 $input-border--basic: 1px solid mix($input-color-fg, $input-color-bg, 20%) !default
 $input-border--hover: 1px solid mix($input-color-fg, $input-color-bg, 40%) !default
-$input-border--focus: 1px solid $color-hl !default
+$input-border--focus: 1px solid $input-color-hl !default
 
 $input-font-color--basic: $input-color-fg !default
 $input-font-color--hover: $input-color-fg !default

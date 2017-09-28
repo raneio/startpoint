@@ -100,6 +100,7 @@ h6
   letter-spacing: $heading-letter-spacing
   line-height: $heading-line-height
   margin: 0
+  text-transform: $headint-text-transform
 
 h1
   font-size: 1rem * $heading-size-scale * $heading-size-scale * $heading-size-scale * $heading-size-scale
@@ -113,58 +114,6 @@ h5
   font-size: 1rem
 h6
   font-size: 1rem / $heading-size-scale
-
-@if $heading-size-scale--s != $heading-size-scale
-  @media (min-width: $breakpoint--s)
-    h1
-      font-size: 1rem * $heading-size-scale--s * $heading-size-scale--s * $heading-size-scale--s * $heading-size-scale--s
-    h2
-      font-size: 1rem * $heading-size-scale--s * $heading-size-scale--s * $heading-size-scale--s
-    h3
-      font-size: 1rem * $heading-size-scale--s * $heading-size-scale--s
-    h4
-      font-size: 1rem * $heading-size-scale--s
-    h6
-      font-size: 1rem / $heading-size-scale--s
-
-@if $heading-size-scale--m != $heading-size-scale--s
-  @media (min-width: $breakpoint--m)
-    h1
-      font-size: 1rem * $heading-size-scale--m * $heading-size-scale--m * $heading-size-scale--m * $heading-size-scale--m
-    h2
-      font-size: 1rem * $heading-size-scale--m * $heading-size-scale--m * $heading-size-scale--m
-    h3
-      font-size: 1rem * $heading-size-scale--m * $heading-size-scale--m
-    h4
-      font-size: 1rem * $heading-size-scale--m
-    h6
-      font-size: 1rem / $heading-size-scale--m
-
-@if $heading-size-scale--l != $heading-size-scale--m
-  @media (min-width: $breakpoint--l)
-    h1
-      font-size: 1rem * $heading-size-scale--l * $heading-size-scale--l * $heading-size-scale--l * $heading-size-scale--l
-    h2
-      font-size: 1rem * $heading-size-scale--l * $heading-size-scale--l * $heading-size-scale--l
-    h3
-      font-size: 1rem * $heading-size-scale--l * $heading-size-scale--l
-    h4
-      font-size: 1rem * $heading-size-scale--l
-    h6
-      font-size: 1rem / $heading-size-scale--l
-
-@if $heading-size-scale--xl != $heading-size-scale--l
-  @media (min-width: $breakpoint--xl)
-    h1
-      font-size: 1rem * $heading-size-scale--xl * $heading-size-scale--xl * $heading-size-scale--xl * $heading-size-scale--xl
-    h2
-      font-size: 1rem * $heading-size-scale--xl * $heading-size-scale--xl * $heading-size-scale--xl
-    h3
-      font-size: 1rem * $heading-size-scale--xl * $heading-size-scale--xl
-    h4
-      font-size: 1rem * $heading-size-scale--xl
-    h6
-      font-size: 1rem / $heading-size-scale--xl
 
 
 //
