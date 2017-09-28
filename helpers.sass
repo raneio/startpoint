@@ -34,11 +34,11 @@
 // Auto Margin
 // --------------------------------------------------
 // Add top margin to other than first child
-// default: data-margin="*1"
+// default: data-margin="x1"
 
 @if $helper-margin == true
   [data-margin=""],
-  [data-margin="*1"]
+  [data-margin="x1"]
     > * + *
       margin-top: $space-margin
 
@@ -46,31 +46,27 @@
     > * + *
       margin-top: $space-margin-auto
 
-  [data-margin="*0"]
+  [data-margin="x0"]
     > * + *
       margin-top: 0
 
-  [data-margin="/4"]
+  [data-margin="x0.25"]
     > * + *
-      margin-top: $space-margin / 4
+      margin-top: $space-margin * 0.25
 
-  [data-margin="/3"]
+  [data-margin="x0.5"]
     > * + *
-      margin-top: $space-margin / 3
+      margin-top: $space-margin * 0.5
 
-  [data-margin="/2"]
-    > * + *
-      margin-top: $space-margin / 2
-
-  [data-margin="*2"]
+  [data-margin="x2"]
     > * + *
       margin-top: $space-margin * 2
 
-  [data-margin="*3"]
+  [data-margin="x3"]
     > * + *
       margin-top: $space-margin * 3
 
-  [data-margin="*4"]
+  [data-margin="x4"]
     > * + *
       margin-top: $space-margin * 4
 
@@ -152,31 +148,27 @@
     &[data-container~="l"]
       max-width: $breakpoint--l
 
-    &[data-container~="*0"]
+    &[data-container~="x0"]
       padding-top: 0
       padding-bottom: 0
 
-    &[data-container~="/4"]
-      padding-top: $space-container--y / 4
-      padding-bottom: $space-container--y / 4
+    &[data-container~="x0.25"]
+      padding-top: $space-container--y * 0.25
+      padding-bottom: $space-container--y * 0.25
 
-    &[data-container~="/3"]
-      padding-top: $space-container--y / 3
-      padding-bottom: $space-container--y / 3
+    &[data-container~="x0.5"]
+      padding-top: $space-container--y * 0.5
+      padding-bottom: $space-container--y * 0.5
 
-    &[data-container~="/2"]
-      padding-top: $space-container--y / 2
-      padding-bottom: $space-container--y / 2
-
-    &[data-container~="*2"]
+    &[data-container~="x2"]
       padding-top: $space-container--y * 2
       padding-bottom: $space-container--y * 2
 
-    &[data-container~="*3"]
+    &[data-container~="x3"]
       padding-top: $space-container--y * 3
       padding-bottom: $space-container--y * 3
 
-    &[data-container~="*4"]
+    &[data-container~="x4"]
       padding-top: $space-container--y * 4
       padding-bottom: $space-container--y * 4
 
@@ -316,7 +308,7 @@
     [data-grid~="6xl"] > *
       width: 16.6666%
 
-  [data-grid~="*0"]
+  [data-grid~="x0"]
     margin-left: 0
     margin-bottom: 0
 
@@ -324,31 +316,23 @@
       padding-left: 0
       padding-bottom: 0
 
-  [data-grid~="/4"]
-    margin-left: $space-grid / -4
-    margin-bottom: $space-grid / -4
+  [data-grid~="x0.25"]
+    margin-left: $space-grid * -0.25
+    margin-bottom: $space-grid * -0.25
 
     > *
-      padding-left: $space-grid / 4
-      padding-bottom: $space-grid / 4
+      padding-left: $space-grid * 0.25
+      padding-bottom: $space-grid * 0.25
 
-  [data-grid~="/3"]
-    margin-left: $space-grid / -3
-    margin-bottom: $space-grid / -3
-
-    > *
-      padding-left: $space-grid / 3
-      padding-bottom: $space-grid / 3
-
-  [data-grid~="/2"]
-    margin-left: $space-grid / -2
-    margin-bottom: $space-grid / -2
+  [data-grid~="x0.5"]
+    margin-left: $space-grid * -0.5
+    margin-bottom: $space-grid * -0.5
 
     > *
-      padding-left: $space-grid / 2
-      padding-bottom: $space-grid / 2
+      padding-left: $space-grid * 0.5
+      padding-bottom: $space-grid * 0.5
 
-  [data-grid~="*2"]
+  [data-grid~="x2"]
     margin-left: $space-grid * -2
     margin-bottom: $space-grid * -2
 
@@ -356,7 +340,7 @@
       padding-left: $space-grid * 2
       padding-bottom: $space-grid * 2
 
-  [data-grid~="*3"]
+  [data-grid~="x3"]
     margin-left: $space-grid * -3
     margin-bottom: $space-grid * -3
 
@@ -364,7 +348,7 @@
       padding-left: $space-grid * 3
       padding-bottom: $space-grid * 3
 
-  [data-grid~="*4"]
+  [data-grid~="x4"]
     margin-left: $space-grid * -4
     margin-bottom: $space-grid * -4
 
