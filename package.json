@@ -7,7 +7,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://raneio@github.com/raneio/startpoint.git"
+    "url": "git+https://raneio@github.com/raneio/startpoint-sass.git"
   },
   "keywords": [
     "sass",
@@ -18,7 +18,7 @@
   "author": "Rane Ahonen <raneahonen@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/raneio/startpoint/issues"
+    "url": "https://github.com/raneio/startpoint-sass/issues"
   },
-  "homepage": "https://github.com/raneio/startpoint#readme"
+  "homepage": "https://github.com/raneio/startpoint-sass#readme"
 }
