@@ -21,6 +21,8 @@ NPM https://www.npmjs.com/package/startpoint-sass
 
 Yarn https://yarn.pm/startpoint-sass
 
+Twitter https://twitter.com/raneio
+
 
 ## Dependencies
 No dependencies, but I recommend to use [Normalize](https://necolas.github.io/normalize.css/)
