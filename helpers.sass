@@ -167,7 +167,13 @@
       > :not([data-grid])
         flex: 0 0 auto
 
-  [data-grid~="compact"] 
+  [data-grid~="compact"]
+    > :not([data-grid])
+      flex: 0 1 auto
+
+  [data-grid~="compact-inline"]
+    display: inline-flex
+
     > :not([data-grid])
       flex: 0 1 auto
 
