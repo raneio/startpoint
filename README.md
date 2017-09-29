@@ -33,6 +33,7 @@ Rane Ahonen, [Rane.io](https://www.rane.io)
 ## Licenses
 [MIT](https://spdx.org/licenses/MIT.html)
 
+---
 
 #### How to test with demo site
 
