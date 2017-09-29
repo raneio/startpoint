@@ -2,10 +2,12 @@
 
 The Sass-based starting point to web projects. Pure Sass, no Javascript.
 
- ***!!! I can't promise backwards compatible before version 1.0.0 !!!***
+[![NPM](https://nodei.co/npm/startpoint-sass.png?compact=true)](https://nodei.co/npm/startpoint-sass/)
+
+***!!! I can't promise backwards compatible before version 1.0.0 !!!***
 
 
-### Docs
+#### Docs
 **https://www.rane.io/startpoint**
 
 
