@@ -1,32 +1,38 @@
 # Startpoint for every web projects
 
-The Sass-based starting point to web projects. Pure Sass, no Javascript.
+Pure Sass, no Javascript. Startpoint get you a simple and beautiful starting point for your website. It contents variable file where you can determine colors, font properties, spaces and other styles. In addition to this Stratpoint offers most important helper attributes what speed up the development of your site.
 
 [![NPM](https://nodei.co/npm/startpoint-sass.png?compact=true)](https://nodei.co/npm/startpoint-sass/)
 
 ***!!! I can't promise backwards compatible before version 1.0.0 !!!***
 
 
-#### Docs
+## Docs
 **https://www.rane.io/startpoint**
 
 
-#### Demo Site
-https://startpoint-demo.rane.io
+## Links
+
+Demo https://startpoint-demo.rane.io
+
+Github https://github.com/raneio/startpoint-sass
+
+NPM https://www.npmjs.com/package/startpoint-sass
+
+Yarn https://yarn.pm/startpoint-sass
 
 
-#### Dependencies
+## Dependencies
 No dependencies, but I recommend to use [Normalize](https://necolas.github.io/normalize.css/)
 
 
-#### Author
+## Author
 Rane Ahonen, [Rane.io](https://www.rane.io)
 
 
-#### Licenses
+## Licenses
 [MIT](https://spdx.org/licenses/MIT.html)
 
----
 
 #### How to test with demo site
 
