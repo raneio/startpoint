@@ -160,7 +160,9 @@
     [data-grid~="#{$col}l"],
     [data-grid~="#{$col}xl"]
       flex-wrap: wrap
-      width: 100%
+      
+      > *
+        width: 100%
 
       > :not([data-grid])
         flex: 0 0 auto
