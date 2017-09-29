@@ -6,8 +6,9 @@ The Sass-based starting point to web projects. Pure Sass, no Javascript.
 
 
 ### Docs
+#### [https://www.rane.io/startpoint](https://www.rane.io/startpoint)
 
-**[https://www.rane.io/startpoint](https://www.rane.io/startpoint)**
+
 
 
 #### Demo Site
