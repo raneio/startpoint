@@ -28,12 +28,16 @@ Twitter https://twitter.com/raneio
 No dependencies, but I recommend to use [Normalize](https://necolas.github.io/normalize.css/)
 
 
-## Author
-Rane Ahonen, [Rane.io](https://www.rane.io)
+## Creator
+**Rane Ahonen**
 
+- https://www.rane.io
+- https://twitter.com/raneio
+- https://github.com/raneio
 
-## Licenses
-[MIT](https://spdx.org/licenses/MIT.html)
+## Copyright and license
+
+Code and documentation copyright 2017 Rane Ahonen, [Rane.io](https://www.rane.io). Code released under the [MIT License](https://github.com/raneio/startpoint-sass/blob/master/LICENSE). Docs released under [Creative Commons](https://creativecommons.org/licenses/by/3.0/).
 
 ---
 
