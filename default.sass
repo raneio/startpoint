@@ -1,16 +1,9 @@
 //
 // Config
 // --------------------------------------------------
-// $rem is font size and others is relative to it
 
-$rem: 14px !default
-$rem--s: 14px !default
-$rem--m: 16px !default
-$rem--l: 18px !default
-$rem--xl: 18px !default
-
-$list-grid-cols: 1 2 3 4 5 6 !default
-$list-space-factors: 4 3 2 1 0 0.5 0.25 !default
+$grid-cols: 1 2 3 4 5 6 !default
+$space-factors: 4 3 2 1 0 0.5 0.25 !default
 
 $helper-hide: true !default
 $helper-margin: true !default
@@ -22,7 +15,14 @@ $helper-grid: true !default
 //
 // General
 // --------------------------------------------------
+// $rem is font size and others is relative to it
 // bg = background, fg = foreground, hl = highlight
+
+$rem: 14px !default
+$rem--s: 14px !default
+$rem--m: 16px !default
+$rem--l: 18px !default
+$rem--xl: 18px !default
 
 $breakpoint--s: 576px !default
 $breakpoint--m: 768px !default
@@ -84,7 +84,7 @@ $heading-font-weight: 500 !default
 $heading-line-height: 1.2 !default
 $heading-letter-spacing: .02em !default
 $heading-size-scale: 1.414 !default
-$headint-text-transform: uppercase
+$headint-text-transform: uppercase !default
 
 // invert
 $heading-font-color--invert: $color-fg--invert !default

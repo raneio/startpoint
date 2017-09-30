@@ -45,7 +45,7 @@
     > * + *
       margin-top: $space-margin-auto
 
-  @each $factor in $list-space-factors
+  @each $factor in $space-factors
     [data-margin="x#{$factor}"]
       > * + *
         margin-top: $space-margin * $factor
@@ -127,7 +127,7 @@
     &[data-container~="l"]
       max-width: $breakpoint--l
 
-    @each $factor in $list-space-factors
+    @each $factor in $space-factors
       &[data-container~="x#{$factor}"]
         padding-top: $space-container--y * $factor
         padding-bottom: $space-container--y * $factor
@@ -153,7 +153,7 @@
     > :not([data-grid])
       flex: 1
 
-  @each $col in $list-grid-cols
+  @each $col in $grid-cols
     [data-grid~="#{$col}"],
     [data-grid~="#{$col}s"],
     [data-grid~="#{$col}m"],
@@ -177,31 +177,31 @@
     > :not([data-grid])
       flex: 0 1 auto
 
-  @each $col in $list-grid-cols
+  @each $col in $grid-cols
     [data-grid~="#{$col}"] > *
       width: 100% / $col
 
   @media (min-width: $breakpoint--s)
-    @each $col in $list-grid-cols
+    @each $col in $grid-cols
       [data-grid~="#{$col}s"] > *
         width: 100% / $col
 
   @media (min-width: $breakpoint--m)
-    @each $col in $list-grid-cols
+    @each $col in $grid-cols
       [data-grid~="#{$col}m"] > *
         width: 100% / $col
 
   @media (min-width: $breakpoint--l)
-    @each $col in $list-grid-cols
+    @each $col in $grid-cols
       [data-grid~="#{$col}l"] > *
         width: 100% / $col
 
   @media (min-width: $breakpoint--xl)
-    @each $col in $list-grid-cols
+    @each $col in $grid-cols
       [data-grid~="#{$col}xl"] > *
         width: 100% / $col
 
-  @each $factor in $list-space-factors
+  @each $factor in $space-factors
     [data-grid~="x#{$factor}"]
       margin-left: $space-grid * $factor * -1
       margin-bottom: $space-grid * $factor * -1
