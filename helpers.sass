@@ -167,15 +167,15 @@
       > :not([data-grid])
         flex: 0 0 auto
 
-  [data-grid~="compact"]
+  [data-grid~="compact"],
+  [data-grid~="compact-inline"]
+    flex-wrap: wrap
+    
     > :not([data-grid])
-      flex: 0 1 auto
+      flex: 0 0 auto
 
   [data-grid~="compact-inline"]
     display: inline-flex
-
-    > :not([data-grid])
-      flex: 0 1 auto
 
   @each $col in $grid-cols
     [data-grid~="#{$col}"] > *
