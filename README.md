@@ -2,6 +2,11 @@
 
 Pure Sass, no Javascript. Startpoint will get you a simple and beautiful starting point for your website. It contains a variable file where you can determine colors, font properties, spaces and other styles. In addition to this Startpoint offers the most important helper attributes that speed up the development of your site.
 
+![NPM](https://img.shields.io/github/issues/raneio/startpoint-sass.svg)
+![NPM](https://img.shields.io/github/forks/raneio/startpoint-sass.svg)
+![NPM](https://img.shields.io/github/stars/raneio/startpoint-sass.svg)
+![NPM](https://img.shields.io/badge/license-MIT-blue.svg)
+
 [![NPM](https://nodei.co/npm/startpoint-sass.png?compact=true)](https://nodei.co/npm/startpoint-sass/)
 
 ***!!! I can't promise backwards compatible before version 1.0.0 !!!***
