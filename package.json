@@ -13,7 +13,9 @@
     "sass",
     "css",
     "startpoint",
-    "bootstrap"
+    "bootstrap",
+    "scss",
+    "style"
   ],
   "author": "Rane Ahonen <raneahonen@gmail.com>",
   "license": "MIT",
