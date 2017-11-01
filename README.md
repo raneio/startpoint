@@ -54,3 +54,8 @@ Code and documentation copyright 2017 Rane Ahonen, [Rane.io](https://www.rane.io
 1. Make some changes to `./demo/sass/variables.sass`
 1. `npm run demo`
 1. Open `./demo/index.html` with your browser
+
+#### Thanks
+
+<img src="https://file-cjlgurihla.now.sh/" width="150">
+
