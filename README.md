@@ -1,7 +1,8 @@
-**Deprecated!**
+# Deprecated!
+
 I recommend to use **https://github.com/ranereduce/core-sass**
 
-# Startpoint for every web projects
+## Startpoint for every web projects
 
 Pure Sass, no Javascript. Startpoint will get you a simple and beautiful starting point for your website. It contains a variable file where you can determine colors, font properties, spaces and other styles. In addition to this Startpoint offers the most important helper attributes that speed up the development of your site.
 
