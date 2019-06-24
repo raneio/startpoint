@@ -1,6 +1,6 @@
 # Deprecated!
 
-I recommend to use **https://github.com/ranereduce/core-sass**
+I recommend to use **https://github.com/raneio/core-sass**
 
 ## Startpoint for every web projects
 
